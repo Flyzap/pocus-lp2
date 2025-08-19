@@ -10,9 +10,7 @@ const InstructorSection = () => {
             <div className="relative">
               <div className="relative">
                 <img src={instructorProfile} alt="Dr. Carlos Medeiros - Especialista em POCUS" className="w-80 h-80 object-cover rounded-full mx-auto premium-glow" />
-                <Button size="lg" className="absolute bottom-4 right-1/2 transform translate-x-1/2 bg-primary hover:bg-primary-dark rounded-full w-16 h-16 p-0 premium-glow animate-pulse-glow">
-                  <Play size={24} className="text-primary-foreground ml-1" />
-                </Button>
+                
               </div>
             </div>
             
@@ -36,11 +34,9 @@ const InstructorSection = () => {
               
               {/* Credentials */}
               <div className="flex flex-wrap gap-4">
-                {["✅ 15+ anos de experiência", "✅ 5.000+ médicos treinados", "✅ Certificado SBUS", "✅ Professor universitário"].map((credential, index) => (
-                  <span key={index} className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
+                {["✅ 15+ anos de experiência", "✅ 5.000+ médicos treinados", "✅ Certificado SBUS", "✅ Professor universitário"].map((credential, index) => <span key={index} className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
                     {credential}
-                  </span>
-                ))}
+                  </span>)}
               </div>
             </div>
           </div>
