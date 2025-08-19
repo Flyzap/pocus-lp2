@@ -36,7 +36,11 @@ const InstructorSection = () => {
               
               {/* Credentials */}
               <div className="flex flex-wrap gap-4">
-                {["✅ 15+ anos de experiência", "✅ 5.000+ médicos treinados", "✅ Certificado SBUS", "✅ Professor universitário"].map((credential, index) => {})}
+                {["✅ 15+ anos de experiência", "✅ 5.000+ médicos treinados", "✅ Certificado SBUS", "✅ Professor universitário"].map((credential, index) => (
+                  <span key={index} className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
+                    {credential}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
