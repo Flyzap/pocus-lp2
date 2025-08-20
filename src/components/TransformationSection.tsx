@@ -1,5 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Quote } from "lucide-react";
+// 📸 SUBSTITUIR IMAGEM DA TRANSFORMAÇÃO:
+// Para adicionar sua própria imagem, substitua o arquivo "transformation.jpg" 
+// na pasta src/assets/ pela sua imagem.
+// DIMENSÕES RECOMENDADAS: 1200x800px (16:9) ou similar
+// FORMATO: JPG, PNG ou WebP
+// QUALIDADE: Alta resolução para melhor resultado visual
 import transformationImage from "@/assets/transformation.jpg";
 
 const TransformationSection = () => {
