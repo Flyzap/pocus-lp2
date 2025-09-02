@@ -50,13 +50,13 @@ const benefits = [
 
 const BenefitsSection = () => {
   return (
-    <section id="beneficios" className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-background">
+    <section id="beneficios" className="py-10 sm:py-14 lg:py-16 xl:py-20 bg-background">
       <div className="container mx-auto px-3 sm:px-4 lg:px-6">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-3 sm:mb-4 lg:mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-4 sm:mb-5 lg:mb-6">
             O que você vai receber <span className="text-primary">GRATUITAMENTE</span>
           </h2>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-3 sm:px-4">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto px-3 sm:px-4">
             Material completo de POCUS para transformar sua prática médica hoje mesmo
           </p>
         </div>
@@ -70,14 +70,14 @@ const BenefitsSection = () => {
             {benefits.filter(benefit => benefit.priority === "high").map((benefit, index) => (
               <div 
                 key={index} 
-                className="premium-card p-4 sm:p-6 lg:p-8 space-y-3 sm:space-y-4 lg:space-y-6 text-center hover:scale-105 transition-all duration-300 group border-2 border-primary/20"
+                className="premium-card p-5 sm:p-6 lg:p-8 space-y-4 sm:space-y-5 lg:space-y-6 text-center hover:scale-105 transition-all duration-300 group border-2 border-primary/20"
               >
-                <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto group-hover:bg-primary/20 transition-colors">
-                  <benefit.icon size={24} className="sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-primary" />
+                <div className="w-14 h-14 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto group-hover:bg-primary/20 transition-colors">
+                  <benefit.icon size={28} className="sm:w-9 sm:h-9 lg:w-10 lg:h-10 text-primary" />
                 </div>
                 
-                <h3 className="text-sm sm:text-lg md:text-xl font-bold text-foreground">{benefit.title}</h3>
-                <p className="text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed">
+                <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground">{benefit.title}</h3>
+                <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
                   {benefit.description}
                 </p>
               </div>

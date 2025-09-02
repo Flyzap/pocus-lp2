@@ -122,27 +122,33 @@ All colors MUST be HSL.
     scroll-behavior: smooth;
   }
 
-  /* Melhorar tipografia em mobile */
+  /* Melhorar tipografia em mobile - AUMENTADO */
   html {
-    font-size: 14px; /* Reduzido para mobile */
+    font-size: 16px; /* Aumentado de 14px para 16px */
     scroll-behavior: smooth;
   }
 
-  /* Otimizações para mobile */
-  @media (min-width: 640px) {
+  /* Otimizações para diferentes telas */
+  @media (min-width: 768px) {
     html {
-      font-size: 16px; /* Tamanho normal para desktop */
+      font-size: 18px; /* Aumentado de 16px para 18px */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      font-size: 20px; /* Aumentado de 16px para 20px */
     }
   }
 
   /* Scroll suave para navegação */
   html {
-    scroll-padding-top: 4rem; /* Compensar navbar fixa - reduzido para mobile */
+    scroll-padding-top: 4.5rem; /* Ajustado para nova altura da navbar */
   }
 
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     html {
-      scroll-padding-top: 5rem; /* Compensar navbar fixa - desktop */
+      scroll-padding-top: 5.5rem; /* Ajustado para nova altura da navbar */
     }
   }
 }

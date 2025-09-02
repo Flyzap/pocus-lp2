@@ -129,7 +129,7 @@ const StickyFormMobile = () => {
                         value={whatsapp}
                         onChange={handleWhatsAppChange}
                         placeholder="(82) 98103-9197"
-                        className={`h-9 sm:h-10 lg:h-12 text-sm sm:text-base ${
+                        className={`h-11 sm:h-12 lg:h-14 text-base sm:text-lg ${
                           error ? 'border-red-500 focus:border-red-500' : ''
                         }`}
                         required
@@ -142,7 +142,7 @@ const StickyFormMobile = () => {
                     <Button
                       type="submit"
                       disabled={isLoading}
-                      className={`font-bold px-3 sm:px-4 lg:px-6 h-9 sm:h-10 lg:h-12 premium-glow whitespace-nowrap text-xs sm:text-sm ${
+                      className={`font-bold px-4 sm:px-5 lg:px-6 h-11 sm:h-12 lg:h-14 premium-glow whitespace-nowrap text-sm sm:text-base ${
                         error
                           ? 'bg-red-600 hover:bg-red-700'
                           : 'bg-primary hover:bg-primary-dark'

@@ -52,7 +52,7 @@ const HeroSection = () => {
   };
   
   return (
-    <section className="relative min-h-screen hero-gradient flex items-center justify-center overflow-hidden pt-14 sm:pt-16 lg:pt-20">
+    <section className="relative min-h-screen hero-gradient flex items-center justify-center overflow-hidden pt-16 sm:pt-18 lg:pt-20">
       {/* Background Glow Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/10"></div>
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-glow"></div>
@@ -63,14 +63,14 @@ const HeroSection = () => {
           {/* Content - Sempre primeiro em mobile */}
           <div className="space-y-4 sm:space-y-6 lg:space-y-8 text-center lg:text-left order-1">
             <div className="space-y-3 sm:space-y-4">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                 <span className="text-foreground">Domine a</span>{" "}
                 <span className="text-primary bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
                   Ultrassonografia
                 </span>{" "}
                 <span className="text-foreground">à Beira-leito</span>
               </h1>
-              <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
                 Ebook gratuito + PDF de emergência para usar no plantão hoje mesmo
               </p>
             </div>
@@ -79,10 +79,10 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 lg:gap-6 mb-4 sm:mb-6 lg:mb-8">
               <div className="flex items-center gap-2">
                 <Download className="text-primary w-4 h-4 sm:w-5 sm:h-5" />
-                <span className="text-foreground font-bold text-xs sm:text-sm lg:text-base">30+ downloads</span>
+                <span className="text-foreground font-bold text-sm sm:text-base lg:text-lg">30+ downloads</span>
               </div>
               <div className="hidden sm:block w-2 h-2 bg-primary rounded-full"></div>
-              <div className="text-xs sm:text-sm lg:text-base text-muted-foreground">Médicos já dominam POCUS</div>
+              <div className="text-sm sm:text-base lg:text-lg text-muted-foreground">Médicos já dominam POCUS</div>
             </div>
           </div>
           
@@ -109,7 +109,7 @@ const HeroSection = () => {
 
         {/* Formulário WhatsApp - Sempre por último em mobile */}
         <div className="mt-6 sm:mt-8 lg:mt-12 text-center lg:text-left order-3">
-          <div className="premium-card p-3 sm:p-4 lg:p-6 max-w-sm sm:max-w-md mx-auto lg:mx-0">
+          <div className="premium-card p-4 sm:p-5 lg:p-6 max-w-sm sm:max-w-md mx-auto lg:mx-0">
             <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
               <div className="space-y-2">
                 <Input 
@@ -117,7 +117,7 @@ const HeroSection = () => {
                   value={whatsapp}
                   onChange={handleWhatsAppChange}
                   placeholder="(82) 98103-9197"
-                  className={`glow-border bg-background/50 text-foreground placeholder:text-muted-foreground h-10 sm:h-12 lg:h-14 text-sm sm:text-base lg:text-lg ${
+                  className={`glow-border bg-background/50 text-foreground placeholder:text-muted-foreground h-12 sm:h-14 lg:h-16 text-base sm:text-lg lg:text-xl ${
                     error ? 'border-red-500 focus:border-red-500' : ''
                   }`}
                   required
@@ -132,7 +132,7 @@ const HeroSection = () => {
                 type="submit"
                 size="lg"
                 disabled={isLoading || isSuccess}
-                className={`w-full font-bold px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg premium-glow group h-10 sm:h-12 lg:h-16 ${
+                                  className={`w-full font-bold px-5 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-5 text-base sm:text-lg lg:text-xl premium-glow group h-12 sm:h-14 lg:h-16 ${
                   isSuccess 
                     ? 'bg-green-600 hover:bg-green-600' 
                     : error
