@@ -60,8 +60,8 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Content */}
-          <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
+          {/* Content - Sempre primeiro em mobile */}
+          <div className="space-y-6 lg:space-y-8 text-center lg:text-left order-1">
             <div className="space-y-4">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
                 <span className="text-foreground">Domine a</span>{" "}
@@ -153,8 +153,8 @@ const HeroSection = () => {
             </div>
           </div>
           
-          {/* Hero Image */}
-          <div className="relative order-first lg:order-last">
+          {/* Hero Image - Sempre segundo em mobile */}
+          <div className="relative order-2">
             <div className="relative">
               <img 
                 src={images.instructorHero} 
