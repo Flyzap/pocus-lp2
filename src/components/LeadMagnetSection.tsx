@@ -9,7 +9,7 @@ const LeadMagnetSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="space-y-6 mb-12">
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
-              <span className="text-primary">Acesso Imediato</span> à Aula Gratuita
+              <span className="text-primary">Acesso Imediato</span> ao Ebook Gratuita
             </h2>
             <p className="text-xl text-muted-foreground">
               + PDF Exclusivo com Protocolo de Emergência para usar no plantão hoje mesmo
