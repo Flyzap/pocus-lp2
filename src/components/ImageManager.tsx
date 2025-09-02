@@ -1,8 +1,9 @@
 import React, { useState, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Upload, Image as ImageIcon, Check, X } from "lucide-react";
+import { Upload, Image as ImageIcon, Check, X, Info, AlertTriangle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { optimizeImageQuality, analyzeImageQuality } from "@/utils/imageOptimizer";
 
 interface ImageManagerProps {
   currentImage: string;
@@ -21,6 +22,7 @@ const ImageManager: React.FC<ImageManagerProps> = ({
 }) => {
   const [isUploading, setIsUploading] = useState(false);
   const [previewImage, setPreviewImage] = useState<string | null>(null);
+  const [imageAnalysis, setImageAnalysis] = useState<any>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
 
@@ -51,14 +53,37 @@ const ImageManager: React.FC<ImageManagerProps> = ({
 
     setIsUploading(true);
 
-    // Criar preview da imagem
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      const imageSrc = e.target?.result as string;
-      setPreviewImage(imageSrc);
-      setIsUploading(false);
-    };
-    reader.readAsDataURL(file);
+    // Analisar qualidade da imagem
+    analyzeImageQuality(file)
+      .then(analysis => {
+        setImageAnalysis(analysis);
+        
+        // Otimizar imagem para máxima qualidade
+        return optimizeImageQuality(file, {
+          maxWidth: 2048,
+          maxHeight: 2048,
+          quality: 0.98,
+          format: 'jpeg'
+        });
+      })
+      .then(optimizedImageSrc => {
+        setPreviewImage(optimizedImageSrc);
+        setIsUploading(false);
+        
+        toast({
+          title: "Imagem processada!",
+          description: "Imagem otimizada para máxima qualidade.",
+        });
+      })
+      .catch(error => {
+        console.error('Erro ao processar imagem:', error);
+        setIsUploading(false);
+        toast({
+          title: "Erro ao processar imagem",
+          description: "Tente novamente com uma imagem diferente.",
+          variant: "destructive"
+        });
+      });
   };
 
   const handleConfirmChange = () => {
@@ -74,6 +99,7 @@ const ImageManager: React.FC<ImageManagerProps> = ({
 
   const handleCancelChange = () => {
     setPreviewImage(null);
+    setImageAnalysis(null);
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
     }
@@ -108,10 +134,42 @@ const ImageManager: React.FC<ImageManagerProps> = ({
           </div>
         </div>
 
+        {/* Análise de Qualidade */}
+        {imageAnalysis && (
+          <div className="bg-muted/50 p-4 rounded-lg">
+            <div className="flex items-center gap-2 mb-3">
+              {imageAnalysis.isHighQuality ? (
+                <Info className="text-green-500" size={16} />
+              ) : (
+                <AlertTriangle className="text-yellow-500" size={16} />
+              )}
+              <span className="text-sm font-medium">
+                Análise de Qualidade
+              </span>
+            </div>
+            
+            <div className="grid grid-cols-2 gap-4 text-xs text-muted-foreground mb-3">
+              <div>Resolução: {imageAnalysis.width}x{imageAnalysis.height}px</div>
+              <div>Tamanho: {Math.round(imageAnalysis.size / 1024)}KB</div>
+            </div>
+            
+            {imageAnalysis.recommendations.length > 0 && (
+              <div>
+                <p className="text-xs font-medium text-yellow-600 mb-2">Recomendações:</p>
+                <ul className="text-xs text-muted-foreground space-y-1">
+                  {imageAnalysis.recommendations.map((rec: string, index: number) => (
+                    <li key={index}>• {rec}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
+
         {/* Preview da Nova Imagem */}
         {previewImage && (
           <div>
-            <label className="text-sm font-medium text-primary">Nova Imagem (Preview):</label>
+            <label className="text-sm font-medium text-primary">Nova Imagem (Otimizada):</label>
             <div className="mt-2 border border-primary rounded-lg overflow-hidden">
               <img 
                 src={previewImage} 

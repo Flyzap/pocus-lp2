@@ -36,9 +36,10 @@ const InstructorSection = () => {
                 <img 
                   src={images.instructorProfile} 
                   alt={`${INSTRUCTOR_CONFIG.name} - Especialista em ${INSTRUCTOR_CONFIG.specialty}`}
-                  className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-full mx-auto premium-glow instructor-image" 
-                  loading="lazy"
+                  className="w-96 h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] object-cover rounded-full mx-auto premium-glow instructor-image" 
+                  loading="eager"
                   fetchPriority="high"
+                  decoding="sync"
                 />
                 {/* 🎥 Espaço reservado para vídeo de apresentação (futuro) */}
               </div>

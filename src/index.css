@@ -158,19 +158,38 @@ All colors MUST be HSL.
     50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.6); }
   }
   
-  /* High Quality Image Rendering */
+  /* Ultra High Quality Image Rendering */
   .instructor-image {
+    /* Máxima qualidade de interpolação */
     image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
     image-rendering: crisp-edges;
-    image-rendering: pixelated;
     image-rendering: high-quality;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0);
-    backface-visibility: hidden;
-    transform: translateZ(0);
-    /* Força alta qualidade no redimensionamento */
     image-rendering: auto;
     -ms-interpolation-mode: bicubic;
+    
+    /* Hardware acceleration para melhor performance */
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1);
+    -moz-transform: translateZ(0) scale(1);
+    transform: translateZ(0) scale(1);
+    
+    /* Força suavização máxima */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    /* Evita compressão desnecessária */
+    image-orientation: from-image;
+    
+    /* Força renderização de qualidade máxima */
+    will-change: transform;
+    contain: layout style paint;
+    
+    /* Filtro para aumentar nitidez */
+    filter: contrast(1.02) saturate(1.1) brightness(1.01);
   }
   
   /* Otimizações para imagens de alta qualidade */

@@ -76,17 +76,48 @@ Para manter as alterações de forma permanente:
 
 #### Otimizações Automáticas Aplicadas:
 
-- ✅ Renderização de alta qualidade forçada via CSS
-- ✅ Prevenção de blur durante redimensionamento
-- ✅ Otimização para telas Retina/4K
-- ✅ Carregamento prioritário para imagens importantes
+- ✅ **Processamento Inteligente**: Análise automática de qualidade da imagem
+- ✅ **Renderização Ultra HD**: CSS otimizado para máxima qualidade visual
+- ✅ **Filtros de Nitidez**: Aplicação automática de filtros para maior clareza
+- ✅ **Hardware Acceleration**: Uso da GPU para melhor performance
+- ✅ **Compressão Inteligente**: Mantém qualidade máxima com otimização de tamanho
+- ✅ **Suporte Retina/4K**: Otimizado para telas de alta resolução
+- ✅ **Análise em Tempo Real**: Feedback instantâneo sobre qualidade da imagem
+- ✅ **Prevenção de Blur**: Força renderização sem perda de qualidade
+
+### 🎯 Para Qualidade MÁXIMA (Recomendado)
+
+#### 📏 **Dimensões Ideais para Cada Imagem:**
+
+1. **Foto do Instrutor (Circular)**:
+   - **Ideal**: 2000x2000px (quadrada)
+   - **Mínimo**: 1200x1200px
+   - **Formato**: JPG com qualidade 95-100%
+
+2. **Imagem Principal (Hero)**:
+   - **Ideal**: 2560x1600px (16:10)
+   - **Mínimo**: 1920x1200px
+   - **Formato**: JPG com qualidade 90-95%
+
+3. **Imagem de Transformação**:
+   - **Ideal**: 2560x1600px (16:10)
+   - **Mínimo**: 1920x1200px
+   - **Formato**: JPG com qualidade 90-95%
+
+#### 🚀 **Dicas para Máxima Qualidade:**
+
+- **Fonte Original**: Use sempre a imagem original, não screenshots ou redimensionadas
+- **Iluminação**: Prefira fotos bem iluminadas e nítidas
+- **Foco**: Certifique-se que a imagem está em foco perfeito
+- **Edição**: Se necessário, ajuste brilho/contraste antes do upload
+- **Teste**: Sempre visualize o resultado final em tela grande
 
 ### 💡 Dicas Gerais
 
-- Use imagens de alta qualidade para melhor resultado
-- Mantenha as proporções recomendadas para melhor layout
+- O sistema agora analisa automaticamente a qualidade da sua imagem
+- Receba recomendações em tempo real para melhorar a qualidade
+- Imagens são otimizadas automaticamente mantendo a máxima qualidade
 - Teste em diferentes dispositivos para garantir responsividade
-- Imagens maiores resultam em melhor qualidade (até 10MB)
 
 ---
 
