@@ -143,12 +143,18 @@ All colors MUST be HSL.
 
   /* Scroll suave para navegação */
   html {
-    scroll-padding-top: 4.5rem; /* Ajustado para nova altura da navbar */
+    scroll-padding-top: 5rem; /* Ajustado para nova altura da navbar mobile */
+  }
+
+  @media (min-width: 640px) {
+    html {
+      scroll-padding-top: 5.5rem; /* Ajustado para navbar sm */
+    }
   }
 
   @media (min-width: 768px) {
     html {
-      scroll-padding-top: 5.5rem; /* Ajustado para nova altura da navbar */
+      scroll-padding-top: 6rem; /* Ajustado para navbar lg */
     }
   }
 }
@@ -263,5 +269,33 @@ All colors MUST be HSL.
   .mobile-scroll {
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
+  }
+
+  /* Touch targets otimizados */
+  .mobile-touch-target {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  /* Espaçamentos mobile-first aprimorados */
+  @media (max-width: 640px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    /* Aumentar espaçamentos verticais em mobile */
+    .space-y-4 > * + * {
+      margin-top: 1.25rem !important;
+    }
+    
+    .space-y-6 > * + * {
+      margin-top: 1.75rem !important;
+    }
   }
 }

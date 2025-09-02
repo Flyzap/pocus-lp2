@@ -12,13 +12,13 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-3 sm:px-6">
-        <div className="flex items-center justify-between h-16 sm:h-18 lg:h-20">
+        <div className="flex items-center justify-between h-18 sm:h-20 lg:h-24">
           {/* Logo */}
           <div className="flex items-center">
             <img 
               src={logopocusintensive} 
               alt="POCUS INTENSIVE" 
-              className="h-10 sm:h-12 lg:h-14 w-auto"
+              className="h-12 sm:h-14 lg:h-16 w-auto"
             />
           </div>
 
@@ -53,13 +53,13 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden p-1.5 sm:p-2 text-muted-foreground hover:text-primary transition-colors"
+            className="md:hidden p-2 sm:p-3 text-muted-foreground hover:text-primary transition-colors mobile-button"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
-              <X size={20} className="sm:w-6 sm:h-6" />
+              <X size={24} className="sm:w-7 sm:h-7" />
             ) : (
-              <Menu size={20} className="sm:w-6 sm:h-6" />
+              <Menu size={24} className="sm:w-7 sm:h-7" />
             )}
           </button>
         </div>
@@ -67,31 +67,31 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-sm">
-            <div className="px-3 sm:px-4 py-3 sm:py-4 space-y-3 sm:space-y-4">
+            <div className="px-4 py-5 space-y-4">
               <a 
                 href="#beneficios" 
-                                 className="block text-base sm:text-lg font-medium text-muted-foreground hover:text-primary transition-colors"
+                                 className="block text-lg font-medium text-muted-foreground hover:text-primary transition-colors py-2 mobile-touch-target"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Benefícios
               </a>
               <a 
                 href="#instrutor" 
-                                 className="block text-base sm:text-lg font-medium text-muted-foreground hover:text-primary transition-colors"
+                                 className="block text-lg font-medium text-muted-foreground hover:text-primary transition-colors py-2 mobile-touch-target"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Instrutor
               </a>
               <a 
                 href="#depoimentos" 
-                                 className="block text-base sm:text-lg font-medium text-muted-foreground hover:text-primary transition-colors"
+                                 className="block text-lg font-medium text-muted-foreground hover:text-primary transition-colors py-2 mobile-touch-target"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Depoimentos
               </a>
               <a 
                 href="#faq" 
-                                 className="block text-base sm:text-lg font-medium text-muted-foreground hover:text-primary transition-colors"
+                                 className="block text-lg font-medium text-muted-foreground hover:text-primary transition-colors py-2 mobile-touch-target"
                 onClick={() => setIsMenuOpen(false)}
               >
                 FAQ
