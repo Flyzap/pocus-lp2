@@ -77,9 +77,17 @@ const Footer = () => {
         
         {/* Bottom */}
         <div className="border-t border-border mt-12 pt-8 text-center">
-          <p className="text-muted-foreground text-sm">
-            © 2024 POCUS Expert. Todos os direitos reservados. CNPJ: 00.000.000/0001-00
-          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-muted-foreground text-sm">
+              © 2024 POCUS Expert. Todos os direitos reservados. CNPJ: 00.000.000/0001-00
+            </p>
+            <a 
+              href="/admin" 
+              className="text-xs text-muted-foreground hover:text-primary transition-colors opacity-50 hover:opacity-100"
+            >
+              Painel Admin
+            </a>
+          </div>
         </div>
       </div>
       

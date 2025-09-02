@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Play, ArrowRight } from "lucide-react";
-import instructorHero from "@/assets/instructor-hero.jpg";
+import { useImageManager } from "@/hooks/useImageManager";
 
 const HeroSection = () => {
+  const { images } = useImageManager();
+  
   return (
     <section className="relative min-h-screen hero-gradient flex items-center justify-center overflow-hidden">
       {/* Background Glow Effects */}
@@ -53,7 +55,7 @@ const HeroSection = () => {
           <div className="relative">
             <div className="relative">
               <img 
-                src={instructorHero} 
+                src={images.instructorHero} 
                 alt="Instrutor de POCUS ensinando ultrassonografia" 
                 className="w-full h-auto rounded-2xl shadow-2xl premium-glow"
               />

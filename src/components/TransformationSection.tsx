@@ -1,14 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Quote } from "lucide-react";
-// 📸 SUBSTITUIR IMAGEM DA TRANSFORMAÇÃO:
-// Para adicionar sua própria imagem, substitua o arquivo "transformation.jpg" 
-// na pasta src/assets/ pela sua imagem.
-// DIMENSÕES RECOMENDADAS: 1200x800px (16:9) ou similar
-// FORMATO: JPG, PNG ou WebP
-// QUALIDADE: Alta resolução para melhor resultado visual
-import transformationImage from "@/assets/transformation.jpg";
+import { useImageManager } from "@/hooks/useImageManager";
 
 const TransformationSection = () => {
+  const { images } = useImageManager();
+  
   return (
     <section className="py-20 bg-card">
       <div className="container mx-auto px-6">
@@ -26,7 +22,7 @@ const TransformationSection = () => {
             {/* Transformation Image */}
             <div className="relative">
               <img 
-                src={transformationImage}
+                src={images.transformation}
                 alt="Transformação profissional - antes e depois do curso de POCUS"
                 className="w-full h-auto rounded-2xl premium-glow"
               />

@@ -1,12 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
-// 📸 SUBSTITUIR IMAGEM DO INSTRUTOR:
-// Para adicionar sua própria foto, substitua o arquivo "instructor-profile.jpg" 
-// na pasta src/assets/ pela sua imagem.
-// DIMENSÕES RECOMENDADAS: 800x800px (formato quadrado) ou maior
-// FORMATO: JPG, PNG ou WebP
-// QUALIDADE: Alta resolução para melhor resultado no premium-glow
-import instructorProfile from "@/assets/instructor-profile.jpg";
+import { useImageManager } from "@/hooks/useImageManager";
 
 // 👨‍⚕️ PERSONALIZAÇÃO RÁPIDA:
 // Para personalizar nome, especialidade e credenciais,
@@ -23,14 +17,15 @@ const INSTRUCTOR_CONFIG = {
   
   // 🏆 Credenciais (adicione ou remova itens conforme necessário)
   credentials: [
-    "✅ 15+ anos de experiência",
-    "✅ 5.000+ médicos treinados", 
-    "✅ Certificado SBUS",
+    "✅ 5+ anos de experiência",
+    "✅ 5.000+ médicos treinados",
     "✅ Professor universitário"
   ]
 };
 
 const InstructorSection = () => {
+  const { images } = useImageManager();
+  
   return (
     <section className="py-20 bg-secondary">
       <div className="container mx-auto px-6">
@@ -40,7 +35,7 @@ const InstructorSection = () => {
             <div className="relative">
               <div className="relative">
                 <img 
-                  src={instructorProfile} 
+                  src={images.instructorProfile} 
                   alt={`${INSTRUCTOR_CONFIG.name} - Especialista em ${INSTRUCTOR_CONFIG.specialty}`}
                   className="w-80 h-80 object-cover rounded-full mx-auto premium-glow" 
                 />
