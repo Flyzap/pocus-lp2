@@ -118,14 +118,7 @@ const Admin = () => {
               recommendedDimensions="800x800px (quadrada)"
             />
 
-            {/* Imagem de Transformação */}
-            <ImageManager
-              currentImage={images.transformation}
-              onImageChange={(newSrc) => updateImage('transformation', newSrc)}
-              title="Imagem de Transformação"
-              description="Imagem que ilustra a transformação profissional na seção de benefícios."
-              recommendedDimensions="1200x800px (16:9)"
-            />
+
 
           </div>
 

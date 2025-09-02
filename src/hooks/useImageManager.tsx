@@ -3,20 +3,17 @@ import { useState, useEffect } from 'react';
 // Imagens padrão (fallback)
 import instructorHeroDefault from "@/assets/instructor-hero.jpg";
 import instructorProfileDefault from "@/assets/instructor-profile.jpg";
-import transformationDefault from "@/assets/transformation.jpg";
 
 // Chaves para localStorage
 const STORAGE_KEYS = {
   instructorHero: 'pocus-instructor-hero-image',
-  instructorProfile: 'pocus-instructor-profile-image', 
-  transformation: 'pocus-transformation-image'
+  instructorProfile: 'pocus-instructor-profile-image'
 };
 
 // Imagens padrão
 const DEFAULT_IMAGES = {
   instructorHero: instructorHeroDefault,
-  instructorProfile: instructorProfileDefault,
-  transformation: transformationDefault
+  instructorProfile: instructorProfileDefault
 };
 
 export type ImageKey = keyof typeof DEFAULT_IMAGES;
@@ -43,8 +40,7 @@ export const useImageManager = (): UseImageManagerReturn => {
 
     return {
       instructorHero: savedImages.instructorHero || DEFAULT_IMAGES.instructorHero,
-      instructorProfile: savedImages.instructorProfile || DEFAULT_IMAGES.instructorProfile,
-      transformation: savedImages.transformation || DEFAULT_IMAGES.transformation,
+      instructorProfile: savedImages.instructorProfile || DEFAULT_IMAGES.instructorProfile
     };
   });
 
