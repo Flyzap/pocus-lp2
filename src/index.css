@@ -124,20 +124,26 @@ All colors MUST be HSL.
 
   /* Melhorar tipografia em mobile */
   html {
-    font-size: 16px;
+    font-size: 14px; /* Reduzido para mobile */
     scroll-behavior: smooth;
   }
 
   /* Otimizações para mobile */
-  @media (max-width: 640px) {
+  @media (min-width: 640px) {
     html {
-      font-size: 14px;
+      font-size: 16px; /* Tamanho normal para desktop */
     }
   }
 
   /* Scroll suave para navegação */
   html {
-    scroll-padding-top: 5rem; /* Compensar navbar fixa */
+    scroll-padding-top: 4rem; /* Compensar navbar fixa - reduzido para mobile */
+  }
+
+  @media (min-width: 640px) {
+    html {
+      scroll-padding-top: 5rem; /* Compensar navbar fixa - desktop */
+    }
   }
 }
 

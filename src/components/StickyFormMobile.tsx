@@ -95,9 +95,9 @@ const StickyFormMobile = () => {
         {/* Full Form */}
         {!isMinimized && (
           <div className="bg-background border-t border-border shadow-2xl premium-glow">
-            <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4">
+            <div className="container mx-auto px-2.5 sm:px-3 lg:px-4 py-2.5 sm:py-3 lg:py-4">
               {/* Header com botão fechar */}
-              <div className="flex items-center justify-between mb-3 sm:mb-4">
+              <div className="flex items-center justify-between mb-2.5 sm:mb-3 lg:mb-4">
                 <div className="text-xs sm:text-sm font-bold text-foreground">
                   📱 BAIXE O EBOOK GRÁTIS AGORA
                 </div>
@@ -105,14 +105,14 @@ const StickyFormMobile = () => {
                   onClick={() => setIsVisible(false)}
                   className="text-muted-foreground hover:text-foreground p-1"
                 >
-                  <X size={18} className="sm:w-5 sm:h-5" />
+                  <X size={16} className="sm:w-5 sm:h-5" />
                 </button>
               </div>
 
               {isSuccess ? (
                 // Success State
-                <div className="text-center py-3 sm:py-4">
-                  <div className="text-green-600 font-bold text-base sm:text-lg mb-2">
+                <div className="text-center py-2.5 sm:py-3 lg:py-4">
+                  <div className="text-green-600 font-bold text-sm sm:text-base lg:text-lg mb-2">
                     ✅ EBOOK ENVIADO!
                   </div>
                   <p className="text-xs sm:text-sm text-muted-foreground">
@@ -121,7 +121,7 @@ const StickyFormMobile = () => {
                 </div>
               ) : (
                 // Form State
-                <form onSubmit={handleSubmit} className="space-y-3">
+                <form onSubmit={handleSubmit} className="space-y-2.5 sm:space-y-3">
                   <div className="flex gap-2 sm:gap-3">
                     <div className="flex-1">
                       <Input
@@ -129,7 +129,7 @@ const StickyFormMobile = () => {
                         value={whatsapp}
                         onChange={handleWhatsAppChange}
                         placeholder="(82) 98103-9197"
-                        className={`h-10 sm:h-12 text-sm sm:text-base ${
+                        className={`h-9 sm:h-10 lg:h-12 text-sm sm:text-base ${
                           error ? 'border-red-500 focus:border-red-500' : ''
                         }`}
                         required
@@ -142,7 +142,7 @@ const StickyFormMobile = () => {
                     <Button
                       type="submit"
                       disabled={isLoading}
-                      className={`font-bold px-4 sm:px-6 h-10 sm:h-12 premium-glow whitespace-nowrap text-xs sm:text-sm ${
+                      className={`font-bold px-3 sm:px-4 lg:px-6 h-9 sm:h-10 lg:h-12 premium-glow whitespace-nowrap text-xs sm:text-sm ${
                         error
                           ? 'bg-red-600 hover:bg-red-700'
                           : 'bg-primary hover:bg-primary-dark'
@@ -153,7 +153,7 @@ const StickyFormMobile = () => {
                       ) : (
                         <>
                           QUERO!
-                          <ArrowRight size={14} className="sm:w-4 sm:h-4 ml-1" />
+                          <ArrowRight size={12} className="sm:w-4 sm:h-4 ml-1" />
                         </>
                       )}
                     </Button>
