@@ -1,54 +1,54 @@
 import { 
-  Video, 
   FileText, 
-  Award, 
-  MessageCircle, 
-  Clock, 
-  Shield,
+  AlertTriangle, 
+  BookOpen, 
+  Zap, 
+  Smartphone, 
+  Video,
   Download,
-  Smartphone
+  Clock
 } from "lucide-react";
 
 const benefits = [
   {
-    icon: Video,
-    title: "+40 Vídeos de Casos Clínicos",
-    description: "Casos reais guiados passo a passo, desde o básico até situações complexas de emergência"
-  },
-  {
     icon: FileText,
-    title: "PDFs de Protocolos Prontos",
-    description: "Protocolos organizados por especialidade para usar diretamente no plantão"
+    title: "📋 Protocolo FAST",
+    description: "Passo a passo completo para ultrassom abdominal de emergência com técnica detalhada"
   },
   {
-    icon: Award,
-    title: "Certificado de 60 Horas",
-    description: "Certificado reconhecido para currículo e especialização médica continuada"
+    icon: AlertTriangle,
+    title: "🚨 Checklist de Emergência",
+    description: "Para usar no plantão - protocolo rápido com decisões clínicas fundamentais"
   },
   {
-    icon: MessageCircle,
-    title: "Suporte com Especialistas",
-    description: "Tire dúvidas direto com nossa equipe médica via chat exclusivo"
+    icon: BookOpen,
+    title: "📊 Casos Clínicos Ilustrados",
+    description: "10 situações reais com imagens e interpretação passo a passo"
   },
   {
-    icon: Clock,
-    title: "Acesso Vitalício",
-    description: "Assista quando e onde quiser, no seu tempo, com acesso para sempre"
-  },
-  {
-    icon: Shield,
-    title: "Garantia de 7 Dias",
-    description: "Teste o curso por 7 dias. Se não gostar, devolvemos 100% do seu dinheiro"
-  },
-  {
-    icon: Download,
-    title: "Downloads Offline",
-    description: "Baixe as aulas e assista mesmo sem internet, ideal para plantões"
+    icon: Zap,
+    title: "⚡ Guia Rápido de Interpretação",
+    description: "Referência instantânea com os principais achados e diagnósticos diferenciais"
   },
   {
     icon: Smartphone,
-    title: "App Mobile Exclusivo",
-    description: "Acesse pelo celular ou tablet com nossa plataforma otimizada"
+    title: "📱 Versão Mobile",
+    description: "PDF otimizado para celular - consulte durante o plantão facilmente"
+  },
+  {
+    icon: Video,
+    title: "🎥 Acesso a Aula Bônus",
+    description: "Vídeo exclusivo de 30min com demonstração prática dos protocolos"
+  },
+  {
+    icon: Download,
+    title: "💾 Download Instantâneo",
+    description: "Receba imediatamente no WhatsApp - sem espera, sem complicação"
+  },
+  {
+    icon: Clock,
+    title: "⏱️ Leitura Rápida",
+    description: "Conteúdo direto ao ponto - 15 minutos para dominar o essencial"
   }
 ];
 
@@ -58,10 +58,10 @@ const BenefitsSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Tudo que você vai <span className="text-primary">Receber</span>
+            O que você vai receber <span className="text-primary">GRATUITAMENTE</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Um curso completo com tudo que você precisa para dominar a ultrassonografia point-of-care
+            Material completo de POCUS para transformar sua prática médica hoje mesmo
           </p>
         </div>
         
@@ -83,17 +83,29 @@ const BenefitsSection = () => {
           ))}
         </div>
         
-        {/* Total Value */}
+        {/* Ebook Preview */}
         <div className="mt-16 text-center">
-          <div className="premium-card p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Valor Total do Pacote Completo
+          <div className="premium-card p-8 max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold text-foreground mb-6">
+              📖 Prévia do Ebook POCUS
             </h3>
-            <div className="space-y-2">
-              <div className="text-4xl font-bold text-primary">R$ 2.497</div>
-              <div className="text-muted-foreground line-through">De R$ 4.500</div>
-              <div className="text-primary font-semibold">
-                Economia de mais de R$ 2.000
+            <div className="bg-background/50 rounded-lg p-6 space-y-4">
+              <div className="grid md:grid-cols-3 gap-4 text-sm">
+                <div className="space-y-2">
+                  <div className="font-bold text-primary">Capítulo 1-3:</div>
+                  <div className="text-muted-foreground">Fundamentos e Técnica Básica</div>
+                </div>
+                <div className="space-y-2">
+                  <div className="font-bold text-primary">Capítulo 4-6:</div>
+                  <div className="text-muted-foreground">Protocolo FAST Detalhado</div>
+                </div>
+                <div className="space-y-2">
+                  <div className="font-bold text-primary">Capítulo 7-9:</div>
+                  <div className="text-muted-foreground">Casos Clínicos e Emergências</div>
+                </div>
+              </div>
+              <div className="text-green-600 font-bold text-lg">
+                ✅ TOTALMENTE GRATUITO ✅
               </div>
             </div>
           </div>

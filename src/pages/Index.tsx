@@ -1,23 +1,25 @@
 import HeroSection from "@/components/HeroSection";
-import LeadMagnetSection from "@/components/LeadMagnetSection";
-import InstructorSection from "@/components/InstructorSection";
+import SocialProofSection from "@/components/SocialProofSection";
 import BenefitsSection from "@/components/BenefitsSection";
+import InstructorSection from "@/components/InstructorSection";
 import ObjectionsSection from "@/components/ObjectionsSection";
 import TransformationSection from "@/components/TransformationSection";
 import FAQSection from "@/components/FAQSection";
+import StickyFormMobile from "@/components/StickyFormMobile";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <HeroSection />
-      <LeadMagnetSection />
-      <InstructorSection />
+      <SocialProofSection />
       <BenefitsSection />
+      <InstructorSection />
       <ObjectionsSection />
       <TransformationSection />
       <FAQSection />
       <Footer />
+      <StickyFormMobile />
     </div>
   );
 };

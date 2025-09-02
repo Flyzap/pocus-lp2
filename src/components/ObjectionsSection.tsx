@@ -2,28 +2,28 @@ import { Check } from "lucide-react";
 
 const objections = [
   {
-    title: "Mesmo que você nunca tenha usado um aparelho de ultrassom...",
-    description: "Nosso método vai do absoluto zero. Começamos com o básico: como ligar o aparelho, ajustar configurações e interpretar as primeiras imagens."
+    title: "É realmente grátis?",
+    description: "Sim, 100% gratuito! O ebook completo + PDF de emergência + aula bônus. Não cobramos nada, é nossa forma de contribuir com a medicina brasileira."
   },
   {
-    title: "Mesmo que ainda esteja na residência médica...",
-    description: "O curso é especialmente pensado para residentes. Técnicas práticas que você pode aplicar imediatamente no seu plantão."
+    title: "Vão me enviar spam no WhatsApp?",
+    description: "Jamais! Apenas conteúdo de valor: dicas práticas de POCUS, casos clínicos e atualizações. Você pode cancelar quando quiser."
   },
   {
-    title: "Mesmo que não tenha tempo para estudar...",
-    description: "Aulas de 10-15 minutos, direto ao ponto. Você aprende no seu ritmo, quando e onde quiser."
+    title: "Preciso ter experiência prévia?",
+    description: "Não! O ebook vai do zero ao avançado. Perfeito tanto para quem nunca usou ultrassom quanto para quem quer aperfeiçoar."
   },
   {
-    title: "Mesmo que ache ultrassom muito difícil...",
-    description: "Método didático comprovado com mais de 5.000 médicos. Se eles conseguiram, você também consegue."
+    title: "Funciona no meu aparelho de ultrassom?",
+    description: "Sim! Os protocolos funcionam em qualquer marca e modelo. Focamos na técnica e interpretação, não no equipamento específico."
   },
   {
-    title: "Mesmo que já tenha tentado aprender antes...",
-    description: "Nosso método é diferente: foco na prática clínica real, não apenas teoria. Casos que você vê todo dia."
+    title: "Tenho pouco tempo para ler...",
+    description: "O ebook foi pensado para médicos ocupados: leitura de 15 minutos + checklist rápido para consulta durante o plantão."
   },
   {
-    title: "Mesmo que o hospital não tenha equipamento...",
-    description: "Ensinamos técnicas para qualquer tipo de aparelho, desde os mais simples até os mais modernos."
+    title: "Como vou receber o material?",
+    description: "Instantaneamente pelo WhatsApp! Assim que você informar seu número, enviamos os links de download imediatamente."
   }
 ];
 
@@ -33,10 +33,10 @@ const ObjectionsSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            <span className="text-primary">Não importa</span> seu nível atual
+            <span className="text-primary">Sem pegadinhas,</span> sem complicação
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Este curso foi pensado para funcionar independente da sua experiência prévia
+            Respondemos as principais dúvidas sobre nosso ebook gratuito de POCUS
           </p>
         </div>
         
@@ -67,13 +67,13 @@ const ObjectionsSection = () => {
         <div className="text-center mt-16">
           <div className="premium-card p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Pare de adiar seu crescimento profissional
+              Ainda com dúvidas? É só baixar!
             </h3>
             <p className="text-muted-foreground mb-6">
-              Cada dia que passa é uma oportunidade perdida de fazer diagnósticos mais precisos e salvar mais vidas.
+              Não perca tempo. O ebook é gratuito e você recebe instantaneamente. Não tem nada a perder!
             </p>
             <div className="text-primary font-bold text-lg">
-              Seu futuro médico começa agora! 👨‍⚕️
+              ✅ 100% Gratuito ✅ Download Imediato ✅ Sem Compromisso
             </div>
           </div>
         </div>
