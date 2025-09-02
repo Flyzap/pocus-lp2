@@ -3,40 +3,40 @@ import { Instagram, MessageCircle, Youtube, Mail, Phone } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="bg-background border-t border-border">
-      <div className="container mx-auto px-6 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
+      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Brand */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold text-primary">POCUS Expert</h3>
-            <p className="text-muted-foreground text-sm">
+          <div className="space-y-3 sm:space-y-4 text-center sm:text-left">
+            <h3 className="text-lg sm:text-xl font-bold text-primary">POCUS Expert</h3>
+            <p className="text-xs sm:text-sm text-muted-foreground">
               O curso mais completo de ultrassonografia point-of-care do Brasil.
             </p>
-            <div className="flex gap-4">
+            <div className="flex justify-center sm:justify-start gap-3 sm:gap-4">
               <a 
                 href="#" 
-                className="w-10 h-10 bg-card rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors group"
+                className="w-8 h-8 sm:w-10 sm:h-10 bg-card rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors group"
               >
-                <Instagram size={18} className="text-muted-foreground group-hover:text-primary" />
+                <Instagram size={16} className="sm:w-[18px] sm:h-[18px] text-muted-foreground group-hover:text-primary" />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 bg-card rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors group"
+                className="w-8 h-8 sm:w-10 sm:h-10 bg-card rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors group"
               >
-                <Youtube size={18} className="text-muted-foreground group-hover:text-primary" />
+                <Youtube size={16} className="sm:w-[18px] sm:h-[18px] text-muted-foreground group-hover:text-primary" />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 bg-card rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors group"
+                className="w-8 h-8 sm:w-10 sm:h-10 bg-card rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors group"
               >
-                <MessageCircle size={18} className="text-muted-foreground group-hover:text-primary" />
+                <MessageCircle size={16} className="sm:w-[18px] sm:h-[18px] text-muted-foreground group-hover:text-primary" />
               </a>
             </div>
           </div>
           
           {/* Links */}
-          <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Curso</h4>
-            <ul className="space-y-2 text-sm">
+          <div className="space-y-3 sm:space-y-4 text-center sm:text-left">
+            <h4 className="font-semibold text-sm sm:text-base text-foreground">Curso</h4>
+            <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
               <li><a href="#" className="text-muted-foreground hover:text-primary">Conteúdo</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-primary">Instrutor</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-primary">Depoimentos</a></li>
@@ -45,9 +45,9 @@ const Footer = () => {
           </div>
           
           {/* Support */}
-          <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Suporte</h4>
-            <ul className="space-y-2 text-sm">
+          <div className="space-y-3 sm:space-y-4 text-center sm:text-left">
+            <h4 className="font-semibold text-sm sm:text-base text-foreground">Suporte</h4>
+            <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
               <li><a href="#" className="text-muted-foreground hover:text-primary">Central de Ajuda</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-primary">FAQ</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-primary">Contato</a></li>
@@ -56,19 +56,19 @@ const Footer = () => {
           </div>
           
           {/* Contact */}
-          <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Contato</h4>
-            <div className="space-y-3 text-sm">
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <Mail size={16} />
+          <div className="space-y-3 sm:space-y-4 text-center sm:text-left">
+            <h4 className="font-semibold text-sm sm:text-base text-foreground">Contato</h4>
+            <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
+              <div className="flex items-center justify-center sm:justify-start gap-2 text-muted-foreground">
+                <Mail size={14} className="sm:w-4 sm:h-4" />
                 <span>contato@pocusexpert.com</span>
               </div>
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <Phone size={16} />
+              <div className="flex items-center justify-center sm:justify-start gap-2 text-muted-foreground">
+                <Phone size={14} className="sm:w-4 sm:h-4" />
                 <span>(11) 99999-9999</span>
               </div>
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <MessageCircle size={16} />
+              <div className="flex items-center justify-center sm:justify-start gap-2 text-muted-foreground">
+                <MessageCircle size={14} className="sm:w-4 sm:h-4" />
                 <span>WhatsApp 24h</span>
               </div>
             </div>
@@ -76,9 +76,9 @@ const Footer = () => {
         </div>
         
         {/* Bottom */}
-        <div className="border-t border-border mt-12 pt-8 text-center">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-muted-foreground text-sm">
+        <div className="border-t border-border mt-8 sm:mt-12 pt-6 sm:pt-8 text-center">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
+            <p className="text-xs sm:text-sm text-muted-foreground">
               © 2024 POCUS Expert. Todos os direitos reservados. CNPJ: 00.000.000/0001-00
             </p>
             <a 
@@ -92,14 +92,14 @@ const Footer = () => {
       </div>
       
       {/* Floating WhatsApp */}
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50">
         <a 
           href="https://wa.me/5511999999999" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="w-16 h-16 bg-primary rounded-full flex items-center justify-center premium-glow animate-pulse-glow hover:scale-110 transition-transform"
+          className="w-12 h-12 sm:w-16 sm:h-16 bg-primary rounded-full flex items-center justify-center premium-glow animate-pulse-glow hover:scale-110 transition-transform"
         >
-          <MessageCircle size={28} className="text-primary-foreground" />
+          <MessageCircle size={20} className="sm:w-7 sm:h-7 text-primary-foreground" />
         </a>
       </div>
     </footer>

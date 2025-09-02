@@ -51,21 +51,21 @@ const SocialProofSection = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-card">
-      <div className="container mx-auto px-6">
+    <section className="py-12 sm:py-16 bg-card">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Contador de Downloads */}
-        <div className="text-center mb-12">
-          <div className="premium-card p-8 max-w-2xl mx-auto">
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <Download className="text-primary" size={32} />
-              <div className="text-4xl lg:text-5xl font-bold text-primary">
+        <div className="text-center mb-8 sm:mb-12">
+          <div className="premium-card p-6 sm:p-8 max-w-2xl mx-auto">
+            <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4">
+              <Download className="text-primary w-8 h-8 sm:w-8 sm:h-8" />
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary">
                 {currentDownloads.toLocaleString('pt-BR')}
               </div>
             </div>
-            <h3 className="text-xl font-bold text-foreground mb-2">
+            <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2">
               Médicos já baixaram o ebook
             </h3>
-            <p className="text-muted-foreground">
+            <p className="text-sm sm:text-base text-muted-foreground">
               Junte-se a milhares de profissionais que já dominam POCUS
             </p>
           </div>
@@ -73,39 +73,39 @@ const SocialProofSection = () => {
 
         {/* Testimonials Rotativos */}
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-2xl font-bold text-center text-foreground mb-8">
+          <h3 className="text-xl sm:text-2xl font-bold text-center text-foreground mb-6 sm:mb-8">
             O que os médicos estão falando sobre o ebook
           </h3>
           
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {testimonials.slice(currentTestimonial, currentTestimonial + 2).map((testimonial, index) => (
               <div 
                 key={`${currentTestimonial}-${index}`} 
-                className="premium-card p-6 space-y-4 transition-all duration-500 transform"
+                className="premium-card p-4 sm:p-6 space-y-3 sm:space-y-4 transition-all duration-500 transform"
               >
                 {/* Rating */}
                 <div className="flex gap-1">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} size={16} className="text-yellow-500 fill-current" />
+                    <Star key={i} size={14} className="sm:w-4 sm:h-4 text-yellow-500 fill-current" />
                   ))}
                 </div>
                 
                 {/* Testimonial Text */}
-                <p className="text-muted-foreground italic">
+                <p className="text-sm sm:text-base text-muted-foreground italic">
                   "{testimonial.text}"
                 </p>
                 
                 {/* Author */}
-                <div className="border-t pt-4">
-                  <div className="font-bold text-foreground">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.specialty}</div>
+                <div className="border-t pt-3 sm:pt-4">
+                  <div className="font-bold text-sm sm:text-base text-foreground">{testimonial.name}</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">{testimonial.specialty}</div>
                 </div>
               </div>
             ))}
           </div>
 
           {/* Indicadores */}
-          <div className="flex justify-center gap-2 mt-6">
+          <div className="flex justify-center gap-2 mt-4 sm:mt-6">
             {testimonials.map((_, index) => (
               <button
                 key={index}
@@ -119,15 +119,15 @@ const SocialProofSection = () => {
         </div>
 
         {/* Urgência */}
-        <div className="text-center mt-12">
-          <div className="premium-card p-6 max-w-lg mx-auto bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border-yellow-500/30">
-            <div className="text-yellow-600 font-bold text-lg mb-2">
+        <div className="text-center mt-8 sm:mt-12">
+          <div className="premium-card p-4 sm:p-6 max-w-lg mx-auto bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border-yellow-500/30">
+            <div className="text-yellow-600 font-bold text-base sm:text-lg mb-2">
               ⚡ OFERTA LIMITADA
             </div>
-            <p className="text-foreground font-semibold">
+            <p className="text-sm sm:text-base text-foreground font-semibold">
               Ebook gratuito por tempo limitado
             </p>
-            <p className="text-sm text-muted-foreground mt-2">
+            <p className="text-xs sm:text-sm text-muted-foreground mt-2">
               Garante já o seu antes que volte a ser pago
             </p>
           </div>

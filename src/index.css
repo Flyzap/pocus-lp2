@@ -117,6 +117,21 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    /* Melhorar scroll em mobile */
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  /* Melhorar tipografia em mobile */
+  html {
+    font-size: 16px;
+  }
+
+  /* Otimizações para mobile */
+  @media (max-width: 640px) {
+    html {
+      font-size: 14px;
+    }
   }
 }
 
@@ -204,5 +219,31 @@ All colors MUST be HSL.
     /* Força suavização máxima */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Melhorias para mobile */
+  .mobile-optimized {
+    /* Otimizações específicas para mobile */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  /* Melhorar botões em mobile */
+  .mobile-button {
+    min-height: 44px; /* Tamanho mínimo recomendado para touch */
+    min-width: 44px;
+  }
+
+  /* Melhorar inputs em mobile */
+  .mobile-input {
+    font-size: 16px; /* Evita zoom em iOS */
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+
+  /* Melhorar scroll em mobile */
+  .mobile-scroll {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
   }
 }

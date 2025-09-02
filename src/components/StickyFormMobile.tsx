@@ -17,8 +17,8 @@ const StickyFormMobile = () => {
     const handleScroll = () => {
       const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
       
-      // Mostrar após 50% da página percorrida
-      if (scrollPercentage > 50 && !isSuccess) {
+      // Mostrar após 30% da página percorrida (mais cedo para mobile)
+      if (scrollPercentage > 30 && !isSuccess) {
         setIsVisible(true);
       }
     };
@@ -82,10 +82,10 @@ const StickyFormMobile = () => {
       }`}>
         {/* Minimized State - apenas ícone */}
         {isMinimized && (
-          <div className="flex justify-end p-4">
+          <div className="flex justify-end p-3 sm:p-4">
             <button
               onClick={() => setIsMinimized(false)}
-              className="bg-primary text-primary-foreground rounded-full p-3 shadow-lg premium-glow"
+              className="bg-primary text-primary-foreground rounded-full p-3 sm:p-4 shadow-lg premium-glow text-xs sm:text-sm font-bold"
             >
               📱 EBOOK GRÁTIS
             </button>
@@ -95,41 +95,41 @@ const StickyFormMobile = () => {
         {/* Full Form */}
         {!isMinimized && (
           <div className="bg-background border-t border-border shadow-2xl premium-glow">
-            <div className="container mx-auto px-4 py-4">
+            <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4">
               {/* Header com botão fechar */}
-              <div className="flex items-center justify-between mb-4">
-                <div className="text-sm font-bold text-foreground">
+              <div className="flex items-center justify-between mb-3 sm:mb-4">
+                <div className="text-xs sm:text-sm font-bold text-foreground">
                   📱 BAIXE O EBOOK GRÁTIS AGORA
                 </div>
                 <button
                   onClick={() => setIsVisible(false)}
-                  className="text-muted-foreground hover:text-foreground"
+                  className="text-muted-foreground hover:text-foreground p-1"
                 >
-                  <X size={20} />
+                  <X size={18} className="sm:w-5 sm:h-5" />
                 </button>
               </div>
 
               {isSuccess ? (
                 // Success State
-                <div className="text-center py-4">
-                  <div className="text-green-600 font-bold text-lg mb-2">
+                <div className="text-center py-3 sm:py-4">
+                  <div className="text-green-600 font-bold text-base sm:text-lg mb-2">
                     ✅ EBOOK ENVIADO!
                   </div>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-xs sm:text-sm text-muted-foreground">
                     Verifique seu WhatsApp agora mesmo
                   </p>
                 </div>
               ) : (
                 // Form State
                 <form onSubmit={handleSubmit} className="space-y-3">
-                  <div className="flex gap-3">
+                  <div className="flex gap-2 sm:gap-3">
                     <div className="flex-1">
                       <Input
                         type="tel"
                         value={whatsapp}
                         onChange={handleWhatsAppChange}
                         placeholder="(82) 98103-9197"
-                        className={`h-12 text-base ${
+                        className={`h-10 sm:h-12 text-sm sm:text-base ${
                           error ? 'border-red-500 focus:border-red-500' : ''
                         }`}
                         required
@@ -142,18 +142,18 @@ const StickyFormMobile = () => {
                     <Button
                       type="submit"
                       disabled={isLoading}
-                      className={`font-bold px-6 h-12 premium-glow whitespace-nowrap ${
+                      className={`font-bold px-4 sm:px-6 h-10 sm:h-12 premium-glow whitespace-nowrap text-xs sm:text-sm ${
                         error
                           ? 'bg-red-600 hover:bg-red-700'
                           : 'bg-primary hover:bg-primary-dark'
                       } text-primary-foreground`}
                     >
                       {isLoading ? (
-                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                        <div className="w-3 h-3 sm:w-4 sm:h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
                       ) : (
                         <>
                           QUERO!
-                          <ArrowRight size={16} className="ml-1" />
+                          <ArrowRight size={14} className="sm:w-4 sm:h-4 ml-1" />
                         </>
                       )}
                     </Button>

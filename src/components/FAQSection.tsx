@@ -42,30 +42,30 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-6">
+    <section className="py-12 sm:py-16 lg:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
               <span className="text-primary">Dúvidas</span> sobre o Ebook
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
               Respostas para as principais perguntas sobre o download gratuito
             </p>
           </div>
           
-          <div className="premium-card p-8">
-            <Accordion type="single" collapsible className="space-y-4">
+          <div className="premium-card p-4 sm:p-6 lg:p-8">
+            <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
               {faqs.map((faq, index) => (
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`}
-                  className="border border-border rounded-lg px-6"
+                  className="border border-border rounded-lg px-3 sm:px-6"
                 >
-                  <AccordionTrigger className="text-left font-semibold text-primary hover:text-primary-glow">
+                  <AccordionTrigger className="text-left font-semibold text-sm sm:text-base text-primary hover:text-primary-glow">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pt-4 leading-relaxed">
+                  <AccordionContent className="text-xs sm:text-sm text-muted-foreground pt-3 sm:pt-4 leading-relaxed">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -74,15 +74,15 @@ const FAQSection = () => {
           </div>
           
           {/* Still have questions */}
-          <div className="text-center mt-12">
-            <p className="text-muted-foreground mb-4">
+          <div className="text-center mt-8 sm:mt-12">
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Ainda tem dúvidas sobre o ebook? Nossa equipe médica está pronta para ajudar!
             </p>
             <a 
               href="https://wa.me/5582981039197" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-primary hover:text-primary-glow font-semibold"
+              className="inline-flex items-center gap-2 text-primary hover:text-primary-glow font-semibold text-sm sm:text-base"
             >
               💬 Tire suas dúvidas no WhatsApp
             </a>

@@ -26,17 +26,17 @@ const InstructorSection = () => {
   const { images } = useImageManager();
   
   return (
-    <section className="py-20 bg-secondary">
-      <div className="container mx-auto px-6">
+    <section className="py-12 sm:py-16 lg:py-20 bg-secondary">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Instructor Photo & Video */}
-            <div className="relative">
+            <div className="relative order-first lg:order-last">
               <div className="relative">
                 <img 
                   src={images.instructorProfile} 
                   alt={`${INSTRUCTOR_CONFIG.name} - Especialista em ${INSTRUCTOR_CONFIG.specialty}`}
-                  className="w-96 h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] object-cover rounded-full mx-auto premium-glow instructor-image" 
+                  className="w-64 h-64 sm:w-80 sm:h-80 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] object-cover rounded-full mx-auto premium-glow instructor-image" 
                   loading="eager"
                   fetchPriority="high"
                   decoding="sync"
@@ -46,23 +46,23 @@ const InstructorSection = () => {
             </div>
             
             {/* Bio Content */}
-            <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
+            <div className="space-y-4 sm:space-y-6 text-center lg:text-left">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">
                 Conheça seu <span className="text-primary">Instrutor</span>
               </h2>
               
-              <div className="space-y-4 text-lg text-muted-foreground">
+              <div className="space-y-3 sm:space-y-4 text-base sm:text-lg text-muted-foreground">
                 <p>
                   <strong className="text-primary">{INSTRUCTOR_CONFIG.name}</strong> {INSTRUCTOR_CONFIG.bio}
                 </p>
               </div>
               
               {/* Credentials */}
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
                 {INSTRUCTOR_CONFIG.credentials.map((credential, index) => (
                   <span 
                     key={index} 
-                    className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full"
+                    className="text-xs sm:text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full"
                   >
                     {credential}
                   </span>
