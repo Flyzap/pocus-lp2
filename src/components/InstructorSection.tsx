@@ -13,7 +13,7 @@ const INSTRUCTOR_CONFIG = {
   location: "Brasil",
   
   // 📝 Biografia (pode usar HTML simples para formatação)
-  bio: `é médico emergencista com mais de 4 anos de experiência em POCUS. Formado pela Universidade Federal de Alagoas.`,
+  bio: `é médico atuante em emergência e na terapia intensiva com mais de 4 anos de experiência em POCUS. Formado pela Universidade Federal de Alagoas.`,
   
   // 🏆 Credenciais (adicione ou remova itens conforme necessário)
   credentials: [
