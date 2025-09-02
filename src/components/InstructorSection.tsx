@@ -7,17 +7,17 @@ import { useImageManager } from "@/hooks/useImageManager";
 // modifique as constantes abaixo:
 const INSTRUCTOR_CONFIG = {
   name: "Dr. Saulo Salgueiro",
-  title: "Médico Emergencista",
-  experience: "5 anos de experiência",
+  title: "Médico atuante em emergência e na terapia intensiva",
+  experience: "4 anos de experiência",
   specialty: "POCUS",
   location: "Brasil",
   
   // 📝 Biografia (pode usar HTML simples para formatação)
-  bio: `é médico emergencista com mais de 5 anos de experiência em POCUS. Formado pela Universidade Federal de Alagoas.`,
+  bio: `é médico emergencista com mais de 4 anos de experiência em POCUS. Formado pela Universidade Federal de Alagoas.`,
   
   // 🏆 Credenciais (adicione ou remova itens conforme necessário)
   credentials: [
-    "✅ 5+ anos de experiência",
+    "✅ 4+ anos de experiência",
     "✅ Professor universitário"
   ]
 };

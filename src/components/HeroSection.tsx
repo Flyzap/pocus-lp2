@@ -64,13 +64,11 @@ const HeroSection = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+                <span className="text-foreground">Domine a</span>{" "}
                 <span className="text-primary bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                  Domine POCUS 
+                  Ultrassonografia
                 </span>{" "}
-                <span className="text-foreground">em 7 Dias com o</span>{" "}
-                <span className="text-primary bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                  Protocolo Completo
-                </span>
+                <span className="text-foreground">à Beira-leito</span>
               </h1>
               <p className="text-xl lg:text-2xl text-muted-foreground max-w-2xl">
                 Ebook gratuito + PDF de emergência para usar no plantão hoje mesmo
@@ -79,10 +77,10 @@ const HeroSection = () => {
             
             {/* Prova Social */}
             <div className="flex items-center gap-6 mb-8">
-              <div className="flex items-center gap-2">
-                <Download className="text-primary" size={20} />
-                <span className="text-foreground font-bold">12.847 downloads</span>
-              </div>
+                              <div className="flex items-center gap-2">
+                  <Download className="text-primary" size={20} />
+                  <span className="text-foreground font-bold">30+ downloads</span>
+                </div>
               <div className="w-2 h-2 bg-primary rounded-full"></div>
               <div className="text-sm text-muted-foreground">Médicos já dominam POCUS</div>
             </div>

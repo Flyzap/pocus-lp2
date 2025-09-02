@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 const objections = [
   {
     title: "É realmente grátis?",
-    description: "Sim, 100% gratuito! O ebook completo + PDF de emergência + aula bônus. Não cobramos nada, é nossa forma de contribuir com a medicina brasileira."
+    description: "Sim, 100% gratuito! O ebook completo."
   },
   {
     title: "Vão me enviar spam no WhatsApp?",

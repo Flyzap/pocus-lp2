@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const testimonials = [
   {
-    name: "Dr. Ana Carolina",
+    name: "Dra. Ana Carolina",
     specialty: "Emergencista - Hospital São Luís",
     text: "O ebook me deu confiança para usar POCUS na prática. Protocolo claro e direto ao ponto.",
     rating: 5
@@ -11,25 +11,25 @@ const testimonials = [
   {
     name: "Dr. Roberto Silva",
     specialty: "Intensivista - UTI Cardíaca",
-    text: "Excelente material! Uso o checklist de emergência todos os dias no plantão.",
+    text: "Excelente material!",
     rating: 5
   },
   {
     name: "Dra. Marina Santos",
-    specialty: "Clínica Médica - Hospital Albert Einstein",
-    text: "Finalmente um protocolo que funciona na prática. Recomendo para todos os colegas.",
+    specialty: "Clínica Médica - Santa Casa",
+    text: "Ótimo material! Recomendo para todos os colegas.",
     rating: 5
   },
   {
-    name: "Dr. Carlos Mendes",
-    specialty: "Cardiologista - InCor",
-    text: "Material didático excepcional. Em 15 minutos já estava aplicando as técnicas.",
+    name: "Dr Lucas Fernandes",
+    specialty: "Médico",
+    text: "Material didático excepcional.",
     rating: 5
   }
 ];
 
 const SocialProofSection = () => {
-  const [currentDownloads, setCurrentDownloads] = useState(12847);
+  const [currentDownloads, setCurrentDownloads] = useState(30);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   // Simular contador dinâmico de downloads
@@ -68,31 +68,6 @@ const SocialProofSection = () => {
             <p className="text-muted-foreground">
               Junte-se a milhares de profissionais que já dominam POCUS
             </p>
-            
-            {/* Estatísticas Adicionais */}
-            <div className="grid md:grid-cols-3 gap-6 mt-8">
-              <div className="flex items-center justify-center gap-2">
-                <Users className="text-primary" size={20} />
-                <div>
-                  <div className="font-bold text-foreground">50+</div>
-                  <div className="text-xs text-muted-foreground">Hospitais parceiros</div>
-                </div>
-              </div>
-              <div className="flex items-center justify-center gap-2">
-                <Star className="text-primary" size={20} />
-                <div>
-                  <div className="font-bold text-foreground">4.9/5</div>
-                  <div className="text-xs text-muted-foreground">Avaliação média</div>
-                </div>
-              </div>
-              <div className="flex items-center justify-center gap-2">
-                <Clock className="text-primary" size={20} />
-                <div>
-                  <div className="font-bold text-foreground">15min</div>
-                  <div className="text-xs text-muted-foreground">Tempo de leitura</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 

@@ -38,13 +38,11 @@ A landing page está estruturada como venda de curso, mas o objetivo é capturar
 ```
 HEADLINE: "Domine POCUS em 7 Dias com o Protocolo Completo"
 SUBHEADLINE: "Ebook gratuito + PDF de emergência para usar no plantão hoje mesmo"
-URGÊNCIA: "⏰ Disponível apenas até 31/01/2025"
-PROVA SOCIAL: "📱 12.847 médicos já baixaram"
 ```
 
 #### **Formulário Hero:**
 - **Campo único**: WhatsApp com máscara brasileira
-- **Placeholder**: "(11) 99999-9999"
+- **Placeholder**: "(82) 98103-9197"
 - **Botão**: "QUERO O EBOOK GRÁTIS AGORA"
 - **Garantias**: "✅ Download instantâneo ✅ Sem spam ✅ Dados seguros"
 
@@ -56,15 +54,8 @@ PROVA SOCIAL: "📱 12.847 médicos já baixaram"
 #### **Elementos:**
 - **Contador de Downloads**: Número dinâmico ou estático alto
 - **Testimonials Rápidos**: 3-4 frases curtas de médicos
-- **Timer de Urgência**: Countdown para fim da promoção
-- **Logos**: Hospitais ou instituições (se disponível)
 
 #### **Layout:**
-```
-[CONTADOR] "12.847 médicos já baixaram"
-[DEPOIMENTOS] 3 cards com fotos + frases curtas
-[URGÊNCIA] "Restam apenas 2 dias para download"
-```
 
 ---
 
