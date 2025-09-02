@@ -51,7 +51,7 @@ const SocialProofSection = () => {
   }, []);
 
   return (
-    <section className="py-12 sm:py-16 bg-card">
+    <section id="depoimentos" className="py-12 sm:py-16 bg-card">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Contador de Downloads */}
         <div className="text-center mb-8 sm:mb-12">

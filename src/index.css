@@ -125,6 +125,7 @@ All colors MUST be HSL.
   /* Melhorar tipografia em mobile */
   html {
     font-size: 16px;
+    scroll-behavior: smooth;
   }
 
   /* Otimizações para mobile */
@@ -132,6 +133,11 @@ All colors MUST be HSL.
     html {
       font-size: 14px;
     }
+  }
+
+  /* Scroll suave para navegação */
+  html {
+    scroll-padding-top: 5rem; /* Compensar navbar fixa */
   }
 }
 

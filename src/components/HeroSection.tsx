@@ -52,7 +52,7 @@ const HeroSection = () => {
   };
   
   return (
-    <section className="relative min-h-screen hero-gradient flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen hero-gradient flex items-center justify-center overflow-hidden pt-16 sm:pt-20">
       {/* Background Glow Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/10"></div>
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-glow"></div>
@@ -84,77 +84,10 @@ const HeroSection = () => {
               <div className="hidden sm:block w-2 h-2 bg-primary rounded-full"></div>
               <div className="text-xs sm:text-sm text-muted-foreground">Médicos já dominam POCUS</div>
             </div>
-            
-            {/* Formulário WhatsApp */}
-            <div className="premium-card p-4 sm:p-6 max-w-md mx-auto lg:mx-0">
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="space-y-2">
-                  <Input 
-                    type="tel"
-                    value={whatsapp}
-                    onChange={handleWhatsAppChange}
-                    placeholder="(82) 98103-9197"
-                    className={`glow-border bg-background/50 text-foreground placeholder:text-muted-foreground h-12 sm:h-14 text-base sm:text-lg ${
-                      error ? 'border-red-500 focus:border-red-500' : ''
-                    }`}
-                    required
-                    disabled={isSuccess}
-                  />
-                  {error && (
-                    <p className="text-red-500 text-sm font-medium">{error}</p>
-                  )}
-                </div>
-                
-                <Button 
-                  type="submit"
-                  size="lg"
-                  disabled={isLoading || isSuccess}
-                  className={`w-full font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg premium-glow group h-12 sm:h-16 ${
-                    isSuccess 
-                      ? 'bg-green-600 hover:bg-green-600' 
-                      : error
-                      ? 'bg-red-600 hover:bg-red-700'
-                      : 'bg-primary hover:bg-primary-dark'
-                  } text-primary-foreground`}
-                >
-                  {isLoading ? (
-                    <div className="flex items-center justify-center">
-                      <span className="mr-2">ENVIANDO...</span>
-                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                    </div>
-                  ) : isSuccess ? (
-                    <>✅ EBOOK ENVIADO!</>
-                  ) : error ? (
-                    <>❌ ERRO - TENTE NOVAMENTE</>
-                  ) : (
-                    <div className="flex items-center justify-center">
-                      <span className="mr-2">QUERO O EBOOK GRÁTIS AGORA</span>
-                      <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  )}
-                </Button>
-                
-                {/* Garantias */}
-                <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 text-xs text-muted-foreground">
-                  <div className="flex items-center justify-center gap-1">
-                    <Download size={12} className="text-green-500" />
-                    <span>Download instantâneo</span>
-                  </div>
-                  <div className="flex items-center justify-center gap-1">
-                    <Shield size={12} className="text-green-500" />
-                    <span>Sem spam</span>
-                  </div>
-                  <div className="flex items-center justify-center gap-1">
-                    <Clock size={12} className="text-green-500" />
-                    <span>Dados seguros</span>
-                  </div>
-                </div>
-              </form>
-            </div>
           </div>
           
-          {/* Hero Image - Sempre segundo em mobile */}
-          <div className="relative order-2">
+          {/* Hero Image - Entre subheadline e formulário em mobile */}
+          <div className="relative order-2 lg:order-2">
             <div className="relative">
               <img 
                 src={images.instructorHero} 
@@ -171,6 +104,75 @@ const HeroSection = () => {
                 <div className="text-xs text-muted-foreground">Especialista em POCUS</div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Formulário WhatsApp - Sempre por último em mobile */}
+        <div className="mt-8 lg:mt-12 text-center lg:text-left order-3">
+          <div className="premium-card p-4 sm:p-6 max-w-md mx-auto lg:mx-0">
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="space-y-2">
+                <Input 
+                  type="tel"
+                  value={whatsapp}
+                  onChange={handleWhatsAppChange}
+                  placeholder="(82) 98103-9197"
+                  className={`glow-border bg-background/50 text-foreground placeholder:text-muted-foreground h-12 sm:h-14 text-base sm:text-lg ${
+                    error ? 'border-red-500 focus:border-red-500' : ''
+                  }`}
+                  required
+                  disabled={isSuccess}
+                />
+                {error && (
+                  <p className="text-red-500 text-sm font-medium">{error}</p>
+                )}
+              </div>
+              
+              <Button 
+                type="submit"
+                size="lg"
+                disabled={isLoading || isSuccess}
+                className={`w-full font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg premium-glow group h-12 sm:h-16 ${
+                  isSuccess 
+                    ? 'bg-green-600 hover:bg-green-600' 
+                    : error
+                    ? 'bg-red-600 hover:bg-red-700'
+                    : 'bg-primary hover:bg-primary-dark'
+                } text-primary-foreground`}
+              >
+                {isLoading ? (
+                  <div className="flex items-center justify-center">
+                    <span className="mr-2">ENVIANDO...</span>
+                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                  </div>
+                ) : isSuccess ? (
+                  <>✅ EBOOK ENVIADO!</>
+                ) : error ? (
+                  <>❌ ERRO - TENTE NOVAMENTE</>
+                ) : (
+                  <div className="flex items-center justify-center">
+                    <span className="mr-2">QUERO O EBOOK GRÁTIS AGORA</span>
+                    <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                  </div>
+                )}
+              </Button>
+              
+              {/* Garantias */}
+              <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 text-xs text-muted-foreground">
+                <div className="flex items-center justify-center gap-1">
+                  <Download size={12} className="text-green-500" />
+                  <span>Download instantâneo</span>
+                </div>
+                <div className="flex items-center justify-center gap-1">
+                  <Shield size={12} className="text-green-500" />
+                  <span>Sem spam</span>
+                </div>
+                <div className="flex items-center justify-center gap-1">
+                  <Clock size={12} className="text-green-500" />
+                  <span>Dados seguros</span>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>

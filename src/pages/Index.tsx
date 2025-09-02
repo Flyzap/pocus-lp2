@@ -7,10 +7,12 @@ import TransformationSection from "@/components/TransformationSection";
 import FAQSection from "@/components/FAQSection";
 import StickyFormMobile from "@/components/StickyFormMobile";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Navbar />
       <HeroSection />
       <SocialProofSection />
       <BenefitsSection />
