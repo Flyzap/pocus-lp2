@@ -39,11 +39,11 @@ const ImageManager: React.FC<ImageManagerProps> = ({
       return;
     }
 
-    // Validar tamanho (máximo 5MB)
-    if (file.size > 5 * 1024 * 1024) {
+    // Validar tamanho (máximo 10MB para melhor qualidade)
+    if (file.size > 10 * 1024 * 1024) {
       toast({
         title: "Arquivo muito grande",
-        description: "A imagem deve ter no máximo 5MB.",
+        description: "A imagem deve ter no máximo 10MB.",
         variant: "destructive"
       });
       return;
@@ -90,7 +90,7 @@ const ImageManager: React.FC<ImageManagerProps> = ({
           {description}
           <br />
           <span className="text-xs text-muted-foreground">
-            Dimensões recomendadas: {recommendedDimensions} | Formatos: JPG, PNG, WebP | Máximo: 5MB
+            Dimensões recomendadas: {recommendedDimensions} | Formatos: JPG, PNG, WebP | Máximo: 10MB
           </span>
         </CardDescription>
       </CardHeader>
@@ -103,7 +103,7 @@ const ImageManager: React.FC<ImageManagerProps> = ({
             <img 
               src={currentImage} 
               alt="Imagem atual"
-              className="w-full h-48 object-cover"
+              className="w-full h-48 object-cover high-quality-image"
             />
           </div>
         </div>
@@ -116,7 +116,7 @@ const ImageManager: React.FC<ImageManagerProps> = ({
               <img 
                 src={previewImage} 
                 alt="Preview da nova imagem"
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover high-quality-image"
               />
             </div>
             

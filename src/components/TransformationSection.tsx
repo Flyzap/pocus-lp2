@@ -24,7 +24,9 @@ const TransformationSection = () => {
               <img 
                 src={images.transformation}
                 alt="Transformação profissional - antes e depois do curso de POCUS"
-                className="w-full h-auto rounded-2xl premium-glow"
+                className="w-full h-auto rounded-2xl premium-glow high-quality-image"
+                loading="lazy"
+                fetchPriority="auto"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent rounded-2xl"></div>
             </div>

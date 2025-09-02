@@ -57,7 +57,9 @@ const HeroSection = () => {
               <img 
                 src={images.instructorHero} 
                 alt="Instrutor de POCUS ensinando ultrassonografia" 
-                className="w-full h-auto rounded-2xl shadow-2xl premium-glow"
+                className="w-full h-auto rounded-2xl shadow-2xl premium-glow high-quality-image"
+                loading="eager"
+                fetchPriority="high"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent rounded-2xl"></div>
             </div>

@@ -30,13 +30,15 @@ O sistema permite alterar 3 imagens principais:
 - **JPG/JPEG** (recomendado para fotos)
 - **PNG** (ideal para imagens com transparência)
 - **WebP** (formato otimizado)
-- **Tamanho máximo**: 5MB por imagem
+- **Tamanho máximo**: 10MB por imagem (aumentado para melhor qualidade)
 
-### 📐 Dimensões Recomendadas
+### 📐 Dimensões Recomendadas (Para Máxima Qualidade)
 
-- **Imagem Principal**: 1200x800px (proporção 16:9)
-- **Foto do Instrutor**: 800x800px (formato quadrado)
-- **Imagem de Transformação**: 1200x800px (proporção 16:9)
+- **Imagem Principal**: 1920x1280px ou superior (proporção 16:9)
+- **Foto do Instrutor**: 1200x1200px ou superior (formato quadrado)
+- **Imagem de Transformação**: 1920x1280px ou superior (proporção 16:9)
+
+> 💡 **Dica**: Use dimensões maiores que as recomendadas para garantir nitidez em telas de alta resolução!
 
 ### 💾 Armazenamento
 
@@ -60,12 +62,31 @@ Para manter as alterações de forma permanente:
 
 2. Mantenha os mesmos nomes de arquivo para compatibilidade
 
-### 💡 Dicas
+### 🔍 Melhorando a Qualidade das Imagens
+
+#### Para obter a melhor qualidade possível:
+
+1. **Resolução Alta**: Use imagens com pelo menos o dobro das dimensões recomendadas
+2. **Formato Adequado**: 
+   - JPG para fotos (menor tamanho, boa qualidade)
+   - PNG para imagens com transparência
+   - WebP para máxima otimização
+3. **Qualidade de Compressão**: Se possível, use compressão mínima (90-100%)
+4. **Fonte Original**: Prefira imagens não comprimidas ou de alta qualidade
+
+#### Otimizações Automáticas Aplicadas:
+
+- ✅ Renderização de alta qualidade forçada via CSS
+- ✅ Prevenção de blur durante redimensionamento
+- ✅ Otimização para telas Retina/4K
+- ✅ Carregamento prioritário para imagens importantes
+
+### 💡 Dicas Gerais
 
 - Use imagens de alta qualidade para melhor resultado
 - Mantenha as proporções recomendadas para melhor layout
 - Teste em diferentes dispositivos para garantir responsividade
-- As imagens são otimizadas automaticamente para web
+- Imagens maiores resultam em melhor qualidade (até 10MB)
 
 ---
 
