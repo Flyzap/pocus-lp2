@@ -51,37 +51,37 @@ const SocialProofSection = () => {
   }, []);
 
   return (
-    <section id="depoimentos" className="py-16 sm:py-20 lg:py-24 xl:py-28 2xl:py-32 3xl:py-36 bg-card">
+    <section id="depoimentos" className="py-12 lg:py-16 xl:py-20 bg-card">
       <div className="container max-w-7xl mx-auto px-4 lg:px-8 xl:px-12">
         {/* Contador de Downloads */}
-        <div className="text-center mb-16 xl:mb-20 2xl:mb-24 3xl:mb-28">
-          <div className="premium-card p-6 lg:p-8 xl:p-10 max-w-4xl mx-auto">
-            <div className="flex items-center justify-center gap-6 lg:gap-8 xl:gap-10 mb-6 lg:mb-8 xl:mb-10">
-              <Download className="text-primary w-12 h-12 lg:w-16 lg:h-16 xl:w-20 xl:h-20" />
-              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl font-bold text-primary">
+        <div className="text-center mb-12 lg:mb-16">
+          <div className="premium-card p-4 lg:p-6 max-w-2xl lg:max-w-4xl mx-auto">
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-6 mb-4 lg:mb-6">
+              <Download className="text-primary w-8 h-8 lg:w-10 lg:h-10" />
+              <div className="text-2xl lg:text-3xl xl:text-4xl font-bold text-primary">
                 {currentDownloads.toLocaleString('pt-BR')}
               </div>
             </div>
-            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl font-bold text-foreground mb-4 lg:mb-6 xl:mb-8">
+            <h3 className="text-lg lg:text-xl xl:text-2xl font-bold text-foreground mb-3 lg:mb-4">
               Médicos já baixaram o ebook
             </h3>
-            <p className="text-sm sm:text-base md:text-base lg:text-base text-muted-foreground">
+            <p className="text-sm lg:text-base text-muted-foreground">
               Junte-se a milhares de profissionais que já dominam POCUS
             </p>
           </div>
         </div>
 
         {/* Testimonials Rotativos */}
-        <div className="max-w-7xl xl:max-w-8xl 2xl:max-w-9xl mx-auto">
-          <h3 className="desktop-heading-2 font-bold text-center text-foreground mb-12 xl:mb-16 2xl:mb-20 3xl:mb-24">
+        <div className="max-w-6xl mx-auto">
+          <h3 className="text-xl lg:text-2xl xl:text-3xl font-bold text-center text-foreground mb-8 lg:mb-12">
             O que os médicos estão falando sobre o ebook
           </h3>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-4 desktop-spacing">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-6">
             {testimonials.slice(currentTestimonial, currentTestimonial + 2).map((testimonial, index) => (
               <div 
                 key={`${currentTestimonial}-${index}`} 
-                className="premium-card desktop-padding space-y-6 xl:space-y-8 2xl:space-y-10 3xl:space-y-12 transition-all duration-500 transform hover:scale-105"
+                className="premium-card p-4 lg:p-5 space-y-3 lg:space-y-4 transition-all duration-500 transform hover:scale-105"
               >
                 {/* Rating */}
                 <div className="flex gap-2 xl:gap-3 2xl:gap-4">

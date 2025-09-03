@@ -109,9 +109,9 @@ const HeroSection = () => {
 
         {/* Formulário WhatsApp */}
         <div className="mt-8 sm:mt-10 lg:mt-14 xl:mt-16 text-center lg:text-left">
-          <div className="max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl mx-auto lg:mx-0">
-            <div className="premium-card p-4 sm:p-5 lg:p-6 xl:p-8">
-              <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 lg:space-y-5 xl:space-y-6">
+          <div className="max-w-sm lg:max-w-md xl:max-w-lg mx-auto lg:mx-0">
+            <div className="premium-card p-4 lg:p-5 xl:p-6">
+              <form onSubmit={handleSubmit} className="space-y-3 lg:space-y-4">
                 <div className="space-y-2 lg:space-y-3">
                   <Input 
                     type="tel"
@@ -120,7 +120,7 @@ const HeroSection = () => {
                     placeholder="(82) 98103-9197"
                     autoComplete="tel"
                     inputMode="tel"
-                    className={`glow-border bg-background/50 text-foreground placeholder:text-muted-foreground h-14 sm:h-16 lg:h-18 xl:h-20 text-base sm:text-lg lg:text-xl xl:text-2xl mobile-input ${
+                    className={`glow-border bg-background/50 text-foreground placeholder:text-muted-foreground h-11 lg:h-12 xl:h-14 text-base lg:text-lg mobile-input ${
                       error ? 'border-red-500 focus:border-red-500' : ''
                     }`}
                     required
@@ -135,7 +135,7 @@ const HeroSection = () => {
                   type="submit"
                   size="lg"
                   disabled={isLoading || isSuccess}
-                  className={`w-full font-bold px-5 sm:px-6 lg:px-8 xl:px-10 py-3 sm:py-4 lg:py-5 xl:py-6 text-base sm:text-lg lg:text-xl xl:text-2xl premium-glow group h-14 sm:h-16 lg:h-18 xl:h-20 mobile-button ${
+                  className={`w-full font-bold px-4 lg:px-6 xl:px-8 py-2 lg:py-3 text-base lg:text-lg premium-glow group h-11 lg:h-12 xl:h-14 mobile-button ${
                     isSuccess 
                       ? 'bg-green-600 hover:bg-green-600' 
                       : error

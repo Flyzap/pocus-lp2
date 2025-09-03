@@ -92,15 +92,15 @@ const Footer = () => {
       </div>
       
       {/* Floating WhatsApp */}
-      <div className="fixed bottom-4 sm:bottom-6 lg:bottom-8 right-4 sm:right-6 lg:right-8 z-50">
+      <div className="fixed bottom-6 right-6 z-50">
         <a 
           href="https://wa.me/5511999999999" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="w-14 h-14 sm:w-18 sm:h-18 lg:w-20 lg:h-20 xl:w-24 xl:h-24 bg-primary rounded-full flex items-center justify-center premium-glow animate-pulse-glow hover:scale-110 transition-transform mobile-touch-target"
+          className="w-12 h-12 lg:w-14 lg:h-14 bg-primary rounded-full flex items-center justify-center premium-glow animate-pulse-glow hover:scale-110 transition-transform mobile-touch-target"
           aria-label="Contato WhatsApp"
         >
-          <MessageCircle size={20} className="sm:w-6 sm:h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8 text-primary-foreground" />
+          <MessageCircle size={16} className="lg:w-5 lg:h-5 text-primary-foreground" />
         </a>
       </div>
     </footer>
