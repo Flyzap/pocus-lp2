@@ -471,47 +471,47 @@ All colors MUST be HSL.
   }
   
   .desktop-container {
-    @apply xl:max-w-7xl 2xl:max-w-8xl 3xl:max-w-9xl 4xl:max-w-[2400px];
+    @apply container max-w-7xl;
   }
   
   .desktop-grid-auto {
-    @apply xl:grid-cols-4 2xl:grid-cols-4 3xl:grid-cols-5 4xl:grid-cols-6;
+    @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
   }
   
   .desktop-text-scale {
-    @apply xl:text-xl 2xl:text-2xl 3xl:text-3xl 4xl:text-4xl;
+    @apply text-sm sm:text-base lg:text-lg xl:text-xl;
   }
   
   .desktop-spacing {
-    @apply xl:gap-8 2xl:gap-10 3xl:gap-12 4xl:gap-16;
+    @apply gap-6 sm:gap-8 lg:gap-10 xl:gap-12;
   }
 
   .desktop-padding {
-    @apply xl:p-8 2xl:p-12 3xl:p-16 4xl:p-20;
+    @apply p-4 sm:p-6 lg:p-8 xl:p-10;
   }
 
   .desktop-margin {
     @apply xl:m-8 2xl:m-12 3xl:m-16 4xl:m-20;
   }
 
-  /* Typography classes for desktop scaling */
+  /* Typography classes for desktop scaling - CORRIGIDO */
   .desktop-heading-hero {
-    @apply xl:text-8xl 2xl:text-9xl 3xl:text-[8rem] 4xl:text-[10rem] 5xl:text-[12rem];
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl;
   }
 
   .desktop-heading-1 {
-    @apply xl:text-6xl 2xl:text-7xl 3xl:text-8xl 4xl:text-9xl;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl;
   }
 
   .desktop-heading-2 {
-    @apply xl:text-4xl 2xl:text-5xl 3xl:text-6xl 4xl:text-7xl;
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl;
   }
 
   .desktop-body-lg {
-    @apply xl:text-2xl 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl;
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl;
   }
 
   .desktop-body {
-    @apply xl:text-xl 2xl:text-2xl 3xl:text-3xl 4xl:text-4xl;
+    @apply text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl;
   }
 }

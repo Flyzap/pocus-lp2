@@ -59,10 +59,10 @@ const HeroSection = () => {
       <div className="absolute bottom-1/4 right-1/4 w-64 h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 2xl:w-[500px] 2xl:h-[500px] 3xl:w-[600px] 3xl:h-[600px] bg-primary/15 rounded-full blur-2xl animate-float"></div>
       
       <div className="desktop-container mx-auto px-4 xl:px-8 2xl:px-12 3xl:px-16 relative z-10">
-        <div className="grid lg:grid-cols-2 xl:grid-cols-12 desktop-spacing items-center">
-          {/* Content - Expansão inteligente para desktop */}
-          <div className="xl:col-span-7 2xl:col-span-8 3xl:col-span-7 space-y-8 xl:space-y-12 2xl:space-y-16 3xl:space-y-20 text-center lg:text-left order-1">
-            <div className="space-y-6 xl:space-y-8 2xl:space-y-10 3xl:space-y-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
+          {/* Content */}
+          <div className="space-y-6 lg:space-y-8 text-center lg:text-left order-1">
+            <div className="space-y-4 sm:space-y-6">
               <h1 className="desktop-heading-hero font-bold leading-tight">
                 <span className="text-foreground">Domine a</span>{" "}
                 <span className="text-primary bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
@@ -70,49 +70,49 @@ const HeroSection = () => {
                 </span>{" "}
                 <span className="text-foreground">à Beira-leito</span>
               </h1>
-              <p className="desktop-body-lg text-muted-foreground max-w-2xl xl:max-w-3xl 2xl:max-w-4xl 3xl:max-w-5xl mx-auto lg:mx-0">
+              <p className="desktop-body-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0">
                 Ebook gratuito + PDF de emergência para usar no plantão hoje mesmo
               </p>
             </div>
             
             {/* Prova Social */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 xl:gap-6 2xl:gap-8 3xl:gap-10 mb-6 xl:mb-10 2xl:mb-12 3xl:mb-16">
-              <div className="flex items-center gap-3 xl:gap-4 2xl:gap-5">
-                <Download className="text-primary w-5 h-5 xl:w-7 xl:h-7 2xl:w-8 2xl:h-8 3xl:w-10 3xl:h-10" />
-                <span className="text-foreground font-bold desktop-body">30+ downloads</span>
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 lg:gap-6">
+              <div className="flex items-center gap-2 lg:gap-3">
+                <Download className="text-primary w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
+                <span className="text-foreground font-bold text-sm sm:text-base lg:text-lg xl:text-xl">30+ downloads</span>
               </div>
-              <div className="hidden sm:block w-2 h-2 xl:w-3 xl:h-3 2xl:w-4 2xl:h-4 bg-primary rounded-full"></div>
-              <div className="desktop-body text-muted-foreground">Médicos já dominam POCUS</div>
+              <div className="hidden sm:block w-2 h-2 lg:w-3 lg:h-3 bg-primary rounded-full"></div>
+              <div className="text-sm sm:text-base lg:text-lg xl:text-xl text-muted-foreground">Médicos já dominam POCUS</div>
             </div>
           </div>
           
-          {/* Hero Image - Aproveitamento máximo desktop */}
-          <div className="xl:col-span-5 2xl:col-span-4 3xl:col-span-5 relative order-2 lg:order-2">
+          {/* Hero Image */}
+          <div className="relative order-2 lg:order-2">
             <div className="relative">
               <img 
                 src={images.instructorHero} 
                 alt="Dr. Saulo Salgueiro - Especialista em POCUS" 
-                className="w-full h-auto max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl 4xl:max-w-5xl rounded-xl xl:rounded-2xl 2xl:rounded-3xl shadow-2xl premium-glow high-quality-image mx-auto"
+                className="w-full h-auto max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl rounded-xl sm:rounded-2xl lg:rounded-3xl shadow-2xl premium-glow high-quality-image mx-auto"
                 loading="eager"
                 fetchPriority="high"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent rounded-xl xl:rounded-2xl 2xl:rounded-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent rounded-xl sm:rounded-2xl lg:rounded-3xl"></div>
               
               {/* Badge do Instrutor */}
-              <div className="absolute bottom-4 xl:bottom-6 2xl:bottom-8 3xl:bottom-10 left-4 xl:left-6 2xl:left-8 3xl:left-10 bg-background/90 backdrop-blur-sm rounded-lg xl:rounded-xl 2xl:rounded-2xl desktop-padding">
-                <div className="desktop-body font-bold text-foreground">Dr. Saulo Salgueiro</div>
-                <div className="desktop-text-scale text-muted-foreground">Especialista em POCUS</div>
+              <div className="absolute bottom-2 sm:bottom-4 lg:bottom-6 left-2 sm:left-4 lg:left-6 bg-background/90 backdrop-blur-sm rounded-lg p-1.5 sm:p-2 lg:p-3 xl:p-4">
+                <div className="text-xs sm:text-sm lg:text-base xl:text-lg font-bold text-foreground">Dr. Saulo Salgueiro</div>
+                <div className="text-xs lg:text-sm xl:text-base text-muted-foreground">Especialista em POCUS</div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Formulário WhatsApp - Expandido para desktop */}
-        <div className="mt-12 xl:mt-16 2xl:mt-20 3xl:mt-24 text-center lg:text-left order-3">
-          <div className="xl:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0">
-            <div className="premium-card desktop-padding">
-              <form onSubmit={handleSubmit} className="space-y-6 xl:space-y-8 2xl:space-y-10">
-                <div className="space-y-3 xl:space-y-4 2xl:space-y-5">
+        {/* Formulário WhatsApp */}
+        <div className="mt-8 sm:mt-10 lg:mt-14 xl:mt-16 text-center lg:text-left">
+          <div className="max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl mx-auto lg:mx-0">
+            <div className="premium-card p-4 sm:p-5 lg:p-6 xl:p-8">
+              <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 lg:space-y-5 xl:space-y-6">
+                <div className="space-y-2 lg:space-y-3">
                   <Input 
                     type="tel"
                     value={whatsapp}
@@ -120,14 +120,14 @@ const HeroSection = () => {
                     placeholder="(82) 98103-9197"
                     autoComplete="tel"
                     inputMode="tel"
-                    className={`glow-border bg-background/50 text-foreground placeholder:text-muted-foreground h-14 xl:h-16 2xl:h-20 3xl:h-24 desktop-body mobile-input ${
+                    className={`glow-border bg-background/50 text-foreground placeholder:text-muted-foreground h-14 sm:h-16 lg:h-18 xl:h-20 text-base sm:text-lg lg:text-xl xl:text-2xl mobile-input ${
                       error ? 'border-red-500 focus:border-red-500' : ''
                     }`}
                     required
                     disabled={isSuccess}
                   />
                   {error && (
-                    <p className="text-red-500 desktop-text-scale font-medium">{error}</p>
+                    <p className="text-red-500 text-xs sm:text-sm lg:text-base font-medium">{error}</p>
                   )}
                 </div>
                 
@@ -135,7 +135,7 @@ const HeroSection = () => {
                   type="submit"
                   size="lg"
                   disabled={isLoading || isSuccess}
-                  className={`w-full font-bold desktop-padding desktop-body premium-glow group h-14 xl:h-16 2xl:h-20 3xl:h-24 mobile-button ${
+                  className={`w-full font-bold px-5 sm:px-6 lg:px-8 xl:px-10 py-3 sm:py-4 lg:py-5 xl:py-6 text-base sm:text-lg lg:text-xl xl:text-2xl premium-glow group h-14 sm:h-16 lg:h-18 xl:h-20 mobile-button ${
                     isSuccess 
                       ? 'bg-green-600 hover:bg-green-600' 
                       : error
@@ -161,17 +161,17 @@ const HeroSection = () => {
                 </Button>
                 
                 {/* Garantias */}
-                <div className="flex flex-col sm:flex-row justify-center gap-3 xl:gap-6 2xl:gap-8 3xl:gap-10 desktop-text-scale text-muted-foreground">
-                  <div className="flex items-center justify-center gap-2 xl:gap-3 2xl:gap-4">
-                    <Download size={14} className="xl:w-5 xl:h-5 2xl:w-6 2xl:h-6 3xl:w-7 3xl:h-7 text-green-500" />
+                <div className="flex flex-col sm:flex-row justify-center gap-1.5 sm:gap-2 lg:gap-4 xl:gap-6 text-xs lg:text-sm xl:text-base text-muted-foreground">
+                  <div className="flex items-center justify-center gap-1 lg:gap-2">
+                    <Download size={10} className="sm:w-3 sm:h-3 lg:w-4 lg:h-4 text-green-500" />
                     <span>Download instantâneo</span>
                   </div>
-                  <div className="flex items-center justify-center gap-2 xl:gap-3 2xl:gap-4">
-                    <Shield size={14} className="xl:w-5 xl:h-5 2xl:w-6 2xl:h-6 3xl:w-7 3xl:h-7 text-green-500" />
+                  <div className="flex items-center justify-center gap-1 lg:gap-2">
+                    <Shield size={10} className="sm:w-3 sm:h-3 lg:w-4 lg:h-4 text-green-500" />
                     <span>Sem spam</span>
                   </div>
-                  <div className="flex items-center justify-center gap-2 xl:gap-3 2xl:gap-4">
-                    <Clock size={14} className="xl:w-5 xl:h-5 2xl:w-6 2xl:h-6 3xl:w-7 3xl:h-7 text-green-500" />
+                  <div className="flex items-center justify-center gap-1 lg:gap-2">
+                    <Clock size={10} className="sm:w-3 sm:h-3 lg:w-4 lg:h-4 text-green-500" />
                     <span>Dados seguros</span>
                   </div>
                 </div>
