@@ -85,7 +85,7 @@ const StickyFormMobile = () => {
           <div className="flex justify-end p-3 sm:p-4">
             <button
               onClick={() => setIsMinimized(false)}
-              className="bg-primary text-primary-foreground rounded-full p-3 sm:p-4 shadow-lg premium-glow text-xs sm:text-sm font-bold"
+              className="bg-primary text-primary-foreground rounded-full p-4 sm:p-5 lg:p-6 shadow-lg premium-glow text-sm sm:text-base lg:text-lg font-bold mobile-touch-target"
             >
               📱 EBOOK GRÁTIS
             </button>
@@ -95,10 +95,10 @@ const StickyFormMobile = () => {
         {/* Full Form */}
         {!isMinimized && (
           <div className="bg-background border-t border-border shadow-2xl premium-glow">
-            <div className="container mx-auto px-2.5 sm:px-3 lg:px-4 py-2.5 sm:py-3 lg:py-4">
+            <div className="container mx-auto px-4 sm:px-5 lg:px-6 py-4 sm:py-5 lg:py-6">
               {/* Header com botão fechar */}
-              <div className="flex items-center justify-between mb-2.5 sm:mb-3 lg:mb-4">
-                <div className="text-xs sm:text-sm font-bold text-foreground">
+              <div className="flex items-center justify-between mb-4 sm:mb-5 lg:mb-6">
+                <div className="text-sm sm:text-base lg:text-lg font-bold text-foreground">
                   📱 BAIXE O EBOOK GRÁTIS AGORA
                 </div>
                 <button
@@ -111,25 +111,25 @@ const StickyFormMobile = () => {
 
               {isSuccess ? (
                 // Success State
-                <div className="text-center py-2.5 sm:py-3 lg:py-4">
-                  <div className="text-green-600 font-bold text-sm sm:text-base lg:text-lg mb-2">
+                <div className="text-center py-4 sm:py-5 lg:py-6">
+                  <div className="text-green-600 font-bold text-base sm:text-lg lg:text-xl mb-3 sm:mb-4">
                     ✅ EBOOK ENVIADO!
                   </div>
-                  <p className="text-xs sm:text-sm text-muted-foreground">
+                  <p className="text-sm sm:text-base lg:text-lg text-muted-foreground">
                     Verifique seu WhatsApp agora mesmo
                   </p>
                 </div>
               ) : (
                 // Form State
-                <form onSubmit={handleSubmit} className="space-y-2.5 sm:space-y-3">
-                  <div className="flex gap-2 sm:gap-3">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+                  <div className="flex gap-3 sm:gap-4 lg:gap-5">
                     <div className="flex-1">
                       <Input
                         type="tel"
                         value={whatsapp}
                         onChange={handleWhatsAppChange}
                         placeholder="(82) 98103-9197"
-                        className={`h-11 sm:h-12 lg:h-14 text-base sm:text-lg ${
+                        className={`h-12 sm:h-14 lg:h-16 text-base sm:text-lg lg:text-xl mobile-input ${
                           error ? 'border-red-500 focus:border-red-500' : ''
                         }`}
                         required
@@ -142,25 +142,25 @@ const StickyFormMobile = () => {
                     <Button
                       type="submit"
                       disabled={isLoading}
-                      className={`font-bold px-4 sm:px-5 lg:px-6 h-11 sm:h-12 lg:h-14 premium-glow whitespace-nowrap text-sm sm:text-base ${
+                      className={`font-bold px-5 sm:px-6 lg:px-8 h-12 sm:h-14 lg:h-16 premium-glow whitespace-nowrap text-base sm:text-lg lg:text-xl mobile-button ${
                         error
                           ? 'bg-red-600 hover:bg-red-700'
                           : 'bg-primary hover:bg-primary-dark'
                       } text-primary-foreground`}
                     >
                       {isLoading ? (
-                        <div className="w-3 h-3 sm:w-4 sm:h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                        <div className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 border-2 border-white border-t-transparent rounded-full animate-spin" />
                       ) : (
                         <>
                           QUERO!
-                          <ArrowRight size={12} className="sm:w-4 sm:h-4 ml-1" />
+                          <ArrowRight size={16} className="sm:w-5 sm:h-5 lg:w-6 lg:h-6 ml-1" />
                         </>
                       )}
                     </Button>
                   </div>
                   
                   {!error && (
-                    <div className="text-xs text-muted-foreground text-center">
+                    <div className="text-sm sm:text-base text-muted-foreground text-center">
                       ✅ Download instantâneo ✅ Sem spam ✅ Dados seguros
                     </div>
                   )}

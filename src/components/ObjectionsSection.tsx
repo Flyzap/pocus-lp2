@@ -29,32 +29,32 @@ const objections = [
 
 const ObjectionsSection = () => {
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-background">
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
+    <section className="py-16 sm:py-20 lg:py-24 xl:py-28 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-14 sm:mb-18 lg:mb-22">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 sm:mb-8 lg:mb-10">
             <span className="text-primary">Sem pegadinhas,</span> sem complicação
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto px-4 sm:px-6">
             Respondemos as principais dúvidas sobre nosso ebook gratuito de POCUS
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 max-w-7xl mx-auto">
           {objections.map((objection, index) => (
             <div 
               key={index}
-              className="premium-card p-4 sm:p-6 space-y-3 sm:space-y-4 hover:scale-105 transition-all duration-300"
+              className="premium-card p-6 sm:p-8 lg:p-10 space-y-4 sm:space-y-5 lg:space-y-6 hover:scale-105 transition-all duration-300"
             >
-              <div className="flex items-start gap-2 sm:gap-3">
-                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Check size={12} className="sm:w-4 sm:h-4 text-primary-foreground" />
+              <div className="flex items-start gap-3 sm:gap-4 lg:gap-5">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <Check size={16} className="sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-primary-foreground" />
                 </div>
-                <div className="space-y-1 sm:space-y-2">
-                  <h3 className="font-bold text-sm sm:text-base text-foreground leading-tight">
+                <div className="space-y-2 sm:space-y-3 lg:space-y-4">
+                  <h3 className="font-bold text-base sm:text-lg lg:text-xl text-foreground leading-tight">
                     {objection.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed">
                     {objection.description}
                   </p>
                 </div>
@@ -64,15 +64,15 @@ const ObjectionsSection = () => {
         </div>
         
         {/* Bottom CTA */}
-        <div className="text-center mt-12 lg:mt-16">
-          <div className="premium-card p-6 sm:p-8 max-w-2xl mx-auto">
-            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4">
+        <div className="text-center mt-16 sm:mt-20 lg:mt-24">
+          <div className="premium-card p-8 sm:p-10 lg:p-12 max-w-3xl mx-auto">
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 sm:mb-6 lg:mb-8">
               Ainda com dúvidas? É só baixar!
             </h3>
-            <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground mb-6 sm:mb-8 lg:mb-10">
               Não perca tempo. O ebook é gratuito e você recebe instantaneamente. Não tem nada a perder!
             </p>
-            <div className="text-primary font-bold text-sm sm:text-base md:text-lg">
+            <div className="text-primary font-bold text-base sm:text-lg lg:text-xl">
               ✅ 100% Gratuito ✅ Download Imediato ✅ Sem Compromisso
             </div>
           </div>

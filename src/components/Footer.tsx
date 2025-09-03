@@ -3,30 +3,30 @@ import { Instagram, MessageCircle, Youtube, Mail, Phone } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="bg-background border-t border-border">
-      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
           {/* Brand */}
           <div className="space-y-3 sm:space-y-4 text-center sm:text-left">
-            <h3 className="text-lg sm:text-xl font-bold text-primary">POCUS Expert</h3>
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary">POCUS Expert</h3>
             <p className="text-xs sm:text-sm text-muted-foreground">
               O curso mais completo de ultrassonografia point-of-care do Brasil.
             </p>
             <div className="flex justify-center sm:justify-start gap-3 sm:gap-4">
               <a 
                 href="#" 
-                className="w-8 h-8 sm:w-10 sm:h-10 bg-card rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors group"
+                className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-card rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors group mobile-touch-target"
               >
                 <Instagram size={16} className="sm:w-[18px] sm:h-[18px] text-muted-foreground group-hover:text-primary" />
               </a>
               <a 
                 href="#" 
-                className="w-8 h-8 sm:w-10 sm:h-10 bg-card rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors group"
+                className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-card rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors group mobile-touch-target"
               >
                 <Youtube size={16} className="sm:w-[18px] sm:h-[18px] text-muted-foreground group-hover:text-primary" />
               </a>
               <a 
                 href="#" 
-                className="w-8 h-8 sm:w-10 sm:h-10 bg-card rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors group"
+                className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-card rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors group mobile-touch-target"
               >
                 <MessageCircle size={16} className="sm:w-[18px] sm:h-[18px] text-muted-foreground group-hover:text-primary" />
               </a>
@@ -97,9 +97,9 @@ const Footer = () => {
           href="https://wa.me/5511999999999" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="w-12 h-12 sm:w-16 sm:h-16 bg-primary rounded-full flex items-center justify-center premium-glow animate-pulse-glow hover:scale-110 transition-transform"
+          className="w-14 h-14 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-primary rounded-full flex items-center justify-center premium-glow animate-pulse-glow hover:scale-110 transition-transform mobile-touch-target"
         >
-          <MessageCircle size={20} className="sm:w-7 sm:h-7 text-primary-foreground" />
+          <MessageCircle size={24} className="sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-primary-foreground" />
         </a>
       </div>
     </footer>

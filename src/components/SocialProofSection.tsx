@@ -51,21 +51,21 @@ const SocialProofSection = () => {
   }, []);
 
   return (
-    <section id="depoimentos" className="py-12 sm:py-16 bg-card">
-      <div className="container mx-auto px-4 sm:px-6">
+    <section id="depoimentos" className="py-16 sm:py-20 lg:py-24 bg-card">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Contador de Downloads */}
-        <div className="text-center mb-8 sm:mb-12">
-          <div className="premium-card p-6 sm:p-8 max-w-2xl mx-auto">
-            <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4">
-              <Download className="text-primary w-8 h-8 sm:w-8 sm:h-8" />
-              <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary">
+        <div className="text-center mb-10 sm:mb-14 lg:mb-16">
+          <div className="premium-card p-8 sm:p-10 lg:p-12 max-w-2xl mx-auto">
+            <div className="flex items-center justify-center gap-4 sm:gap-5 lg:gap-6 mb-6">
+              <Download className="text-primary w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14" />
+              <div className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary">
                 {currentDownloads.toLocaleString('pt-BR')}
               </div>
             </div>
-            <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground mb-3 sm:mb-4">
               Médicos já baixaram o ebook
             </h3>
-            <p className="text-sm sm:text-base text-muted-foreground">
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground">
               Junte-se a milhares de profissionais que já dominam POCUS
             </p>
           </div>
@@ -73,44 +73,44 @@ const SocialProofSection = () => {
 
         {/* Testimonials Rotativos */}
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-xl sm:text-2xl font-bold text-center text-foreground mb-6 sm:mb-8">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-foreground mb-8 sm:mb-10 lg:mb-12">
             O que os médicos estão falando sobre o ebook
           </h3>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
             {testimonials.slice(currentTestimonial, currentTestimonial + 2).map((testimonial, index) => (
               <div 
                 key={`${currentTestimonial}-${index}`} 
-                className="premium-card p-4 sm:p-6 space-y-3 sm:space-y-4 transition-all duration-500 transform"
+                className="premium-card p-6 sm:p-8 lg:p-10 space-y-4 sm:space-y-5 lg:space-y-6 transition-all duration-500 transform hover:scale-105"
               >
                 {/* Rating */}
-                <div className="flex gap-1">
+                <div className="flex gap-1 sm:gap-1.5">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} size={14} className="sm:w-4 sm:h-4 text-yellow-500 fill-current" />
+                    <Star key={i} size={18} className="sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-yellow-500 fill-current" />
                   ))}
                 </div>
                 
                 {/* Testimonial Text */}
-                <p className="text-sm sm:text-base text-muted-foreground italic">
+                <p className="text-base sm:text-lg lg:text-xl text-muted-foreground italic leading-relaxed">
                   "{testimonial.text}"
                 </p>
                 
                 {/* Author */}
-                <div className="border-t pt-3 sm:pt-4">
-                  <div className="font-bold text-sm sm:text-base text-foreground">{testimonial.name}</div>
-                  <div className="text-xs sm:text-sm text-muted-foreground">{testimonial.specialty}</div>
+                <div className="border-t pt-4 sm:pt-5 lg:pt-6">
+                  <div className="font-bold text-base sm:text-lg lg:text-xl text-foreground">{testimonial.name}</div>
+                  <div className="text-sm sm:text-base lg:text-lg text-muted-foreground">{testimonial.specialty}</div>
                 </div>
               </div>
             ))}
           </div>
 
           {/* Indicadores */}
-          <div className="flex justify-center gap-2 mt-4 sm:mt-6">
+          <div className="flex justify-center gap-3 mt-6 sm:mt-8 lg:mt-10">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentTestimonial(index)}
-                className={`w-2 h-2 rounded-full transition-colors ${
+                className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-colors mobile-touch-target ${
                   index === currentTestimonial ? 'bg-primary' : 'bg-muted-foreground/30'
                 }`}
               />
@@ -119,15 +119,15 @@ const SocialProofSection = () => {
         </div>
 
         {/* Urgência */}
-        <div className="text-center mt-8 sm:mt-12">
-          <div className="premium-card p-4 sm:p-6 max-w-lg mx-auto bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border-yellow-500/30">
-            <div className="text-yellow-600 font-bold text-base sm:text-lg mb-2">
+        <div className="text-center mt-12 sm:mt-16 lg:mt-20">
+          <div className="premium-card p-6 sm:p-8 lg:p-10 max-w-xl mx-auto bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border-yellow-500/30">
+            <div className="text-yellow-600 font-bold text-xl sm:text-2xl lg:text-3xl mb-3 sm:mb-4">
               ⚡ OFERTA LIMITADA
             </div>
-            <p className="text-sm sm:text-base text-foreground font-semibold">
+            <p className="text-base sm:text-lg lg:text-xl text-foreground font-semibold">
               Ebook gratuito por tempo limitado
             </p>
-            <p className="text-xs sm:text-sm text-muted-foreground mt-2">
+            <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mt-3 sm:mt-4">
               Garante já o seu antes que volte a ser pago
             </p>
           </div>
