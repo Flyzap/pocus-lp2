@@ -3,19 +3,19 @@ import { ArrowRight, Quote, TrendingUp, Clock, CheckCircle } from "lucide-react"
 
 const TransformationSection = () => {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 xl:py-28 bg-card">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+    <section className="py-16 sm:py-20 lg:py-24 xl:py-28 2xl:py-32 bg-card">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="max-w-7xl xl:max-w-8xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16 sm:mb-20 lg:mb-24">
-            <div className="inline-flex items-center gap-3 sm:gap-4 lg:gap-5 bg-primary/10 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-full mb-6 sm:mb-8 lg:mb-10">
-              <TrendingUp className="text-primary w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
-              <span className="text-primary font-semibold text-base sm:text-lg lg:text-xl">Sua Jornada de Transformação</span>
+          <div className="text-center mb-16 sm:mb-20 lg:mb-24 xl:mb-28">
+            <div className="inline-flex items-center gap-3 sm:gap-4 lg:gap-5 xl:gap-6 bg-primary/10 px-6 sm:px-8 lg:px-10 xl:px-12 py-3 sm:py-4 lg:py-5 xl:py-6 rounded-full mb-6 sm:mb-8 lg:mb-10 xl:mb-12">
+              <TrendingUp className="text-primary w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xl:w-9 xl:h-9" />
+              <span className="text-primary font-semibold text-base sm:text-lg lg:text-xl xl:text-2xl">Sua Jornada de Transformação</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 sm:mb-8 lg:mb-10">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-foreground mb-6 sm:mb-8 lg:mb-10 xl:mb-12">
               De <span className="text-destructive">Inseguro</span> para <span className="text-primary">Especialista</span>
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto px-4 sm:px-6">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-muted-foreground max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6">
               Veja como sua prática médica será transformada com o domínio do POCUS
             </p>
           </div>
@@ -25,7 +25,7 @@ const TransformationSection = () => {
             {/* Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-destructive via-yellow-500 to-primary rounded-full hidden lg:block"></div>
             
-            <div className="space-y-12 sm:space-y-16 lg:space-y-20">
+            <div className="space-y-12 sm:space-y-16 lg:space-y-20 xl:space-y-24">
               {/* Before State */}
               <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-10 lg:gap-12">
                 <div className="lg:w-1/2 lg:pr-12 w-full">
@@ -111,32 +111,32 @@ const TransformationSection = () => {
           </div>
 
           {/* Impact Quote */}
-          <div className="mt-16 sm:mt-20 lg:mt-24">
-            <div className="relative p-8 sm:p-10 lg:p-12 bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl border border-primary/20 text-center">
-              <Quote size={48} className="sm:w-16 sm:h-16 lg:w-20 lg:h-20 text-primary opacity-30 mx-auto mb-6 sm:mb-8 lg:mb-10" />
-              <blockquote className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-6 sm:mb-8 lg:mb-10 leading-relaxed">
+          <div className="mt-16 sm:mt-20 lg:mt-24 xl:mt-28">
+            <div className="relative p-8 sm:p-10 lg:p-12 xl:p-16 bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl border border-primary/20 text-center">
+              <Quote size={48} className="sm:w-16 sm:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24 text-primary opacity-30 mx-auto mb-6 sm:mb-8 lg:mb-10 xl:mb-12" />
+              <blockquote className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-foreground mb-6 sm:mb-8 lg:mb-10 xl:mb-12 leading-relaxed">
                 "Ultrassom nas suas mãos.<br />
                 <span className="text-primary">Diagnóstico rápido.</span><br />
                 Decisão segura."
               </blockquote>
-              <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-primary font-semibold">
+              <div className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-primary font-semibold">
                 — A confiança que todo médico merece ter
               </div>
             </div>
           </div>
 
           {/* CTA Section */}
-          <div className="text-center mt-12 sm:mt-16 lg:mt-20">
-            <div className="bg-gradient-to-r from-primary/5 to-primary/10 rounded-2xl p-8 sm:p-10 lg:p-12">
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-5 sm:mb-6 lg:mb-8">
+          <div className="text-center mt-12 sm:mt-16 lg:mt-20 xl:mt-24">
+            <div className="bg-gradient-to-r from-primary/5 to-primary/10 rounded-2xl p-8 sm:p-10 lg:p-12 xl:p-16">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-5 sm:mb-6 lg:mb-8 xl:mb-10">
                 Pronto para Sua Transformação?
               </h3>
-              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground mb-6 sm:mb-8 lg:mb-10 max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-muted-foreground mb-6 sm:mb-8 lg:mb-10 xl:mb-12 max-w-4xl xl:max-w-5xl mx-auto">
                 Junte-se aos médicos que já dominam o POCUS e transformaram sua prática profissional
               </p>
               <Button 
                 size="lg"
-                className="bg-primary hover:bg-primary-dark text-primary-foreground font-bold px-8 sm:px-10 lg:px-12 py-4 sm:py-5 lg:py-6 text-lg sm:text-xl lg:text-2xl premium-glow group mobile-button"
+                className="bg-primary hover:bg-primary-dark text-primary-foreground font-bold px-8 sm:px-10 lg:px-12 xl:px-16 py-4 sm:py-5 lg:py-6 xl:py-8 text-lg sm:text-xl lg:text-2xl xl:text-3xl premium-glow group mobile-button"
               >
                 <span className="mr-2">Começar Minha Transformação Agora</span>
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />

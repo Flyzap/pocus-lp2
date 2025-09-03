@@ -141,6 +141,18 @@ All colors MUST be HSL.
     }
   }
 
+  @media (min-width: 1280px) {
+    html {
+      font-size: 22px; /* Otimização para telas xl */
+    }
+  }
+
+  @media (min-width: 1536px) {
+    html {
+      font-size: 24px; /* Otimização para telas 2xl */
+    }
+  }
+
   /* Scroll suave para navegação */
   html {
     scroll-padding-top: 5rem; /* Ajustado para nova altura da navbar mobile */
@@ -155,6 +167,12 @@ All colors MUST be HSL.
   @media (min-width: 768px) {
     html {
       scroll-padding-top: 6rem; /* Ajustado para navbar lg */
+    }
+  }
+
+  @media (min-width: 1280px) {
+    html {
+      scroll-padding-top: 7rem; /* Ajustado para navbar xl */
     }
   }
 }
@@ -296,6 +314,52 @@ All colors MUST be HSL.
     
     .space-y-6 > * + * {
       margin-top: 1.75rem !important;
+    }
+  }
+
+  /* Otimizações para desktop */
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 1280px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .container {
+      max-width: 1536px;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  /* Melhorar espaçamentos em telas grandes */
+  @media (min-width: 1024px) {
+    .space-y-8 > * + * {
+      margin-top: 2.5rem !important;
+    }
+    
+    .space-y-10 > * + * {
+      margin-top: 3rem !important;
+    }
+    
+    .space-y-12 > * + * {
+      margin-top: 3.5rem !important;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .space-y-8 > * + * {
+      margin-top: 3rem !important;
+    }
+    
+    .space-y-10 > * + * {
+      margin-top: 3.5rem !important;
+    }
+    
+    .space-y-12 > * + * {
+      margin-top: 4rem !important;
     }
   }
 }
