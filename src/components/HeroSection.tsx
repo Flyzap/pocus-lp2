@@ -63,14 +63,14 @@ const HeroSection = () => {
           {/* Content */}
           <div className="space-y-6 lg:space-y-8 text-center lg:text-left order-1">
             <div className="space-y-4 sm:space-y-6">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl font-bold leading-tight">
                 <span className="text-foreground">Domine a</span>{" "}
                 <span className="text-primary bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
                   Ultrassonografia
                 </span>{" "}
                 <span className="text-foreground">à Beira-leito</span>
               </h1>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
+              <p className="text-base sm:text-lg md:text-lg lg:text-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0">
                 Ebook gratuito + PDF de emergência para usar no plantão hoje mesmo
               </p>
             </div>

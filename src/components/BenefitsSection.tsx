@@ -53,10 +53,10 @@ const BenefitsSection = () => {
     <section id="beneficios" className="py-16 sm:py-20 lg:py-24 xl:py-28 2xl:py-32 3xl:py-36 bg-background">
       <div className="container max-w-7xl mx-auto px-4 lg:px-8 xl:px-12">
         <div className="text-center mb-12 xl:mb-20 2xl:mb-24 3xl:mb-28">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-6 lg:mb-10 xl:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl font-bold text-foreground mb-6 lg:mb-10 xl:mb-12">
             O que você vai receber <span className="text-primary">GRATUITAMENTE</span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto">
+          <p className="text-base sm:text-lg md:text-lg lg:text-lg text-muted-foreground max-w-4xl mx-auto">
             Material completo de POCUS para transformar sua prática médica hoje mesmo
           </p>
         </div>

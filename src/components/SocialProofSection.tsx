@@ -58,14 +58,14 @@ const SocialProofSection = () => {
           <div className="premium-card p-6 lg:p-8 xl:p-10 max-w-4xl mx-auto">
             <div className="flex items-center justify-center gap-6 lg:gap-8 xl:gap-10 mb-6 lg:mb-8 xl:mb-10">
               <Download className="text-primary w-12 h-12 lg:w-16 lg:h-16 xl:w-20 xl:h-20" />
-              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary">
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl font-bold text-primary">
                 {currentDownloads.toLocaleString('pt-BR')}
               </div>
             </div>
-            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-4 lg:mb-6 xl:mb-8">
+            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl font-bold text-foreground mb-4 lg:mb-6 xl:mb-8">
               Médicos já baixaram o ebook
             </h3>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground">
+            <p className="text-sm sm:text-base md:text-base lg:text-base text-muted-foreground">
               Junte-se a milhares de profissionais que já dominam POCUS
             </p>
           </div>
