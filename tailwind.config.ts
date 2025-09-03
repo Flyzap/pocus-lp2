@@ -10,11 +10,28 @@ export default {
 	],
 	prefix: "",
 	theme: {
+		screens: {
+			'sm': '640px',
+			'md': '768px', 
+			'lg': '1024px',
+			'xl': '1280px',
+			'2xl': '1536px',
+			'3xl': '1920px',   // Full HD
+			'4xl': '2560px',   // 2K/4K  
+			'5xl': '3840px',   // 4K Ultra
+		},
 		container: {
 			center: true,
 			padding: '2rem',
 			screens: {
-				'2xl': '1400px'
+				'sm': '640px',
+				'md': '768px',
+				'lg': '1024px', 
+				'xl': '1280px',
+				'2xl': '1400px',
+				'3xl': '1600px',
+				'4xl': '1920px',
+				'5xl': '2400px',
 			}
 		},
 		extend: {
@@ -62,6 +79,23 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			spacing: {
+				'18': '4.5rem',   // 72px
+				'88': '22rem',    // 352px
+				'96': '24rem',    // 384px
+				'104': '26rem',   // 416px
+				'112': '28rem',   // 448px
+				'128': '32rem',   // 512px
+			},
+			fontSize: {
+				'10xl': ['10rem', { lineHeight: '1' }],
+				'11xl': ['12rem', { lineHeight: '1' }], 
+				'12xl': ['14rem', { lineHeight: '1' }],
+			},
+			maxWidth: {
+				'8xl': '88rem',
+				'9xl': '96rem',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

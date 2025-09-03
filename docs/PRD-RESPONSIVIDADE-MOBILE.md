@@ -339,3 +339,67 @@ className="px-4 py-5 space-y-4"
 ---
 
 *Este PRD é um documento vivo e será atualizado conforme novas descobertas e feedbacks dos usuários.*
+
+## 📋 **Comandos para Atualizar o GitHub**
+
+### **1. Verificar Status Atual**
+```bash
+git status
+```
+
+### **2. Adicionar Todos os Arquivos Modificados**
+```bash
+<code_block_to_apply_changes_from>
+```
+
+### **3. Fazer o Commit das Mudanças**
+```bash
+git commit -m "feat: implementar responsividade desktop completa
+
+- Otimização de todos os componentes para telas grandes
+- Breakpoints xl e 2xl adicionados
+- Tipografia escalável implementada
+- Layouts expandidos para melhor aproveitamento do espaço
+- Espaçamentos otimizados para desktop
+- CSS global melhorado com suporte a telas grandes
+- Build bem-sucedido sem erros"
+```
+
+### **4. Enviar para o GitHub (Push)**
+```bash
+git push origin main
+```
+
+## 🚀 **Comandos Rápidos (Sequência Completa)**
+
+Se você quiser executar tudo de uma vez:
+
+```bash
+git add .
+git commit -m "feat: responsividade desktop completa implementada"
+git push origin main
+```
+
+## 📝 **Resumo das Mudanças que Serão Enviadas**
+
+✅ **Componentes Otimizados:**
+- HeroSection.tsx
+- BenefitsSection.tsx
+- SocialProofSection.tsx
+- InstructorSection.tsx
+- ObjectionsSection.tsx
+- FAQSection.tsx
+- TransformationSection.tsx
+- Footer.tsx
+- LeadMagnetSection.tsx
+- index.css
+
+✅ **Melhorias Implementadas:**
+- Responsividade completa para desktop
+- Breakpoints xl (1280px) e 2xl (1536px)
+- Tipografia escalável
+- Layouts expandidos
+- Espaçamentos otimizados
+- CSS global melhorado
+
+Execute esses comandos no terminal do seu projeto para atualizar o repositório no GitHub! 🎉

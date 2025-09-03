@@ -51,54 +51,54 @@ const SocialProofSection = () => {
   }, []);
 
   return (
-    <section id="depoimentos" className="py-16 sm:py-20 lg:py-24 xl:py-28 bg-card">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+    <section id="depoimentos" className="py-16 sm:py-20 lg:py-24 xl:py-28 2xl:py-32 3xl:py-36 bg-card">
+      <div className="desktop-container mx-auto px-4 xl:px-8 2xl:px-12 3xl:px-16">
         {/* Contador de Downloads */}
-        <div className="text-center mb-10 sm:mb-14 lg:mb-16 xl:mb-20">
-          <div className="premium-card p-8 sm:p-10 lg:p-12 xl:p-16 max-w-3xl xl:max-w-4xl mx-auto">
-            <div className="flex items-center justify-center gap-4 sm:gap-5 lg:gap-6 xl:gap-8 mb-6 lg:mb-8 xl:mb-10">
-              <Download className="text-primary w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 xl:w-16 xl:h-16" />
-              <div className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-primary">
+        <div className="text-center mb-16 xl:mb-20 2xl:mb-24 3xl:mb-28">
+          <div className="premium-card desktop-padding max-w-4xl xl:max-w-5xl 2xl:max-w-6xl mx-auto">
+            <div className="flex items-center justify-center desktop-spacing mb-8 xl:mb-12 2xl:mb-16 3xl:mb-20">
+              <Download className="text-primary w-12 h-12 xl:w-16 xl:h-16 2xl:w-20 2xl:h-20 3xl:w-24 3xl:h-24" />
+              <div className="desktop-heading-hero font-bold text-primary">
                 {currentDownloads.toLocaleString('pt-BR')}
               </div>
             </div>
-            <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-foreground mb-3 sm:mb-4 lg:mb-5 xl:mb-6">
+            <h3 className="desktop-heading-2 font-bold text-foreground mb-6 xl:mb-8 2xl:mb-10 3xl:mb-12">
               Médicos já baixaram o ebook
             </h3>
-            <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-muted-foreground">
+            <p className="desktop-body text-muted-foreground">
               Junte-se a milhares de profissionais que já dominam POCUS
             </p>
           </div>
         </div>
 
         {/* Testimonials Rotativos */}
-        <div className="max-w-6xl xl:max-w-7xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-foreground mb-8 sm:mb-10 lg:mb-12 xl:mb-16">
+        <div className="max-w-7xl xl:max-w-8xl 2xl:max-w-9xl mx-auto">
+          <h3 className="desktop-heading-2 font-bold text-center text-foreground mb-12 xl:mb-16 2xl:mb-20 3xl:mb-24">
             O que os médicos estão falando sobre o ebook
           </h3>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 xl:gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-4 desktop-spacing">
             {testimonials.slice(currentTestimonial, currentTestimonial + 2).map((testimonial, index) => (
               <div 
                 key={`${currentTestimonial}-${index}`} 
-                className="premium-card p-6 sm:p-8 lg:p-10 xl:p-12 space-y-4 sm:space-y-5 lg:space-y-6 xl:space-y-8 transition-all duration-500 transform hover:scale-105"
+                className="premium-card desktop-padding space-y-6 xl:space-y-8 2xl:space-y-10 3xl:space-y-12 transition-all duration-500 transform hover:scale-105"
               >
                 {/* Rating */}
-                <div className="flex gap-1 sm:gap-1.5 lg:gap-2">
+                <div className="flex gap-2 xl:gap-3 2xl:gap-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} size={18} className="sm:w-5 sm:h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 text-yellow-500 fill-current" />
+                    <Star key={i} size={20} className="xl:w-6 xl:h-6 2xl:w-7 2xl:h-7 3xl:w-8 3xl:h-8 text-yellow-500 fill-current" />
                   ))}
                 </div>
                 
                 {/* Testimonial Text */}
-                <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-muted-foreground italic leading-relaxed">
+                <p className="desktop-body text-muted-foreground italic leading-relaxed">
                   "{testimonial.text}"
                 </p>
                 
                 {/* Author */}
-                <div className="border-t pt-4 sm:pt-5 lg:pt-6 xl:pt-8">
-                  <div className="font-bold text-base sm:text-lg lg:text-xl xl:text-2xl text-foreground">{testimonial.name}</div>
-                  <div className="text-sm sm:text-base lg:text-lg xl:text-xl text-muted-foreground">{testimonial.specialty}</div>
+                <div className="border-t pt-6 xl:pt-8 2xl:pt-10 3xl:pt-12">
+                  <div className="font-bold desktop-body text-foreground">{testimonial.name}</div>
+                  <div className="desktop-text-scale text-muted-foreground">{testimonial.specialty}</div>
                 </div>
               </div>
             ))}
@@ -106,30 +106,30 @@ const SocialProofSection = () => {
         </div>
 
         {/* Estatísticas Adicionais */}
-        <div className="mt-12 sm:mt-16 lg:mt-20 xl:mt-24">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 xl:gap-12 max-w-5xl xl:max-w-6xl mx-auto">
-            <div className="premium-card p-6 sm:p-8 lg:p-10 xl:p-12 text-center">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 lg:mb-6">
-                <Users className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xl:w-9 xl:h-9 text-primary" />
+        <div className="mt-16 xl:mt-20 2xl:mt-24 3xl:mt-28">
+          <div className="grid grid-cols-1 sm:grid-cols-3 desktop-spacing max-w-6xl xl:max-w-7xl 2xl:max-w-8xl mx-auto">
+            <div className="premium-card desktop-padding text-center">
+              <div className="w-16 h-16 xl:w-20 xl:h-20 2xl:w-24 2xl:h-24 3xl:w-28 3xl:h-28 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 xl:mb-8 2xl:mb-10 3xl:mb-12">
+                <Users className="w-8 h-8 xl:w-10 xl:h-10 2xl:w-12 2xl:h-12 3xl:w-14 3xl:h-14 text-primary" />
               </div>
-              <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-2 lg:mb-3">98%</div>
-              <div className="text-sm sm:text-base lg:text-lg xl:text-xl text-muted-foreground">Satisfação dos usuários</div>
+              <div className="desktop-heading-2 font-bold text-foreground mb-4 xl:mb-6 2xl:mb-8">98%</div>
+              <div className="desktop-text-scale text-muted-foreground">Satisfação dos usuários</div>
             </div>
             
-            <div className="premium-card p-6 sm:p-8 lg:p-10 xl:p-12 text-center">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 lg:mb-6">
-                <Star className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xl:w-9 xl:h-9 text-primary" />
+            <div className="premium-card desktop-padding text-center">
+              <div className="w-16 h-16 xl:w-20 xl:h-20 2xl:w-24 2xl:h-24 3xl:w-28 3xl:h-28 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 xl:mb-8 2xl:mb-10 3xl:mb-12">
+                <Star className="w-8 h-8 xl:w-10 xl:h-10 2xl:w-12 2xl:h-12 3xl:w-14 3xl:h-14 text-primary" />
               </div>
-              <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-2 lg:mb-3">4.9/5</div>
-              <div className="text-sm sm:text-base lg:text-lg xl:text-xl text-muted-foreground">Avaliação média</div>
+              <div className="desktop-heading-2 font-bold text-foreground mb-4 xl:mb-6 2xl:mb-8">4.9/5</div>
+              <div className="desktop-text-scale text-muted-foreground">Avaliação média</div>
             </div>
             
-            <div className="premium-card p-6 sm:p-8 lg:p-10 xl:p-12 text-center">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 lg:mb-6">
-                <Clock className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xl:w-9 xl:h-9 text-primary" />
+            <div className="premium-card desktop-padding text-center">
+              <div className="w-16 h-16 xl:w-20 xl:h-20 2xl:w-24 2xl:h-24 3xl:w-28 3xl:h-28 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 xl:mb-8 2xl:mb-10 3xl:mb-12">
+                <Clock className="w-8 h-8 xl:w-10 xl:h-10 2xl:w-12 2xl:h-12 3xl:w-14 3xl:h-14 text-primary" />
               </div>
-              <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-2 lg:mb-3">15min</div>
-              <div className="text-sm sm:text-base lg:text-lg xl:text-xl text-muted-foreground">Tempo médio de leitura</div>
+              <div className="desktop-heading-2 font-bold text-foreground mb-4 xl:mb-6 2xl:mb-8">15min</div>
+              <div className="desktop-text-scale text-muted-foreground">Tempo médio de leitura</div>
             </div>
           </div>
         </div>

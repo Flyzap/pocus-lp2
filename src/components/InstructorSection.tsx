@@ -26,17 +26,17 @@ const InstructorSection = () => {
   const { images } = useImageManager();
   
   return (
-    <section id="instrutor" className="py-16 sm:py-20 lg:py-24 xl:py-28 2xl:py-32 bg-secondary">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-        <div className="max-w-7xl xl:max-w-8xl mx-auto">
-          <div className="grid lg:grid-cols-2 xl:grid-cols-12 gap-10 sm:gap-12 lg:gap-16 xl:gap-20 items-center">
+    <section id="instrutor" className="py-16 sm:py-20 lg:py-24 xl:py-28 2xl:py-32 3xl:py-36 bg-secondary">
+      <div className="desktop-container mx-auto px-4 xl:px-8 2xl:px-12 3xl:px-16">
+        <div className="max-w-8xl xl:max-w-9xl 2xl:max-w-[2400px] mx-auto">
+          <div className="grid lg:grid-cols-2 xl:grid-cols-12 desktop-spacing items-center">
             {/* Instructor Photo & Video */}
-            <div className="relative order-first lg:order-last xl:col-span-6">
+            <div className="relative order-first lg:order-last xl:col-span-6 2xl:col-span-5 3xl:col-span-6">
               <div className="relative">
                 <img 
                   src={images.instructorProfile} 
                   alt={`${INSTRUCTOR_CONFIG.name} - Especialista em ${INSTRUCTOR_CONFIG.specialty}`}
-                  className="w-80 h-80 sm:w-96 sm:h-96 lg:w-[30rem] lg:h-[30rem] xl:w-[36rem] xl:h-[36rem] 2xl:w-[40rem] 2xl:h-[40rem] object-cover rounded-full mx-auto premium-glow instructor-image" 
+                  className="w-80 h-80 sm:w-96 sm:h-96 lg:w-[30rem] lg:h-[30rem] xl:w-[36rem] xl:h-[36rem] 2xl:w-[44rem] 2xl:h-[44rem] 3xl:w-[50rem] 3xl:h-[50rem] object-cover rounded-full mx-auto premium-glow instructor-image" 
                   loading="eager"
                   fetchPriority="high"
                   decoding="sync"
@@ -46,23 +46,23 @@ const InstructorSection = () => {
             </div>
             
             {/* Bio Content */}
-            <div className="space-y-6 sm:space-y-8 lg:space-y-10 xl:space-y-12 text-center lg:text-left xl:col-span-6">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-foreground">
+            <div className="xl:col-span-6 2xl:col-span-7 3xl:col-span-6 space-y-8 xl:space-y-12 2xl:space-y-16 3xl:space-y-20 text-center lg:text-left">
+              <h2 className="desktop-heading-1 font-bold text-foreground">
                 Conheça seu <span className="text-primary">Instrutor</span>
               </h2>
               
-              <div className="space-y-4 sm:space-y-5 lg:space-y-6 xl:space-y-8 text-lg sm:text-xl lg:text-2xl xl:text-3xl text-muted-foreground">
+              <div className="space-y-6 xl:space-y-8 2xl:space-y-10 3xl:space-y-12 desktop-body text-muted-foreground">
                 <p>
                   <strong className="text-primary">{INSTRUCTOR_CONFIG.name}</strong> {INSTRUCTOR_CONFIG.bio}
                 </p>
               </div>
               
               {/* Credentials */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-5 lg:gap-6 xl:gap-8">
+              <div className="flex flex-wrap justify-center lg:justify-start desktop-spacing">
                 {INSTRUCTOR_CONFIG.credentials.map((credential, index) => (
                   <span 
                     key={index} 
-                    className="text-sm sm:text-base lg:text-lg xl:text-xl font-medium text-primary bg-primary/10 px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3 xl:px-8 xl:py-4 rounded-full"
+                    className="desktop-text-scale font-medium text-primary bg-primary/10 px-6 py-3 xl:px-8 xl:py-4 2xl:px-10 2xl:py-5 3xl:px-12 3xl:py-6 rounded-full"
                   >
                     {credential}
                   </span>

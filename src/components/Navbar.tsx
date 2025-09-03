@@ -11,40 +11,40 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-3 sm:px-6">
-        <div className="flex items-center justify-between h-18 sm:h-20 lg:h-24">
+      <div className="desktop-container mx-auto px-4 xl:px-8 2xl:px-12 3xl:px-16">
+        <div className="flex items-center justify-between h-18 sm:h-20 lg:h-24 xl:h-28 2xl:h-32 3xl:h-36">
           {/* Logo */}
           <div className="flex items-center">
             <img 
               src={logopocusintensive} 
               alt="POCUS INTENSIVE" 
-              className="h-12 sm:h-14 lg:h-16 w-auto"
+              className="h-12 sm:h-14 lg:h-16 xl:h-20 2xl:h-24 3xl:h-28 w-auto"
             />
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8 xl:space-x-12 2xl:space-x-16 3xl:space-x-20">
             <a 
               href="#beneficios" 
-                              className="text-sm sm:text-base font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="desktop-text-scale font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               Benefícios
             </a>
             <a 
               href="#instrutor" 
-                              className="text-sm sm:text-base font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="desktop-text-scale font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               Instrutor
             </a>
             <a 
               href="#depoimentos" 
-                              className="text-sm sm:text-base font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="desktop-text-scale font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               Depoimentos
             </a>
             <a 
               href="#faq" 
-                              className="text-sm sm:text-base font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="desktop-text-scale font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               FAQ
             </a>
