@@ -30,31 +30,31 @@ const objections = [
 const ObjectionsSection = () => {
   return (
     <section className="py-16 sm:py-20 lg:py-24 xl:py-28 2xl:py-32 3xl:py-36 bg-background">
-      <div className="desktop-container mx-auto px-4 xl:px-8 2xl:px-12 3xl:px-16">
+      <div className="container max-w-7xl mx-auto px-4 lg:px-8 xl:px-12">
         <div className="text-center mb-16 xl:mb-20 2xl:mb-24 3xl:mb-28">
-          <h2 className="desktop-heading-1 font-bold text-foreground mb-8 xl:mb-12 2xl:mb-16 3xl:mb-20">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-6 lg:mb-10 xl:mb-12">
             <span className="text-primary">Sem pegadinhas,</span> sem complicação
           </h2>
-          <p className="desktop-body-lg text-muted-foreground max-w-5xl xl:max-w-6xl 2xl:max-w-7xl 3xl:max-w-8xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto">
             Respondemos as principais dúvidas sobre nosso ebook gratuito de POCUS
           </p>
         </div>
         
-        <div className="desktop-grid-auto desktop-spacing max-w-8xl xl:max-w-9xl 2xl:max-w-[2400px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 xl:gap-10 max-w-7xl mx-auto">
           {objections.map((objection, index) => (
             <div 
               key={index}
-              className="premium-card desktop-padding space-y-6 xl:space-y-8 2xl:space-y-10 3xl:space-y-12 hover:scale-105 transition-all duration-300"
+              className="premium-card p-4 sm:p-6 lg:p-8 space-y-4 lg:space-y-6 hover:scale-105 transition-all duration-300"
             >
-              <div className="flex items-start desktop-spacing">
-                <div className="w-10 h-10 xl:w-12 xl:h-12 2xl:w-14 2xl:h-14 3xl:w-16 3xl:h-16 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1 xl:mt-2">
-                  <Check size={18} className="xl:w-6 xl:h-6 2xl:w-7 2xl:h-7 3xl:w-8 3xl:h-8 text-primary-foreground" />
+              <div className="flex items-start gap-3 lg:gap-4">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <Check size={14} className="sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-primary-foreground" />
                 </div>
-                <div className="space-y-3 xl:space-y-4 2xl:space-y-5 3xl:space-y-6">
-                  <h3 className="font-bold desktop-body text-foreground leading-tight">
+                <div className="space-y-2 lg:space-y-3">
+                  <h3 className="font-bold text-sm sm:text-base lg:text-lg xl:text-xl text-foreground leading-tight">
                     {objection.title}
                   </h3>
-                  <p className="desktop-text-scale text-muted-foreground leading-relaxed">
+                  <p className="text-xs sm:text-sm lg:text-base text-muted-foreground leading-relaxed">
                     {objection.description}
                   </p>
                 </div>

@@ -52,25 +52,25 @@ const HeroSection = () => {
   };
   
   return (
-    <section className="relative desktop-hero hero-gradient flex items-center justify-center overflow-hidden pt-20 pb-12 xl:pt-24 2xl:pt-28 3xl:pt-32">
+    <section className="relative hero-gradient flex items-center justify-center overflow-hidden pt-20 pb-12 lg:pt-24 xl:pt-28 min-h-screen">
       {/* Background Glow Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/10"></div>
       <div className="absolute top-1/4 left-1/4 w-96 h-96 lg:w-[500px] lg:h-[500px] xl:w-[600px] xl:h-[600px] 2xl:w-[800px] 2xl:h-[800px] 3xl:w-[1000px] 3xl:h-[1000px] bg-primary/20 rounded-full blur-3xl animate-pulse-glow"></div>
       <div className="absolute bottom-1/4 right-1/4 w-64 h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 2xl:w-[500px] 2xl:h-[500px] 3xl:w-[600px] 3xl:h-[600px] bg-primary/15 rounded-full blur-2xl animate-float"></div>
       
-      <div className="desktop-container mx-auto px-4 xl:px-8 2xl:px-12 3xl:px-16 relative z-10">
+      <div className="container max-w-7xl mx-auto px-4 lg:px-8 xl:px-12 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
           {/* Content */}
           <div className="space-y-6 lg:space-y-8 text-center lg:text-left order-1">
             <div className="space-y-4 sm:space-y-6">
-              <h1 className="desktop-heading-hero font-bold leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                 <span className="text-foreground">Domine a</span>{" "}
                 <span className="text-primary bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
                   Ultrassonografia
                 </span>{" "}
                 <span className="text-foreground">à Beira-leito</span>
               </h1>
-              <p className="desktop-body-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
                 Ebook gratuito + PDF de emergência para usar no plantão hoje mesmo
               </p>
             </div>

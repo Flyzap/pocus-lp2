@@ -52,20 +52,20 @@ const SocialProofSection = () => {
 
   return (
     <section id="depoimentos" className="py-16 sm:py-20 lg:py-24 xl:py-28 2xl:py-32 3xl:py-36 bg-card">
-      <div className="desktop-container mx-auto px-4 xl:px-8 2xl:px-12 3xl:px-16">
+      <div className="container max-w-7xl mx-auto px-4 lg:px-8 xl:px-12">
         {/* Contador de Downloads */}
         <div className="text-center mb-16 xl:mb-20 2xl:mb-24 3xl:mb-28">
-          <div className="premium-card desktop-padding max-w-4xl xl:max-w-5xl 2xl:max-w-6xl mx-auto">
-            <div className="flex items-center justify-center desktop-spacing mb-8 xl:mb-12 2xl:mb-16 3xl:mb-20">
-              <Download className="text-primary w-12 h-12 xl:w-16 xl:h-16 2xl:w-20 2xl:h-20 3xl:w-24 3xl:h-24" />
-              <div className="desktop-heading-hero font-bold text-primary">
+          <div className="premium-card p-6 lg:p-8 xl:p-10 max-w-4xl mx-auto">
+            <div className="flex items-center justify-center gap-6 lg:gap-8 xl:gap-10 mb-6 lg:mb-8 xl:mb-10">
+              <Download className="text-primary w-12 h-12 lg:w-16 lg:h-16 xl:w-20 xl:h-20" />
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary">
                 {currentDownloads.toLocaleString('pt-BR')}
               </div>
             </div>
-            <h3 className="desktop-heading-2 font-bold text-foreground mb-6 xl:mb-8 2xl:mb-10 3xl:mb-12">
+            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-4 lg:mb-6 xl:mb-8">
               Médicos já baixaram o ebook
             </h3>
-            <p className="desktop-body text-muted-foreground">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground">
               Junte-se a milhares de profissionais que já dominam POCUS
             </p>
           </div>
