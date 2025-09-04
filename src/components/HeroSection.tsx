@@ -111,7 +111,7 @@ const HeroSection = () => {
         </div>
 
         {/* Formulário WhatsApp - Centralizado no mobile, abaixo da imagem */}
-        <div className="mt-8 lg:mt-12 max-w-md mx-auto lg:mx-0 order-3">
+        <div className="mt-8 lg:mt-8 max-w-md mx-auto lg:mx-0 order-3">
           <form onSubmit={handleSubmit} className="flex flex-col gap-3">
             <Input 
               type="text"
