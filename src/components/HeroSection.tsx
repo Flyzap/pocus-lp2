@@ -62,7 +62,7 @@ const HeroSection = () => {
   };
   
   return (
-    <section id="hero" className="mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8 pt-20 pb-12 md:py-20 min-h-screen flex items-center">
+    <section id="hero" className="mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8 pt-28 pb-12 md:pt-32 md:pb-20 min-h-screen flex items-center">
       <div className="relative w-full">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-10 lg:items-start">
           {/* Content */}
