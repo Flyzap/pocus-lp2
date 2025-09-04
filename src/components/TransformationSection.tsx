@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Quote, TrendingUp, Clock, CheckCircle } from "lucide-react";
+import { ArrowRight, ArrowDown, Quote, TrendingUp, Clock, CheckCircle } from "lucide-react";
 
 const TransformationSection = () => {
   return (
@@ -62,7 +62,8 @@ const TransformationSection = () => {
               {/* Center Arrow */}
               <div className="lg:w-auto w-full flex justify-center">
                 <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center premium-glow z-10">
-                  <ArrowRight className="text-primary-foreground w-6 h-6" />
+                  <ArrowDown className="text-primary-foreground w-6 h-6 lg:hidden" />
+                  <ArrowRight className="text-primary-foreground w-6 h-6 hidden lg:block" />
                 </div>
               </div>
               

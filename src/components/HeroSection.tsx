@@ -64,7 +64,7 @@ const HeroSection = () => {
   return (
     <section id="hero" className="mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8 pt-28 pb-12 md:pt-32 md:pb-20 min-h-screen flex items-center">
       <div className="relative w-full">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-10 lg:items-start">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-16 lg:items-start">
           {/* Content */}
           <div className="text-center lg:text-left order-1 lg:order-1">
             <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-tight">
@@ -77,10 +77,152 @@ const HeroSection = () => {
             <p className="mt-4 text-lg md:text-xl text-neutral-600">
               Ebook gratuito + PDF de emergência para usar no plantão hoje mesmo
             </p>
+            
+            {/* Formulário - Visível apenas no desktop, integrado ao conteúdo */}
+            <div className="hidden lg:block mt-6 max-w-md">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+                <Input 
+                  type="text"
+                  value={name}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                    if (error) setError("");
+                  }}
+                  placeholder="Seu nome completo"
+                  autoComplete="name"
+                  className={`${error && !name.trim() ? 'border-red-500 focus:border-red-500' : ''}`}
+                  required
+                  disabled={isSuccess}
+                />
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Input 
+                    type="tel"
+                    value={whatsapp}
+                    onChange={handleWhatsAppChange}
+                    placeholder="(82) 98103-9197"
+                    autoComplete="tel"
+                    inputMode="tel"
+                    className={`flex-1 ${error && validateWhatsApp(whatsapp).isValid === false ? 'border-red-500 focus:border-red-500' : ''}`}
+                    required
+                    disabled={isSuccess}
+                  />
+                  <Button 
+                    type="submit"
+                    disabled={isLoading || isSuccess}
+                    className="px-6 py-3 text-white font-semibold"
+                    style={{background:'#ff0033'}}
+                  >
+                    {isLoading ? (
+                      <div className="flex items-center">
+                        <span className="mr-2">Enviando...</span>
+                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      </div>
+                    ) : isSuccess ? (
+                      "✅ Enviado!"
+                    ) : error ? (
+                      "❌ Erro"
+                    ) : (
+                      "Quero o Ebook"
+                    )}
+                  </Button>
+                </div>
+              </form>
+              
+              {error && (
+                <p className="text-red-500 text-sm font-medium mt-2">{error}</p>
+              )}
+              
+              {/* Garantias */}
+              <div className="flex justify-start gap-4 text-sm text-neutral-600 mt-4">
+                <div className="flex items-center gap-1">
+                  <Download size={16} className="text-green-500" />
+                  <span>Download instantâneo</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <Shield size={16} className="text-green-500" />
+                  <span>Sem spam</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <Clock size={16} className="text-green-500" />
+                  <span>Dados seguros</span>
+                </div>
+              </div>
+            </div>
           </div>
           
+          {/* Formulário Mobile - Visível apenas no mobile */}
+          <div className="lg:hidden mt-2 max-w-md mx-auto order-2">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+              <Input 
+                type="text"
+                value={name}
+                onChange={(e) => {
+                  setName(e.target.value);
+                  if (error) setError("");
+                }}
+                placeholder="Seu nome completo"
+                autoComplete="name"
+                className={`${error && !name.trim() ? 'border-red-500 focus:border-red-500' : ''}`}
+                required
+                disabled={isSuccess}
+              />
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Input 
+                  type="tel"
+                  value={whatsapp}
+                  onChange={handleWhatsAppChange}
+                  placeholder="(82) 98103-9197"
+                  autoComplete="tel"
+                  inputMode="tel"
+                  className={`flex-1 ${error && validateWhatsApp(whatsapp).isValid === false ? 'border-red-500 focus:border-red-500' : ''}`}
+                  required
+                  disabled={isSuccess}
+                />
+                <Button 
+                  type="submit"
+                  disabled={isLoading || isSuccess}
+                  className="px-6 py-3 text-white font-semibold"
+                  style={{background:'#ff0033'}}
+                >
+                  {isLoading ? (
+                    <div className="flex items-center">
+                      <span className="mr-2">Enviando...</span>
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    </div>
+                  ) : isSuccess ? (
+                    "✅ Enviado!"
+                  ) : error ? (
+                    "❌ Erro"
+                  ) : (
+                    "Quero o Ebook"
+                  )}
+                </Button>
+              </div>
+            </form>
+            
+            {error && (
+              <p className="text-red-500 text-sm font-medium mt-2">{error}</p>
+            )}
+            
+            {/* Garantias */}
+            <div className="flex justify-center gap-4 text-sm text-neutral-600 mt-4">
+              <div className="flex items-center gap-1">
+                <Download size={16} className="text-green-500" />
+                <span>Download instantâneo</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <Shield size={16} className="text-green-500" />
+                <span>Sem spam</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <Clock size={16} className="text-green-500" />
+                <span>Dados seguros</span>
+              </div>
+            </div>
+          </div>
+
           {/* Hero Image - Versão Elegante */}
-          <div className="relative aspect-[4/3] lg:aspect-[5/4] order-2 lg:order-2 group">
+          <div className="relative aspect-[2/1] lg:aspect-[5/4] order-3 lg:order-2 group">
             {/* Container da imagem com efeitos */}
             <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-slate-900 to-slate-700">
               <img 
@@ -106,77 +248,6 @@ const HeroSection = () => {
               
               {/* Efeito de brilho no hover */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
-          </div>
-        </div>
-
-        {/* Formulário WhatsApp - Centralizado no mobile, abaixo da imagem */}
-        <div className="mt-8 lg:mt-8 max-w-md mx-auto lg:mx-0 order-3">
-          <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-            <Input 
-              type="text"
-              value={name}
-              onChange={(e) => {
-                setName(e.target.value);
-                if (error) setError("");
-              }}
-              placeholder="Seu nome completo"
-              autoComplete="name"
-              className={`${error && !name.trim() ? 'border-red-500 focus:border-red-500' : ''}`}
-              required
-              disabled={isSuccess}
-            />
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Input 
-                type="tel"
-                value={whatsapp}
-                onChange={handleWhatsAppChange}
-                placeholder="(82) 98103-9197"
-                autoComplete="tel"
-                inputMode="tel"
-                className={`flex-1 ${error && validateWhatsApp(whatsapp).isValid === false ? 'border-red-500 focus:border-red-500' : ''}`}
-                required
-                disabled={isSuccess}
-              />
-              <Button 
-                type="submit"
-                disabled={isLoading || isSuccess}
-                className="px-6 py-3 text-white font-semibold"
-                style={{background:'#ff0033'}}
-              >
-                {isLoading ? (
-                  <div className="flex items-center">
-                    <span className="mr-2">Enviando...</span>
-                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                  </div>
-                ) : isSuccess ? (
-                  "✅ Enviado!"
-                ) : error ? (
-                  "❌ Erro"
-                ) : (
-                  "Quero o Ebook"
-                )}
-              </Button>
-            </div>
-          </form>
-          
-          {error && (
-            <p className="text-red-500 text-sm font-medium mt-2">{error}</p>
-          )}
-          
-          {/* Garantias */}
-          <div className="flex justify-center lg:justify-start gap-4 text-sm text-neutral-600 mt-4">
-            <div className="flex items-center gap-1">
-              <Download size={16} className="text-green-500" />
-              <span>Download instantâneo</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Shield size={16} className="text-green-500" />
-              <span>Sem spam</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock size={16} className="text-green-500" />
-              <span>Dados seguros</span>
             </div>
           </div>
         </div>
