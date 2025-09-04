@@ -29,8 +29,8 @@ const objections = [
 
 const ObjectionsSection = () => {
   return (
-    <section className="py-12 lg:py-16 bg-background">
-      <div className="container max-w-5xl mx-auto px-4 lg:px-8">
+    <section className="mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8 py-12">
+      <div className="mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
             <span className="text-primary">Sem pegadinhas,</span> sem complicação
@@ -40,7 +40,7 @@ const ObjectionsSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {objections.map((objection, index) => (
             <div 
               key={index}

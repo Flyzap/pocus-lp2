@@ -24,8 +24,8 @@ const InstructorSection = () => {
   const { images } = useImageManager();
   
   return (
-    <section id="instrutor" className="py-12 lg:py-16 bg-secondary">
-      <div className="container max-w-5xl mx-auto px-4 lg:px-8">
+    <section id="instrutor" className="mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8 py-12">
+      <div className="mx-auto max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Instructor Photo & Video */}
           <div className="relative order-first lg:order-last">

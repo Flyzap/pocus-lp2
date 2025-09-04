@@ -10,9 +10,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container max-w-6xl mx-auto px-4 lg:px-6 xl:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-18 xl:h-20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur border-b border-border shadow-sm">
+      <div className="mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
             <img 
@@ -23,30 +23,31 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-8 xl:space-x-10">
+          <div className="hidden md:flex items-center gap-6">
             <a 
               href="#beneficios" 
-              className="text-sm lg:text-base font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="hover:text-neutral-700 text-neutral-900 font-medium"
             >
-              Benefícios
+              Conteúdo
             </a>
             <a 
               href="#instrutor" 
-              className="text-sm lg:text-base font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="hover:text-neutral-700 text-neutral-900 font-medium"
             >
-              Instrutor
-            </a>
-            <a 
-              href="#depoimentos" 
-              className="text-sm lg:text-base font-medium text-muted-foreground hover:text-primary transition-colors"
-            >
-              Depoimentos
+              Programa
             </a>
             <a 
               href="#faq" 
-              className="text-sm lg:text-base font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="hover:text-neutral-700 text-neutral-900 font-medium"
             >
               FAQ
+            </a>
+            <a 
+              href="#hero" 
+              className="px-4 py-2 rounded-xl text-white font-semibold"
+              style={{background:'#ff0033'}}
+            >
+              Quero saber mais
             </a>
           </div>
 

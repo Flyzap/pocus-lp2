@@ -42,8 +42,8 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section id="faq" className="py-12 lg:py-16 bg-background">
-      <div className="container max-w-4xl mx-auto px-4 lg:px-8">
+    <section id="faq" className="mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8 py-12">
+      <div className="mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
             <span className="text-primary">Dúvidas</span> sobre o Ebook

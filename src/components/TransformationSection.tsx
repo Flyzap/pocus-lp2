@@ -3,8 +3,8 @@ import { ArrowRight, Quote, TrendingUp, Clock, CheckCircle } from "lucide-react"
 
 const TransformationSection = () => {
   return (
-    <section className="py-12 lg:py-16 bg-card">
-      <div className="container max-w-5xl mx-auto px-4 lg:px-8">
+    <section className="mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8 py-12">
+      <div className="mx-auto max-w-6xl">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-3 bg-primary/10 px-6 py-3 rounded-full mb-6">

@@ -15,23 +15,30 @@ export default {
 			'md': '768px', 
 			'lg': '1024px',
 			'xl': '1280px',
-			'2xl': '1536px',
+			'2xl': '1440px',   // Conforme PRD
 			'3xl': '1920px',   // Full HD
 			'4xl': '2560px',   // 2K/4K  
 			'5xl': '3840px',   // 4K Ultra
 		},
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: {
+				DEFAULT: '1rem',
+				sm: '1.5rem',
+				md: '2rem',
+				lg: '2rem',
+				xl: '2rem',
+				'2xl': '2rem',
+			},
 			screens: {
 				'sm': '640px',
 				'md': '768px',
 				'lg': '1024px', 
 				'xl': '1280px',
-				'2xl': '1400px',
-				'3xl': '1600px',
-				'4xl': '1920px',
-				'5xl': '2400px',
+				'2xl': '1440px',
+				'3xl': '1920px',
+				'4xl': '2560px',
+				'5xl': '3840px',
 			}
 		},
 		extend: {

@@ -51,8 +51,8 @@ const SocialProofSection = () => {
   }, []);
 
   return (
-    <section id="depoimentos" className="py-12 lg:py-16 bg-card">
-      <div className="container max-w-5xl mx-auto px-4 lg:px-8">
+    <section id="depoimentos" className="mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8 py-12">
+      <div className="mx-auto max-w-6xl">
         {/* Contador de Downloads */}
         <div className="text-center mb-12">
           <div className="premium-card p-6 max-w-lg mx-auto">
@@ -77,7 +77,7 @@ const SocialProofSection = () => {
             O que os médicos estão falando sobre o ebook
           </h3>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.slice(currentTestimonial, currentTestimonial + 3).map((testimonial, index) => (
               <div 
                 key={`${currentTestimonial}-${index}`} 
@@ -107,7 +107,7 @@ const SocialProofSection = () => {
 
         {/* Estatísticas Adicionais */}
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="premium-card p-6 text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-6 h-6 text-primary" />

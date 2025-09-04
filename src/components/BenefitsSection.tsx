@@ -48,8 +48,8 @@ const benefits = [
 
 const BenefitsSection = () => {
   return (
-    <section id="beneficios" className="py-12 lg:py-16 bg-background">
-      <div className="container max-w-5xl mx-auto px-4 lg:px-8">
+    <section id="beneficios" className="mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8 py-12">
+      <div className="mx-auto max-w-6xl">
         <div className="text-center mb-8">
           <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
             O que você vai receber <span className="text-primary">GRATUITAMENTE</span>
@@ -64,7 +64,7 @@ const BenefitsSection = () => {
           <h3 className="text-lg lg:text-xl font-bold text-center text-foreground mb-6">
             🎯 <span className="text-primary">Principais Benefícios</span>
           </h3>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.filter(benefit => benefit.priority === "high").map((benefit, index) => (
               <div 
                 key={index} 
@@ -88,7 +88,7 @@ const BenefitsSection = () => {
           <h3 className="text-lg font-bold text-center text-foreground mb-6">
             ➕ <span className="text-primary">Benefícios Adicionais</span>
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.filter(benefit => benefit.priority === "medium").map((benefit, index) => (
               <div 
                 key={index} 
@@ -112,7 +112,7 @@ const BenefitsSection = () => {
           <h3 className="text-base font-bold text-center text-foreground mb-6">
             ✨ <span className="text-primary">Benefícios Extras</span>
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.filter(benefit => benefit.priority === "low").map((benefit, index) => (
               <div 
                 key={index} 
