@@ -64,7 +64,7 @@ const HeroSection = () => {
   return (
     <section id="hero" className="mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8 pt-20 pb-12 md:py-20 min-h-screen flex items-center">
       <div className="relative w-full">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-10 lg:items-center">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-10 lg:items-start">
           {/* Content */}
           <div className="text-center lg:text-left order-1 lg:order-1">
             <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-tight">
@@ -86,7 +86,7 @@ const HeroSection = () => {
               <img 
                 src={images.instructorHero} 
                 alt="Dr. Saulo Salgueiro - Especialista em POCUS" 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                 loading="eager"
                 fetchPriority="high"
               />
@@ -96,15 +96,9 @@ const HeroSection = () => {
               
               {/* Texto sobreposto */}
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <h3 className="text-xl md:text-2xl font-bold mb-1">
+                <h3 className="text-xl md:text-2xl font-bold">
                   Dr. Saulo Salgueiro
                 </h3>
-                <p className="text-sm md:text-base text-gray-200 font-medium">
-                  Especialista em POCUS
-                </p>
-                <p className="text-xs md:text-sm text-gray-300 mt-1">
-                  Diretor e Fundador
-                </p>
               </div>
               
               {/* Borda de luz sutil */}
