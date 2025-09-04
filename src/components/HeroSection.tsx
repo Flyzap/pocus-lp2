@@ -52,11 +52,11 @@ const HeroSection = () => {
   };
   
   return (
-    <section id="hero" className="mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8 py-12 md:py-20 min-h-screen flex items-center">
+    <section id="hero" className="mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8 pt-20 pb-12 md:py-20 min-h-screen flex items-center">
       <div className="relative w-full">
-        <div className="grid lg:grid-cols-2 gap-10 items-center">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-10 lg:items-center">
           {/* Content */}
-          <div>
+          <div className="text-center lg:text-left order-1 lg:order-1">
             <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-tight">
               <span className="text-foreground">Domine a</span>{" "}
               <span className="text-primary bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
@@ -70,19 +70,19 @@ const HeroSection = () => {
           </div>
           
           {/* Hero Image */}
-          <div className="relative aspect-[4/3] lg:aspect-[5/4]">
+          <div className="relative aspect-[4/3] lg:aspect-[5/4] order-2 lg:order-2">
             <img 
               src={images.instructorHero} 
               alt="Dr. Saulo Salgueiro - Especialista em POCUS" 
-              className="w-full h-full object-contain rounded-xl shadow-2xl"
+              className="w-full h-full object-contain rounded-xl shadow-2xl mx-auto"
               loading="eager"
               fetchPriority="high"
             />
           </div>
         </div>
 
-        {/* Formulário WhatsApp */}
-        <div className="mt-12 max-w-md">
+        {/* Formulário WhatsApp - Centralizado no mobile, abaixo da imagem */}
+        <div className="mt-8 lg:mt-12 max-w-md mx-auto lg:mx-0 order-3">
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
             <Input 
               type="tel"
@@ -121,7 +121,7 @@ const HeroSection = () => {
           )}
           
           {/* Garantias */}
-          <div className="flex justify-start gap-4 text-sm text-neutral-600 mt-4">
+          <div className="flex justify-center lg:justify-start gap-4 text-sm text-neutral-600 mt-4">
             <div className="flex items-center gap-1">
               <Download size={16} className="text-green-500" />
               <span>Download instantâneo</span>
