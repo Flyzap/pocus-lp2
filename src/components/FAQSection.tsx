@@ -42,51 +42,74 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section id="faq" className="py-16 sm:py-20 lg:py-24 xl:py-28 2xl:py-32 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-        <div className="max-w-5xl xl:max-w-6xl mx-auto">
-          <div className="text-center mb-14 sm:mb-18 lg:mb-22 xl:mb-24">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-foreground mb-6 sm:mb-8 lg:mb-10 xl:mb-12">
-              <span className="text-primary">Dúvidas</span> sobre o Ebook
-            </h2>
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-muted-foreground">
-              Respostas para as principais perguntas sobre o download gratuito
-            </p>
+    <section id="faq" className="py-12 lg:py-16 bg-background">
+      <div className="container max-w-4xl mx-auto px-4 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
+            <span className="text-primary">Dúvidas</span> sobre o Ebook
+          </h2>
+          <p className="text-base lg:text-lg text-muted-foreground">
+            Respostas para as principais perguntas sobre o download gratuito
+          </p>
+        </div>
+        
+        <div className="premium-card p-6 lg:p-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Primeira coluna */}
+            <div>
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.slice(0, 4).map((faq, index) => (
+                  <AccordionItem 
+                    key={index} 
+                    value={`item-${index}`}
+                    className="border border-border rounded-lg px-4"
+                  >
+                    <AccordionTrigger className="text-left font-semibold text-sm lg:text-base text-primary hover:text-primary-glow mobile-touch-target">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-xs lg:text-sm text-muted-foreground pt-3 leading-relaxed">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+            
+            {/* Segunda coluna */}
+            <div>
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.slice(4, 8).map((faq, index) => (
+                  <AccordionItem 
+                    key={index + 4} 
+                    value={`item-${index + 4}`}
+                    className="border border-border rounded-lg px-4"
+                  >
+                    <AccordionTrigger className="text-left font-semibold text-sm lg:text-base text-primary hover:text-primary-glow mobile-touch-target">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-xs lg:text-sm text-muted-foreground pt-3 leading-relaxed">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
           </div>
-          
-          <div className="premium-card p-6 sm:p-8 lg:p-10 xl:p-12">
-            <Accordion type="single" collapsible className="space-y-4 sm:space-y-5 lg:space-y-6 xl:space-y-8">
-              {faqs.map((faq, index) => (
-                <AccordionItem 
-                  key={index} 
-                  value={`item-${index}`}
-                  className="border border-border rounded-lg px-4 sm:px-6 lg:px-8 xl:px-10"
-                >
-                  <AccordionTrigger className="text-left font-semibold text-base sm:text-lg lg:text-xl xl:text-2xl text-primary hover:text-primary-glow mobile-touch-target">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-sm sm:text-base lg:text-lg xl:text-xl text-muted-foreground pt-4 sm:pt-5 lg:pt-6 xl:pt-8 leading-relaxed">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-          
-          {/* Still have questions */}
-          <div className="text-center mt-12 sm:mt-16 lg:mt-20 xl:mt-24">
-            <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-muted-foreground mb-4 sm:mb-6 lg:mb-8 xl:mb-10">
-              Ainda tem dúvidas sobre o ebook? Nossa equipe médica está pronta para ajudar!
-            </p>
-            <a 
-              href="https://wa.me/5582981039197" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-primary hover:text-primary-glow font-semibold text-base sm:text-lg lg:text-xl xl:text-2xl mobile-touch-target"
-            >
-              💬 Tire suas dúvidas no WhatsApp
-            </a>
-          </div>
+        </div>
+        
+        {/* Still have questions */}
+        <div className="text-center mt-12">
+          <p className="text-base text-muted-foreground mb-4">
+            Ainda tem dúvidas sobre o ebook? Nossa equipe médica está pronta para ajudar!
+          </p>
+          <a 
+            href="https://wa.me/5582981039197" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-primary hover:text-primary-glow font-semibold text-base mobile-touch-target"
+          >
+            💬 Tire suas dúvidas no WhatsApp
+          </a>
         </div>
       </div>
     </section>

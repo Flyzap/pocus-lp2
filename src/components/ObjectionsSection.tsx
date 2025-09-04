@@ -29,32 +29,32 @@ const objections = [
 
 const ObjectionsSection = () => {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 xl:py-28 2xl:py-32 3xl:py-36 bg-background">
-      <div className="container max-w-7xl mx-auto px-4 lg:px-8 xl:px-12">
-        <div className="text-center mb-16 xl:mb-20 2xl:mb-24 3xl:mb-28">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl font-bold text-foreground mb-6 lg:mb-10 xl:mb-12">
+    <section className="py-12 lg:py-16 bg-background">
+      <div className="container max-w-5xl mx-auto px-4 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
             <span className="text-primary">Sem pegadinhas,</span> sem complicação
           </h2>
-          <p className="text-base sm:text-lg md:text-lg lg:text-lg text-muted-foreground max-w-4xl mx-auto">
+          <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
             Respondemos as principais dúvidas sobre nosso ebook gratuito de POCUS
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 xl:gap-10 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {objections.map((objection, index) => (
             <div 
               key={index}
-              className="premium-card p-4 sm:p-6 lg:p-8 space-y-4 lg:space-y-6 hover:scale-105 transition-all duration-300"
+              className="premium-card p-6 space-y-4 hover:scale-105 transition-all duration-300"
             >
-              <div className="flex items-start gap-3 lg:gap-4">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Check size={14} className="sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-primary-foreground" />
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <Check size={14} className="text-primary-foreground" />
                 </div>
-                <div className="space-y-2 lg:space-y-3">
-                  <h3 className="font-bold text-sm sm:text-base lg:text-lg xl:text-xl text-foreground leading-tight">
+                <div className="space-y-2">
+                  <h3 className="font-bold text-base text-foreground leading-tight">
                     {objection.title}
                   </h3>
-                  <p className="text-xs sm:text-sm lg:text-base text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     {objection.description}
                   </p>
                 </div>
@@ -64,15 +64,15 @@ const ObjectionsSection = () => {
         </div>
         
         {/* Bottom CTA */}
-        <div className="text-center mt-20 xl:mt-24 2xl:mt-28 3xl:mt-32">
-          <div className="premium-card desktop-padding max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto">
-            <h3 className="desktop-heading-2 font-bold text-foreground mb-6 xl:mb-8 2xl:mb-10 3xl:mb-12">
+        <div className="text-center mt-16">
+          <div className="premium-card p-8 max-w-3xl mx-auto">
+            <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-6">
               Ainda com dúvidas? É só baixar!
             </h3>
-            <p className="desktop-body text-muted-foreground mb-8 xl:mb-10 2xl:mb-12 3xl:mb-16">
+            <p className="text-base text-muted-foreground mb-8">
               Não perca tempo. O ebook é gratuito e você recebe instantaneamente. Não tem nada a perder!
             </p>
-            <div className="text-primary font-bold desktop-body">
+            <div className="text-primary font-bold text-base">
               ✅ 100% Gratuito ✅ Download Imediato ✅ Sem Compromisso
             </div>
           </div>
