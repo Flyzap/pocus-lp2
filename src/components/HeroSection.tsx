@@ -79,15 +79,40 @@ const HeroSection = () => {
             </p>
           </div>
           
-          {/* Hero Image */}
-          <div className="relative aspect-[4/3] lg:aspect-[5/4] order-2 lg:order-2">
-            <img 
-              src={images.instructorHero} 
-              alt="Dr. Saulo Salgueiro - Especialista em POCUS" 
-              className="w-full h-full object-contain rounded-xl shadow-2xl mx-auto"
-              loading="eager"
-              fetchPriority="high"
-            />
+          {/* Hero Image - Versão Elegante */}
+          <div className="relative aspect-[4/3] lg:aspect-[5/4] order-2 lg:order-2 group">
+            {/* Container da imagem com efeitos */}
+            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-slate-900 to-slate-700">
+              <img 
+                src={images.instructorHero} 
+                alt="Dr. Saulo Salgueiro - Especialista em POCUS" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="eager"
+                fetchPriority="high"
+              />
+              
+              {/* Overlay gradiente */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              
+              {/* Texto sobreposto */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3 className="text-xl md:text-2xl font-bold mb-1">
+                  Dr. Saulo Salgueiro
+                </h3>
+                <p className="text-sm md:text-base text-gray-200 font-medium">
+                  Especialista em POCUS
+                </p>
+                <p className="text-xs md:text-sm text-gray-300 mt-1">
+                  Diretor e Fundador
+                </p>
+              </div>
+              
+              {/* Borda de luz sutil */}
+              <div className="absolute inset-0 rounded-2xl ring-1 ring-white/10"></div>
+              
+              {/* Efeito de brilho no hover */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
           </div>
         </div>
 
