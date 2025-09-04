@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 // Imagens padrão (fallback)
-import instructorHeroDefault from "@/assets/instructor-hero.jpg";
+import instructorHeroDefault from "@/assets/instructor-heroo.jpg";
 import instructorProfileDefault from "@/assets/instructor-profile.jpg";
 
 // Chaves para localStorage

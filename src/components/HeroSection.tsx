@@ -7,6 +7,7 @@ import { formatWhatsApp, validateWhatsApp } from "@/utils/whatsappValidation";
 
 const HeroSection = () => {
   const { images } = useImageManager();
+  const [name, setName] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -23,6 +24,12 @@ const HeroSection = () => {
     e.preventDefault();
     setError("");
     
+    // Validar nome
+    if (!name.trim()) {
+      setError("Por favor, insira seu nome");
+      return;
+    }
+    
     // Validar WhatsApp
     const validation = validateWhatsApp(whatsapp);
     if (!validation.isValid) {
@@ -37,7 +44,10 @@ const HeroSection = () => {
       // const response = await fetch('/api/capture-lead', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({ whatsapp: validation.formattedNumber })
+      //   body: JSON.stringify({ 
+      //     name: name.trim(), 
+      //     whatsapp: validation.formattedNumber 
+      //   })
       // });
       
       // Simular envio por enquanto
@@ -83,37 +93,52 @@ const HeroSection = () => {
 
         {/* Formulário WhatsApp - Centralizado no mobile, abaixo da imagem */}
         <div className="mt-8 lg:mt-12 max-w-md mx-auto lg:mx-0 order-3">
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-3">
             <Input 
-              type="tel"
-              value={whatsapp}
-              onChange={handleWhatsAppChange}
-              placeholder="(82) 98103-9197"
-              autoComplete="tel"
-              inputMode="tel"
-              className={`flex-1 ${error ? 'border-red-500 focus:border-red-500' : ''}`}
+              type="text"
+              value={name}
+              onChange={(e) => {
+                setName(e.target.value);
+                if (error) setError("");
+              }}
+              placeholder="Seu nome completo"
+              autoComplete="name"
+              className={`${error && !name.trim() ? 'border-red-500 focus:border-red-500' : ''}`}
               required
               disabled={isSuccess}
             />
-            <Button 
-              type="submit"
-              disabled={isLoading || isSuccess}
-              className="px-6 py-3 text-white font-semibold"
-              style={{background:'#ff0033'}}
-            >
-              {isLoading ? (
-                <div className="flex items-center">
-                  <span className="mr-2">Enviando...</span>
-                  <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                </div>
-              ) : isSuccess ? (
-                "✅ Enviado!"
-              ) : error ? (
-                "❌ Erro"
-              ) : (
-                "Quero o Ebook"
-              )}
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Input 
+                type="tel"
+                value={whatsapp}
+                onChange={handleWhatsAppChange}
+                placeholder="(82) 98103-9197"
+                autoComplete="tel"
+                inputMode="tel"
+                className={`flex-1 ${error && validateWhatsApp(whatsapp).isValid === false ? 'border-red-500 focus:border-red-500' : ''}`}
+                required
+                disabled={isSuccess}
+              />
+              <Button 
+                type="submit"
+                disabled={isLoading || isSuccess}
+                className="px-6 py-3 text-white font-semibold"
+                style={{background:'#ff0033'}}
+              >
+                {isLoading ? (
+                  <div className="flex items-center">
+                    <span className="mr-2">Enviando...</span>
+                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                  </div>
+                ) : isSuccess ? (
+                  "✅ Enviado!"
+                ) : error ? (
+                  "❌ Erro"
+                ) : (
+                  "Quero o Ebook"
+                )}
+              </Button>
+            </div>
           </form>
           
           {error && (
