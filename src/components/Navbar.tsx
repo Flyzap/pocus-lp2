@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur border-b border-border shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur border-b border-gray-800 shadow-sm">
       <div className="mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -26,19 +26,19 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-6">
             <a 
               href="#beneficios" 
-              className="hover:text-neutral-700 text-neutral-900 font-medium"
+              className="hover:text-gray-300 text-white font-medium"
             >
               Conteúdo
             </a>
             <a 
               href="#instrutor" 
-              className="hover:text-neutral-700 text-neutral-900 font-medium"
+              className="hover:text-gray-300 text-white font-medium"
             >
               Programa
             </a>
             <a 
               href="#faq" 
-              className="hover:text-neutral-700 text-neutral-900 font-medium"
+              className="hover:text-gray-300 text-white font-medium"
             >
               FAQ
             </a>
@@ -54,7 +54,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden p-2 sm:p-3 text-muted-foreground hover:text-primary transition-colors mobile-button"
+            className="md:hidden p-2 sm:p-3 text-gray-300 hover:text-primary transition-colors mobile-button"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
@@ -67,32 +67,32 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-sm">
+          <div className="md:hidden border-t border-gray-800 bg-black/95 backdrop-blur-sm">
             <div className="px-4 py-5 space-y-4">
               <a 
                 href="#beneficios" 
-                                 className="block text-lg font-medium text-muted-foreground hover:text-primary transition-colors py-2 mobile-touch-target"
+                                 className="block text-lg font-medium text-gray-300 hover:text-primary transition-colors py-2 mobile-touch-target"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Benefícios
               </a>
               <a 
                 href="#instrutor" 
-                                 className="block text-lg font-medium text-muted-foreground hover:text-primary transition-colors py-2 mobile-touch-target"
+                                 className="block text-lg font-medium text-gray-300 hover:text-primary transition-colors py-2 mobile-touch-target"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Instrutor
               </a>
               <a 
                 href="#depoimentos" 
-                                 className="block text-lg font-medium text-muted-foreground hover:text-primary transition-colors py-2 mobile-touch-target"
+                                 className="block text-lg font-medium text-gray-300 hover:text-primary transition-colors py-2 mobile-touch-target"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Depoimentos
               </a>
               <a 
                 href="#faq" 
-                                 className="block text-lg font-medium text-muted-foreground hover:text-primary transition-colors py-2 mobile-touch-target"
+                                 className="block text-lg font-medium text-gray-300 hover:text-primary transition-colors py-2 mobile-touch-target"
                 onClick={() => setIsMenuOpen(false)}
               >
                 FAQ

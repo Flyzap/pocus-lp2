@@ -57,17 +57,16 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           {/* Content */}
           <div>
-            <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-tight text-neutral-900">
-              Domine o POCUS no plantão
+            <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-tight">
+              <span className="text-foreground">Domine a</span>{" "}
+              <span className="text-primary bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
+                Ultrassonografia
+              </span>{" "}
+              <span className="text-foreground">à Beira-leito</span>
             </h1>
             <p className="mt-4 text-lg md:text-xl text-neutral-600">
-              Diagnóstico rápido, decisão segura. Prática supervisionada e mentoria.
+              Ebook gratuito + PDF de emergência para usar no plantão hoje mesmo
             </p>
-            <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              <a className="px-6 py-3 rounded-xl text-white font-semibold"
-                 style={{background:'#ff0033'}}>Quero saber mais</a>
-              <a className="px-6 py-3 rounded-xl border font-semibold text-neutral-900 border-neutral-300 hover:bg-neutral-50">Ver programa</a>
-            </div>
           </div>
           
           {/* Hero Image */}
