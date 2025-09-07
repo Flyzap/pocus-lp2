@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { ArrowRight, Download, Shield, Clock } from "lucide-react";
+import { ArrowRight, Shield, Clock, CreditCard } from "lucide-react";
 import { useImageManager } from "@/hooks/useImageManager";
 import { useState } from "react";
 import { formatWhatsApp, validateWhatsApp } from "@/utils/whatsappValidation";
 
-const HeroSection = () => {
+const SalesHeroSection = () => {
   const { images } = useImageManager();
   const [name, setName] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
@@ -16,7 +16,6 @@ const HeroSection = () => {
   const handleWhatsAppChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const formatted = formatWhatsApp(e.target.value);
     setWhatsapp(formatted);
-    // Limpar erro quando usuário digita
     if (error) setError("");
   };
 
@@ -24,13 +23,11 @@ const HeroSection = () => {
     e.preventDefault();
     setError("");
     
-    // Validar nome
     if (!name.trim()) {
       setError("Por favor, insira seu nome");
       return;
     }
     
-    // Validar WhatsApp
     const validation = validateWhatsApp(whatsapp);
     if (!validation.isValid) {
       setError(validation.errorMessage || "WhatsApp inválido");
@@ -40,24 +37,13 @@ const HeroSection = () => {
     setIsLoading(true);
     
     try {
-      // Aqui você integraria com sua API
-      // const response = await fetch('/api/capture-lead', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({ 
-      //     name: name.trim(), 
-      //     whatsapp: validation.formattedNumber 
-      //   })
-      // });
-      
-      // Simular envio por enquanto
       setTimeout(() => {
         setIsLoading(false);
         setIsSuccess(true);
       }, 2000);
     } catch (err) {
       setIsLoading(false);
-      setError("Erro ao enviar. Tente novamente.");
+      setError("Erro ao processar. Tente novamente.");
     }
   };
   
@@ -68,17 +54,32 @@ const HeroSection = () => {
           {/* Content */}
           <div className="text-center lg:text-left order-1 lg:order-1">
             <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-tight">
-              <span className="text-foreground">Domine a</span>{" "}
+              <span className="text-foreground">Domine o</span>{" "}
               <span className="text-primary bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                Ultrassonografia
+                POCUS Completo
               </span>{" "}
-              <span className="text-foreground">à Beira-leito</span>
+              <span className="text-foreground">em 30 Dias</span>
             </h1>
             <p className="mt-4 text-lg md:text-xl text-neutral-600">
-              Ebook gratuito + PDF de emergência para usar no plantão hoje mesmo
+              Curso completo + Certificação + Casos práticos + Suporte VIP
             </p>
+
+            {/* Preço Box */}
+            <div className="mt-6 premium-card p-6 max-w-md mx-auto lg:mx-0">
+              <div className="text-center">
+                <div className="text-sm text-muted-foreground line-through mb-2">
+                  De R$ 997
+                </div>
+                <div className="text-3xl font-bold text-primary mb-2">
+                  R$ 497
+                </div>
+                <div className="text-lg text-foreground mb-4">
+                  ou 3x de <span className="font-bold">R$ 165</span>
+                </div>
+              </div>
+            </div>
             
-            {/* Formulário - Visível apenas no desktop, integrado ao conteúdo */}
+            {/* Formulário - Visível apenas no desktop */}
             <div className="hidden lg:block mt-6 max-w-md">
               <form onSubmit={handleSubmit} className="flex flex-col gap-3">
                 <Input 
@@ -114,15 +115,15 @@ const HeroSection = () => {
                   >
                     {isLoading ? (
                       <div className="flex items-center">
-                        <span className="mr-2">Enviando...</span>
+                        <span className="mr-2">Processando...</span>
                         <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       </div>
                     ) : isSuccess ? (
-                      "✅ Enviado!"
+                      "✅ Sucesso!"
                     ) : error ? (
                       "❌ Erro"
                     ) : (
-                      "Quero o Ebook"
+                      "🔥 GARANTIR MINHA VAGA AGORA"
                     )}
                   </Button>
                 </div>
@@ -135,37 +136,22 @@ const HeroSection = () => {
               {/* Garantias */}
               <div className="flex justify-start gap-4 text-sm text-neutral-600 mt-4">
                 <div className="flex items-center gap-1">
-                  <Download size={16} className="text-green-500" />
-                  <span>Download instantâneo</span>
-                </div>
-                <div className="flex items-center gap-1">
                   <Shield size={16} className="text-green-500" />
-                  <span>Sem spam</span>
+                  <span>Garantia 7 dias</span>
                 </div>
                 <div className="flex items-center gap-1">
                   <Clock size={16} className="text-green-500" />
-                  <span>Dados seguros</span>
+                  <span>Acesso vitalício</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <CreditCard size={16} className="text-green-500" />
+                  <span>Parcelamento</span>
                 </div>
               </div>
-
-              {/* Link para curso após sucesso */}
-              {isSuccess && (
-                <div className="mt-4 p-4 bg-gradient-to-r from-primary/5 to-primary/10 rounded-lg border border-primary/20">
-                  <p className="text-sm text-center text-muted-foreground mb-2">
-                    ✨ Quer mais que um ebook? 
-                  </p>
-                  <a 
-                    href="/curso" 
-                    className="text-primary font-semibold hover:underline text-sm block text-center"
-                  >
-                    Conheça nosso curso completo
-                  </a>
-                </div>
-              )}
             </div>
           </div>
           
-          {/* Formulário Mobile - Visível apenas no mobile */}
+          {/* Formulário Mobile */}
           <div className="lg:hidden mt-2 max-w-md mx-auto order-2">
             <form onSubmit={handleSubmit} className="flex flex-col gap-3">
               <Input 
@@ -201,15 +187,15 @@ const HeroSection = () => {
                 >
                   {isLoading ? (
                     <div className="flex items-center">
-                      <span className="mr-2">Enviando...</span>
+                      <span className="mr-2">Processando...</span>
                       <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                     </div>
                   ) : isSuccess ? (
-                    "✅ Enviado!"
+                    "✅ Sucesso!"
                   ) : error ? (
                     "❌ Erro"
                   ) : (
-                    "Quero o Ebook"
+                    "🔥 GARANTIR VAGA"
                   )}
                 </Button>
               </div>
@@ -222,38 +208,18 @@ const HeroSection = () => {
             {/* Garantias */}
             <div className="flex justify-center gap-4 text-sm text-neutral-600 mt-4">
               <div className="flex items-center gap-1">
-                <Download size={16} className="text-green-500" />
-                <span>Download instantâneo</span>
-              </div>
-              <div className="flex items-center gap-1">
                 <Shield size={16} className="text-green-500" />
-                <span>Sem spam</span>
+                <span>Garantia 7 dias</span>
               </div>
               <div className="flex items-center gap-1">
                 <Clock size={16} className="text-green-500" />
-                <span>Dados seguros</span>
+                <span>Acesso vitalício</span>
               </div>
             </div>
-
-            {/* Link para curso após sucesso */}
-            {isSuccess && (
-              <div className="mt-4 p-4 bg-gradient-to-r from-primary/5 to-primary/10 rounded-lg border border-primary/20">
-                <p className="text-sm text-center text-muted-foreground mb-2">
-                  ✨ Quer mais que um ebook? 
-                </p>
-                <a 
-                  href="/curso" 
-                  className="text-primary font-semibold hover:underline text-sm block text-center"
-                >
-                  Conheça nosso curso completo
-                </a>
-              </div>
-            )}
           </div>
 
           {/* Hero Image - Versão Elegante */}
           <div className="relative aspect-[2/1] lg:aspect-[5/4] order-3 lg:order-2 group">
-            {/* Container da imagem com efeitos */}
             <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-slate-900 to-slate-700">
               <img 
                 src={images.instructorHero} 
@@ -263,20 +229,18 @@ const HeroSection = () => {
                 fetchPriority="high"
               />
               
-              {/* Overlay gradiente */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
               
-              {/* Texto sobreposto */}
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                 <h3 className="text-xl md:text-2xl font-bold">
                   Dr. Saulo Salgueiro
                 </h3>
+                <p className="text-sm text-white/80">
+                  Seu instrutor especialista
+                </p>
               </div>
               
-              {/* Borda de luz sutil */}
               <div className="absolute inset-0 rounded-2xl ring-1 ring-white/10"></div>
-              
-              {/* Efeito de brilho no hover */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
           </div>
@@ -286,4 +250,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default SalesHeroSection;
