@@ -147,21 +147,6 @@ const HeroSection = () => {
                   <span>Dados seguros</span>
                 </div>
               </div>
-
-              {/* Link para curso após sucesso */}
-              {isSuccess && (
-                <div className="mt-4 p-4 bg-gradient-to-r from-primary/5 to-primary/10 rounded-lg border border-primary/20">
-                  <p className="text-sm text-center text-muted-foreground mb-2">
-                    ✨ Quer mais que um ebook? 
-                  </p>
-                  <a 
-                    href="/curso" 
-                    className="text-primary font-semibold hover:underline text-sm block text-center"
-                  >
-                    Conheça nosso curso completo
-                  </a>
-                </div>
-              )}
             </div>
           </div>
           
@@ -234,21 +219,6 @@ const HeroSection = () => {
                 <span>Dados seguros</span>
               </div>
             </div>
-
-            {/* Link para curso após sucesso */}
-            {isSuccess && (
-              <div className="mt-4 p-4 bg-gradient-to-r from-primary/5 to-primary/10 rounded-lg border border-primary/20">
-                <p className="text-sm text-center text-muted-foreground mb-2">
-                  ✨ Quer mais que um ebook? 
-                </p>
-                <a 
-                  href="/curso" 
-                  className="text-primary font-semibold hover:underline text-sm block text-center"
-                >
-                  Conheça nosso curso completo
-                </a>
-              </div>
-            )}
           </div>
 
           {/* Hero Image - Versão Elegante */}
