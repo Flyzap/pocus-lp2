@@ -1,6 +1,7 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { ArrowRight, Download, Shield, Clock } from "lucide-react";
+import { PremiumButton } from "@/components/ui/premium-button";
+import { PremiumInput } from "@/components/ui/premium-input";
+import { PremiumCard } from "@/components/ui/premium-card";
+import { ArrowRight, Download, Shield, Clock, Play, Star, Users, Award, CheckCircle } from "lucide-react";
 import { useImageManager } from "@/hooks/useImageManager";
 import { useState } from "react";
 import { formatWhatsApp, validateWhatsApp } from "@/utils/whatsappValidation";
@@ -62,98 +63,122 @@ const HeroSection = () => {
   };
   
   return (
-    <section id="hero" className="mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8 pt-28 pb-12 md:pt-32 md:pb-20 min-h-screen flex items-center">
-      <div className="relative w-full">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-16 lg:items-start">
-          {/* Content */}
-          <div className="text-center lg:text-left order-1 lg:order-1">
-            <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-tight">
-              <span className="text-foreground">Domine a</span>{" "}
-              <span className="text-primary bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                Ultrassonografia
-              </span>{" "}
-              <span className="text-foreground">à Beira-leito</span>
-            </h1>
-            <p className="mt-4 text-lg md:text-xl text-neutral-600">
-              Ebook gratuito + PDF de emergência para usar no plantão hoje mesmo
-            </p>
+    <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden">
+      {/* Background Premium */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-gray-premium to-black-premium"></div>
+      
+      {/* Animated Background Pattern */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
+        <div className="absolute top-40 right-10 w-72 h-72 bg-primary/15 rounded-full mix-blend-multiply filter blur-xl animate-float animate-delay-200"></div>
+        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-primary/10 rounded-full mix-blend-multiply filter blur-xl animate-float animate-delay-400"></div>
+      </div>
+
+      {/* Content Container */}
+      <div className="relative z-10 mx-auto max-w-4xl px-4 md:px-8 lg:px-10 xl:px-12 pt-16 pb-6 md:pt-20 md:pb-8 w-full">
+        <div className="grid lg:grid-cols-[1.2fr,0.8fr] gap-6 lg:gap-12 items-center">
+          
+          {/* Left Column - Content */}
+          <div className="space-y-5 text-center lg:text-left animate-fade-in-left">
             
-            {/* Formulário - Visível apenas no desktop, integrado ao conteúdo */}
-            <div className="hidden lg:block mt-6 max-w-md">
-              <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-                <Input 
-                  type="text"
-                  value={name}
-                  onChange={(e) => {
-                    setName(e.target.value);
-                    if (error) setError("");
-                  }}
-                  placeholder="Seu nome completo"
-                  autoComplete="name"
-                  className={`${error && !name.trim() ? 'border-red-500 focus:border-red-500' : ''}`}
-                  required
-                  disabled={isSuccess}
-                />
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Input 
-                    type="tel"
-                    value={whatsapp}
-                    onChange={handleWhatsAppChange}
-                    placeholder="(82) 98103-9197"
-                    autoComplete="tel"
-                    inputMode="tel"
-                    className={`flex-1 ${error && validateWhatsApp(whatsapp).isValid === false ? 'border-red-500 focus:border-red-500' : ''}`}
+            {/* Badge Premium */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 border border-primary/30 text-sm font-medium backdrop-blur-sm">
+              <Star className="w-4 h-4 text-primary fill-primary" />
+              <span>Curso #1 em Ultrassom Point-of-Care</span>
+            </div>
+
+            {/* Main Title */}
+            <div className="space-y-3">
+              <h1 className="text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold tracking-tight leading-tight">
+                <span className="block text-foreground">Domine a</span>
+                <span className="block bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent animate-glow-pulse">
+                  Ultrassonografia
+                </span>
+                <span className="block text-foreground">à Beira-leito</span>
+              </h1>
+              
+              <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-md lg:max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                Material premium gratuito + <span className="text-primary font-semibold">guia de emergência</span> para usar no plantão hoje mesmo
+              </p>
+            </div>
+
+
+            {/* Form Desktop */}
+            <div className="hidden lg:block max-w-md xl:max-w-lg space-y-3">
+              <form onSubmit={handleSubmit} className="space-y-3">
+                <div className="grid grid-cols-1 gap-3">
+                  <PremiumInput
+                    type="text"
+                    value={name}
+                    onChange={(e) => {
+                      setName(e.target.value);
+                      if (error) setError("");
+                    }}
+                    placeholder="Seu nome completo"
+                    variant="glassmorphism"
+                    state={error && !name.trim() ? "error" : "default"}
                     required
                     disabled={isSuccess}
                   />
-                  <Button 
-                    type="submit"
-                    disabled={isLoading || isSuccess}
-                    className="px-6 py-3 text-white font-semibold"
-                    style={{background:'#ff0033'}}
-                  >
-                    {isLoading ? (
-                      <div className="flex items-center">
-                        <span className="mr-2">Enviando...</span>
-                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      </div>
-                    ) : isSuccess ? (
-                      "✅ Enviado!"
-                    ) : error ? (
-                      "❌ Erro"
-                    ) : (
-                      "Quero o Ebook"
-                    )}
-                  </Button>
+                  
+                  <div className="grid grid-cols-3 gap-3">
+                    <div className="col-span-2">
+                      <PremiumInput
+                        type="tel"
+                        value={whatsapp}
+                        onChange={handleWhatsAppChange}
+                        placeholder="(82) 98103-9197"
+                        variant="glassmorphism"
+                        state={error && !validateWhatsApp(whatsapp).isValid ? "error" : "default"}
+                        required
+                        disabled={isSuccess}
+                      />
+                    </div>
+                    <PremiumButton
+                      type="submit"
+                      variant="cta"
+                      size="default"
+                      loading={isLoading}
+                      disabled={isLoading || isSuccess}
+                      glow="subtle"
+                      shimmer={!isLoading && !isSuccess}
+                      icon={isSuccess ? <CheckCircle className="w-4 h-4" /> : <Download className="w-4 h-4" />}
+                    >
+                      {isSuccess ? "Enviado!" : "QUERO"}
+                    </PremiumButton>
+                  </div>
                 </div>
               </form>
               
               {error && (
-                <p className="text-red-500 text-sm font-medium mt-2">{error}</p>
+                <p className="text-red-400 text-sm font-medium flex items-center gap-2">
+                  <span className="w-4 h-4">⚠</span>
+                  {error}
+                </p>
               )}
               
-              {/* Garantias */}
-              <div className="flex justify-start gap-4 text-sm text-neutral-600 mt-4">
-                <div className="flex items-center gap-1">
-                  <Download size={16} className="text-green-500" />
-                  <span>Download instantâneo</span>
+              {/* Trust Indicators */}
+              <div className="flex items-center justify-start gap-4 text-xs text-muted-foreground">
+                <div className="flex items-center gap-1.5">
+                  <Download className="w-3 h-3 text-green-400" />
+                  <span>Instantâneo</span>
                 </div>
-                <div className="flex items-center gap-1">
-                  <Shield size={16} className="text-green-500" />
+                <div className="flex items-center gap-1.5">
+                  <Shield className="w-3 h-3 text-green-400" />
+                  <span>Seguro</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <Clock className="w-3 h-3 text-green-400" />
                   <span>Sem spam</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <Clock size={16} className="text-green-500" />
-                  <span>Dados seguros</span>
                 </div>
               </div>
             </div>
           </div>
-          
-          {/* Formulário Mobile - Visível apenas no mobile */}
-          <div className="lg:hidden mt-2 max-w-md mx-auto order-2">
-            <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-              <Input 
+
+          {/* Form Mobile - Apenas no mobile, acima da imagem */}
+          <div className="lg:hidden mb-6 space-y-3 w-full">
+            <form onSubmit={handleSubmit} className="space-y-3">
+              <PremiumInput
                 type="text"
                 value={name}
                 onChange={(e) => {
@@ -161,93 +186,118 @@ const HeroSection = () => {
                   if (error) setError("");
                 }}
                 placeholder="Seu nome completo"
-                autoComplete="name"
-                className={`${error && !name.trim() ? 'border-red-500 focus:border-red-500' : ''}`}
+                variant="glassmorphism"
+                state={error && !name.trim() ? "error" : "default"}
                 required
                 disabled={isSuccess}
               />
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Input 
-                  type="tel"
-                  value={whatsapp}
-                  onChange={handleWhatsAppChange}
-                  placeholder="(82) 98103-9197"
-                  autoComplete="tel"
-                  inputMode="tel"
-                  className={`flex-1 ${error && validateWhatsApp(whatsapp).isValid === false ? 'border-red-500 focus:border-red-500' : ''}`}
-                  required
-                  disabled={isSuccess}
-                />
-                <Button 
+              
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div className="sm:col-span-2">
+                  <PremiumInput
+                    type="tel"
+                    value={whatsapp}
+                    onChange={handleWhatsAppChange}
+                    placeholder="(82) 98103-9197"
+                    variant="glassmorphism"
+                    state={error && !validateWhatsApp(whatsapp).isValid ? "error" : "default"}
+                    required
+                    disabled={isSuccess}
+                  />
+                </div>
+                <PremiumButton
                   type="submit"
+                  variant="cta"
+                  size="default"
+                  loading={isLoading}
                   disabled={isLoading || isSuccess}
-                  className="px-6 py-3 text-white font-semibold"
-                  style={{background:'#ff0033'}}
+                  glow="subtle"
+                  shimmer={!isLoading && !isSuccess}
+                  icon={isSuccess ? <CheckCircle className="w-4 h-4" /> : <Download className="w-4 h-4" />}
+                  className="sm:col-span-1"
                 >
-                  {isLoading ? (
-                    <div className="flex items-center">
-                      <span className="mr-2">Enviando...</span>
-                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                    </div>
-                  ) : isSuccess ? (
-                    "✅ Enviado!"
-                  ) : error ? (
-                    "❌ Erro"
-                  ) : (
-                    "Quero o Ebook"
-                  )}
-                </Button>
+                  {isSuccess ? "Enviado!" : "QUERO"}
+                </PremiumButton>
               </div>
             </form>
             
             {error && (
-              <p className="text-red-500 text-sm font-medium mt-2">{error}</p>
+              <p className="text-red-400 text-sm font-medium flex items-center gap-2 justify-center">
+                <span className="w-4 h-4">⚠</span>
+                {error}
+              </p>
             )}
             
-            {/* Garantias */}
-            <div className="flex justify-center gap-4 text-sm text-neutral-600 mt-4">
-              <div className="flex items-center gap-1">
-                <Download size={16} className="text-green-500" />
-                <span>Download instantâneo</span>
+            {/* Trust Indicators Mobile */}
+            <div className="flex items-center justify-center gap-4 text-xs text-muted-foreground">
+              <div className="flex items-center gap-1.5">
+                <Download className="w-3 h-3 text-green-400" />
+                <span>Instantâneo</span>
               </div>
-              <div className="flex items-center gap-1">
-                <Shield size={16} className="text-green-500" />
+              <div className="flex items-center gap-1.5">
+                <Shield className="w-3 h-3 text-green-400" />
+                <span>Seguro</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Clock className="w-3 h-3 text-green-400" />
                 <span>Sem spam</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Clock size={16} className="text-green-500" />
-                <span>Dados seguros</span>
               </div>
             </div>
           </div>
 
-          {/* Hero Image - Versão Elegante */}
-          <div className="relative aspect-[2/1] lg:aspect-[5/4] order-3 lg:order-2 group">
-            {/* Container da imagem com efeitos */}
-            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-slate-900 to-slate-700">
-              <img 
-                src={images.instructorHero} 
-                alt="Dr. Saulo Salgueiro - Especialista em POCUS" 
-                className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-                loading="eager"
-                fetchPriority="high"
-              />
+          {/* Right Column - Visual Premium */}
+          <div className="relative animate-fade-in-right animate-delay-200 flex justify-center lg:justify-end">
+            {/* Hero Visual Premium */}
+            <div className="w-full max-w-xs lg:max-w-sm xl:max-w-md mx-auto lg:mx-0">
+              <PremiumCard 
+                variant="elevated" 
+                animation="float"
+                size="sm"
+                className="relative group overflow-hidden border-primary/20 bg-gradient-to-br from-gray-premium/50 to-black-premium/50 backdrop-blur-xl"
+              >
               
-              {/* Overlay gradiente */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-              
-              {/* Texto sobreposto */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <h3 className="text-xl md:text-2xl font-bold">
-                  Dr. Saulo Salgueiro
-                </h3>
+              {/* Image Container */}
+              <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
+                <img 
+                  src={images.instructorHero} 
+                  alt="Dr. Saulo Salgueiro - Especialista em POCUS" 
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 instructor-image"
+                  loading="eager"
+                  fetchPriority="high"
+                />
+                
+                {/* Overlay Premium */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                
+                {/* Play Button Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="w-12 h-12 bg-primary/90 rounded-full flex items-center justify-center backdrop-blur-sm hover-lift">
+                    <Play className="w-5 h-5 text-white ml-0.5 fill-white" />
+                  </div>
+                </div>
+                
+                {/* Info Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                  <div className="space-y-1">
+                    <h3 className="text-lg font-bold">Dr. Saulo Salgueiro</h3>
+                    <p className="text-xs text-white/80">Especialista em POCUS</p>
+                    <div className="flex items-center gap-1 text-xs">
+                      <div className="flex items-center gap-0.5">
+                        <Star className="w-2.5 h-2.5 fill-yellow-400 text-yellow-400" />
+                        <Star className="w-2.5 h-2.5 fill-yellow-400 text-yellow-400" />
+                        <Star className="w-2.5 h-2.5 fill-yellow-400 text-yellow-400" />
+                        <Star className="w-2.5 h-2.5 fill-yellow-400 text-yellow-400" />
+                        <Star className="w-2.5 h-2.5 fill-yellow-400 text-yellow-400" />
+                      </div>
+                      <span className="text-white/60 ml-1">5.0 • 2.8k+</span>
+                    </div>
+                  </div>
+                </div>
               </div>
               
-              {/* Borda de luz sutil */}
-              <div className="absolute inset-0 rounded-2xl ring-1 ring-white/10"></div>
-              
-              {/* Efeito de brilho no hover */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              {/* Glow Effect */}
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </PremiumCard>
             </div>
           </div>
         </div>

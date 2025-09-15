@@ -189,7 +189,7 @@ const StickyFormMobile = () => {
                         onChange={handleNomeChange}
                         placeholder="Seu nome completo"
                         className={`h-12 sm:h-14 lg:h-16 text-base sm:text-lg lg:text-xl mobile-input ${
-                          error && !nome.trim() ? 'border-red-500 focus:border-red-500' : ''
+                          error && !nome.trim() ? 'border-[#88021c] focus:border-[#88021c]' : ''
                         }`}
                         required
                         disabled={isLoading}
@@ -205,7 +205,7 @@ const StickyFormMobile = () => {
                           onChange={handleWhatsAppChange}
                           placeholder="(82) 98103-9197"
                           className={`h-12 sm:h-14 lg:h-16 text-base sm:text-lg lg:text-xl mobile-input ${
-                            error && whatsapp ? 'border-red-500 focus:border-red-500' : ''
+                            error && whatsapp ? 'border-[#88021c] focus:border-[#88021c]' : ''
                           }`}
                           required
                           disabled={isLoading}
@@ -216,7 +216,7 @@ const StickyFormMobile = () => {
                         disabled={isLoading}
                         className={`font-bold px-5 sm:px-6 lg:px-8 h-12 sm:h-14 lg:h-16 premium-glow whitespace-nowrap text-base sm:text-lg lg:text-xl mobile-button ${
                           error
-                            ? 'bg-red-600 hover:bg-red-700'
+                            ? 'bg-[#88021c] hover:bg-[#a0032a]'
                             : 'bg-primary hover:bg-primary-dark'
                         } text-primary-foreground`}
                       >
@@ -233,7 +233,7 @@ const StickyFormMobile = () => {
                     
                     {/* Erro */}
                     {error && (
-                      <p className="text-red-500 text-xs sm:text-sm text-center">{error}</p>
+                      <p className="text-[#88021c] text-xs sm:text-sm text-center">{error}</p>
                     )}
                   </div>
                   

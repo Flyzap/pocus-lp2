@@ -1,4 +1,4 @@
-import { Download, Star, Users, Clock } from "lucide-react";
+import { Star } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const testimonials = [
@@ -29,17 +29,7 @@ const testimonials = [
 ];
 
 const SocialProofSection = () => {
-  const [currentDownloads, setCurrentDownloads] = useState(30);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
-  // Simular contador dinâmico de downloads
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentDownloads(prev => prev + Math.floor(Math.random() * 3));
-    }, 30000); // Incrementa a cada 30 segundos
-
-    return () => clearInterval(interval);
-  }, []);
 
   // Rotacionar testimonials
   useEffect(() => {
@@ -51,88 +41,84 @@ const SocialProofSection = () => {
   }, []);
 
   return (
-    <section id="depoimentos" className="mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8 py-12">
-      <div className="mx-auto max-w-6xl">
-        {/* Contador de Downloads */}
-        <div className="text-center mb-12">
-          <div className="premium-card p-6 max-w-lg mx-auto">
-            <div className="flex flex-col lg:flex-row items-center justify-center gap-4 mb-4">
-              <Download className="text-primary w-8 h-8" />
-              <div className="text-2xl lg:text-3xl font-bold text-primary">
-                {currentDownloads.toLocaleString('pt-BR')}
-              </div>
-            </div>
-            <h3 className="text-lg lg:text-xl font-bold text-foreground mb-3">
-              Médicos já baixaram o ebook
-            </h3>
-            <p className="text-sm lg:text-base text-muted-foreground">
-              Junte-se a milhares de profissionais que já dominam POCUS
-            </p>
+    <section id="depoimentos" className="relative py-12 md:py-16 lg:py-18 overflow-hidden">
+      {/* Background Premium */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background to-gray-premium/30"></div>
+      
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-40 left-1/4 w-64 h-64 bg-primary/20 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
+        <div className="absolute bottom-40 right-1/4 w-64 h-64 bg-primary/15 rounded-full mix-blend-multiply filter blur-xl animate-float animate-delay-300"></div>
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-4xl px-4 md:px-8 lg:px-10">
+
+        {/* Section Header */}
+        <div className="text-center mb-12 animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 border border-primary/30 text-sm font-medium backdrop-blur-sm mb-6">
+            <Star className="w-4 h-4 text-primary fill-primary" />
+            <span>Aprovado por Especialistas</span>
           </div>
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3">
+            Depoimentos de
+            <span className="block bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent">
+              Médicos Especialistas
+            </span>
+          </h2>
+          <p className="text-base text-muted-foreground max-w-xl mx-auto">
+            Veja o que profissionais renomados estão falando sobre o material
+          </p>
         </div>
 
-        {/* Testimonials Rotativos */}
-        <div className="mb-12">
-          <h3 className="text-xl lg:text-2xl font-bold text-center text-foreground mb-8">
-            O que os médicos estão falando sobre o ebook
-          </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.slice(currentTestimonial, currentTestimonial + 3).map((testimonial, index) => (
-              <div 
-                key={`${currentTestimonial}-${index}`} 
-                className="premium-card p-6 space-y-4 transition-all duration-500 transform hover:scale-105"
+        {/* Testimonials Premium */}
+        <div className="mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {Array.from({ length: 3 }, (_, index) => {
+              const testimonialIndex = (currentTestimonial + index) % testimonials.length;
+              const testimonial = testimonials[testimonialIndex];
+              return (
+                <div 
+                  key={`${currentTestimonial}-${index}`} 
+                  className="group relative animate-fade-in-up hover-lift"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                <div className="premium-card p-5 space-y-3 h-full border-primary/10 hover:border-primary/30 transition-all duration-300"
               >
-                {/* Rating */}
-                <div className="flex gap-1">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} size={16} className="text-yellow-500 fill-current" />
-                  ))}
-                </div>
-                
-                {/* Testimonial Text */}
-                <p className="text-sm text-muted-foreground italic leading-relaxed">
-                  "{testimonial.text}"
-                </p>
-                
-                {/* Author */}
-                <div className="border-t pt-4">
-                  <div className="font-bold text-sm text-foreground">{testimonial.name}</div>
-                  <div className="text-xs text-muted-foreground">{testimonial.specialty}</div>
+                  {/* Rating Premium */}
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} size={16} className="text-yellow-400 fill-yellow-400" />
+                    ))}
+                  </div>
+                  
+                  {/* Quote Icon */}
+                  <div className="text-4xl text-primary/20 font-serif leading-none mb-2">"</div>
+                  
+                  {/* Testimonial Text */}
+                  <p className="text-muted-foreground leading-relaxed mb-6 flex-1">
+                    {testimonial.text}
+                  </p>
+                  
+                  {/* Author Premium */}
+                  <div className="flex items-center gap-3 pt-4 border-t border-white/10">
+                    <div className="w-10 h-10 bg-gradient-to-r from-primary to-primary-light rounded-full flex items-center justify-center text-white font-bold text-sm">
+                      {testimonial.name.split(' ').map(n => n[0]).join('')}
+                    </div>
+                    <div>
+                      <div className="font-semibold text-foreground text-sm">{testimonial.name}</div>
+                      <div className="text-xs text-muted-foreground">{testimonial.specialty}</div>
+                    </div>
+                  </div>
+                  
+                  {/* Glow Effect */}
+                  <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
-        {/* Estatísticas Adicionais */}
-        <div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="premium-card p-6 text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-6 h-6 text-primary" />
-              </div>
-              <div className="text-xl font-bold text-foreground mb-2">98%</div>
-              <div className="text-sm text-muted-foreground">Satisfação dos usuários</div>
-            </div>
-            
-            <div className="premium-card p-6 text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="w-6 h-6 text-primary" />
-              </div>
-              <div className="text-xl font-bold text-foreground mb-2">4.9/5</div>
-              <div className="text-sm text-muted-foreground">Avaliação média</div>
-            </div>
-            
-            <div className="premium-card p-6 text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-6 h-6 text-primary" />
-              </div>
-              <div className="text-xl font-bold text-foreground mb-2">15min</div>
-              <div className="text-sm text-muted-foreground">Tempo médio de leitura</div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

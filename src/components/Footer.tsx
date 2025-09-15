@@ -3,7 +3,7 @@ import { Instagram, MessageCircle, Youtube, Mail, Phone } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="bg-background border-t border-border">
-      <div className="mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8 py-12">
+      <div className="mx-auto max-w-screen-xl px-4 md:px-6 lg:px-8 py-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="space-y-4 text-center sm:text-left">

@@ -3,32 +3,32 @@ import { ArrowRight, ArrowDown, Quote, TrendingUp, Clock, CheckCircle } from "lu
 
 const TransformationSection = () => {
   return (
-    <section className="mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8 py-12">
-      <div className="mx-auto max-w-6xl">
+    <section className="mx-auto max-w-screen-xl px-4 md:px-6 lg:px-8 py-10">
+      <div className="mx-auto max-w-5xl">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-10">
           <div className="inline-flex items-center gap-3 bg-primary/10 px-6 py-3 rounded-full mb-6">
             <TrendingUp className="text-primary w-6 h-6" />
             <span className="text-primary font-semibold text-base">Sua Jornada de Transformação</span>
           </div>
-          <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
+          <h2 className="text-xl lg:text-2xl font-bold text-foreground mb-4">
             De <span className="text-destructive">Inseguro</span> para <span className="text-primary">Especialista</span>
           </h2>
-          <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm lg:text-base text-muted-foreground max-w-xl mx-auto">
             Veja como sua prática médica será transformada com o domínio do POCUS
           </p>
         </div>
 
         {/* Transformation Flow */}
-        <div className="relative mb-12">
+        <div className="relative mb-8">
           {/* Timeline Line */}
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-destructive via-yellow-500 to-primary rounded-full hidden lg:block"></div>
           
-          <div className="space-y-8">
+          <div className="space-y-6">
             {/* Before State */}
             <div className="flex flex-col lg:flex-row items-center gap-8">
               <div className="lg:w-1/2 lg:pr-8 w-full">
-                <div className="premium-card p-6 border-l-4 border-destructive bg-destructive/5">
+                <div className="premium-card p-5 border-l-4 border-destructive bg-destructive/5">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-12 h-12 bg-destructive/20 rounded-full flex items-center justify-center">
                       <Clock className="text-destructive w-6 h-6" />

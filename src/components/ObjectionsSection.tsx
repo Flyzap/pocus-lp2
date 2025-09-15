@@ -29,22 +29,22 @@ const objections = [
 
 const ObjectionsSection = () => {
   return (
-    <section className="mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8 py-12">
-      <div className="mx-auto max-w-6xl">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
+    <section className="mx-auto max-w-screen-xl px-4 md:px-6 lg:px-8 py-10">
+      <div className="mx-auto max-w-5xl">
+        <div className="text-center mb-10">
+          <h2 className="text-xl lg:text-2xl font-bold text-foreground mb-4">
             <span className="text-primary">Sem pegadinhas,</span> sem complicação
           </h2>
-          <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm lg:text-base text-muted-foreground max-w-xl mx-auto">
             Respondemos as principais dúvidas sobre nosso ebook gratuito de POCUS
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {objections.map((objection, index) => (
             <div 
               key={index}
-              className="premium-card p-6 space-y-4 hover:scale-105 transition-all duration-300"
+              className="premium-card p-5 space-y-3 hover:scale-105 transition-all duration-300"
             >
               <div className="flex items-start gap-3">
                 <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">

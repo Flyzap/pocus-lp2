@@ -8,51 +8,84 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Dark Premium Theme */
-    --background: 0 0% 0%;
+    /* Premium Dark Theme - POCUS Intensive */
+    --background: 0 0% 2%;
     --foreground: 0 0% 98%;
 
-    --card: 0 0% 6.7%;
+    --card: 0 0% 4%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 6.7%;
+    --popover: 0 0% 4%;
     --popover-foreground: 0 0% 98%;
 
-    /* Premium Red Primary */
-    --primary: 348 100% 50%;
+    /* Premium Red System - Baseado em #88021c */
+    --primary: 354 87% 17%;           /* #88021c */
     --primary-foreground: 0 0% 98%;
-    
-    /* Premium Red Variants */
-    --primary-glow: 348 100% 55%;
-    --primary-dark: 348 100% 45%;
+    --primary-light: 354 87% 22%;     /* #a0032a */
+    --primary-dark: 354 87% 12%;      /* #6b0215 */
+    --primary-glow: 354 87% 22%;
 
-    --secondary: 0 0% 10.2%;
+    /* Premium Neutrals */
+    --black-premium: 0 0% 4%;         /* #0a0a0a */
+    --gray-premium: 0 0% 10%;         /* #1a1a1a */
+    --gray-medium: 0 0% 16%;          /* #2a2a2a */
+    --white-premium: 0 0% 100%;       /* #ffffff */
+
+    /* Accent Colors Premium */
+    --gold-accent: 45 100% 51%;       /* #d4af37 */
+    --silver-accent: 0 0% 75%;        /* #c0c0c0 */
+    --blue-trust: 216 100% 40%;       /* #0066cc */
+    --green-success: 158 100% 33%;    /* #00a86b */
+
+    --secondary: 0 0% 8%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 348 100% 50%;
+    --accent: 354 87% 17%;
     --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 348 100% 50%;
+    --border: 0 0% 12%;
+    --input: 0 0% 8%;
+    --ring: 354 87% 17%;
 
-    /* Premium Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(348 100% 50%), hsl(348 100% 55%));
-    --gradient-dark: linear-gradient(180deg, hsl(0 0% 0%), hsl(0 0% 3%));
-    --gradient-glow: linear-gradient(135deg, hsl(348 100% 50% / 0.1), hsl(348 100% 55% / 0.2));
+    /* Premium Gradients System */
+    --gradient-primary: linear-gradient(135deg, hsl(354 87% 17% / 0.9), hsl(354 87% 22% / 0.95));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 2%), hsl(0 0% 6%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 4% / 0.8), hsl(0 0% 8% / 0.9));
+    --gradient-glow: linear-gradient(135deg, hsl(354 87% 17% / 0.1), hsl(354 87% 22% / 0.2));
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
 
-    /* Premium Shadows */
-    --shadow-glow: 0 0 40px hsl(348 100% 50% / 0.3);
-    --shadow-premium: 0 20px 60px -20px hsl(348 100% 50% / 0.4);
-    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.8);
+    /* Premium Shadow System */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-premium: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-glow: 0 0 30px hsl(354 87% 17% / 0.3);
+    --shadow-glow-intense: 0 0 60px hsl(354 87% 17% / 0.4);
+    --shadow-card-premium: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+    --shadow-button: 0 4px 14px 0 hsl(354 87% 17% / 0.25);
 
-    --radius: 0.75rem;
+    /* Premium Elevation System */
+    --elevation-1: var(--shadow-sm);
+    --elevation-2: var(--shadow-md);
+    --elevation-3: var(--shadow-lg);
+    --elevation-4: var(--shadow-xl);
+    --elevation-5: var(--shadow-premium);
+
+    /* Border Radius Premium */
+    --radius-sm: 0.375rem;    /* 6px */
+    --radius: 0.5rem;         /* 8px */
+    --radius-md: 0.75rem;     /* 12px */
+    --radius-lg: 1rem;        /* 16px */
+    --radius-xl: 1.5rem;      /* 24px */
+    --radius-2xl: 2rem;       /* 32px */
 
     --sidebar-background: 0 0% 98%;
 
@@ -178,6 +211,237 @@ All colors MUST be HSL.
 }
 
 @layer components {
+  /* ===========================================
+     PREMIUM GLASSMORPHISM SYSTEM
+     =========================================== */
+  
+  .glassmorphism-navbar {
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(24px) saturate(1.8);
+    -webkit-backdrop-filter: blur(24px) saturate(1.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.4),
+      0 2px 8px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  
+  .glassmorphism-button {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(12px) saturate(1.5);
+    -webkit-backdrop-filter: blur(12px) saturate(1.5);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .glassmorphism-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.6s ease;
+  }
+  
+  .glassmorphism-button:hover::before {
+    left: 100%;
+  }
+  
+  .glassmorphism-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 
+      0 8px 25px rgba(0, 0, 0, 0.3),
+      0 3px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .glassmorphism-cta {
+    background: linear-gradient(135deg, 
+      hsl(354 87% 17% / 0.9), 
+      hsl(354 87% 22% / 0.95)
+    );
+    backdrop-filter: blur(16px) saturate(1.8);
+    -webkit-backdrop-filter: blur(16px) saturate(1.8);
+    border: 1px solid hsl(354 87% 17% / 0.4);
+    box-shadow: 
+      var(--shadow-button),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .glassmorphism-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.6s ease;
+  }
+  
+  .glassmorphism-cta:hover::before {
+    left: 100%;
+  }
+  
+  .glassmorphism-cta:hover {
+    background: linear-gradient(135deg, 
+      hsl(354 87% 17%), 
+      hsl(354 87% 25%)
+    );
+    border-color: hsl(354 87% 17% / 0.6);
+    box-shadow: 
+      var(--shadow-glow-intense),
+      0 12px 35px hsl(354 87% 17% / 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px) scale(1.03);
+  }
+  
+  .glassmorphism-overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
+    backdrop-filter: blur(24px) saturate(1.5);
+    -webkit-backdrop-filter: blur(24px) saturate(1.5);
+  }
+
+  /* ===========================================
+     PREMIUM CARD SYSTEM
+     =========================================== */
+  
+  .premium-card {
+    background: var(--gradient-card);
+    border: 1px solid hsl(0 0% 12%);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card-premium);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .premium-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  }
+  
+  .premium-card:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 
+      var(--shadow-premium),
+      0 0 40px hsl(354 87% 17% / 0.1);
+    border-color: hsl(0 0% 18%);
+  }
+  
+  .premium-card-interactive {
+    cursor: pointer;
+  }
+  
+  .premium-card-interactive:hover {
+    background: linear-gradient(145deg, hsl(0 0% 6% / 0.9), hsl(0 0% 10% / 0.95));
+  }
+
+  /* ===========================================
+     PREMIUM BUTTON SYSTEM
+     =========================================== */
+  
+  .btn-premium-primary {
+    background: var(--gradient-primary);
+    color: hsl(var(--primary-foreground));
+    border: 1px solid hsl(354 87% 17% / 0.3);
+    border-radius: var(--radius-md);
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    box-shadow: var(--shadow-button);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-premium-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+  }
+  
+  .btn-premium-primary:hover::before {
+    left: 100%;
+  }
+  
+  .btn-premium-primary:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: var(--shadow-glow);
+    border-color: hsl(354 87% 17% / 0.5);
+  }
+  
+  .btn-premium-secondary {
+    background: transparent;
+    color: hsl(var(--foreground));
+    border: 1px solid hsl(0 0% 20%);
+    border-radius: var(--radius-md);
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .btn-premium-secondary:hover {
+    background: hsl(0 0% 8% / 0.8);
+    border-color: hsl(354 87% 17% / 0.4);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+
+  /* ===========================================
+     PREMIUM FORM ELEMENTS
+     =========================================== */
+  
+  .input-premium {
+    background: hsl(0 0% 6% / 0.8);
+    border: 1px solid hsl(0 0% 15%);
+    border-radius: var(--radius);
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+    color: hsl(var(--foreground));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .input-premium:focus {
+    outline: none;
+    border-color: hsl(354 87% 17% / 0.6);
+    box-shadow: 
+      0 0 0 3px hsl(354 87% 17% / 0.1),
+      var(--shadow-md);
+    background: hsl(0 0% 8% / 0.9);
+  }
+  
+  .input-premium::placeholder {
+    color: hsl(0 0% 50%);
+  }
+
   /* Premium Components */
   .premium-glow {
     box-shadow: var(--shadow-glow);
@@ -197,23 +461,153 @@ All colors MUST be HSL.
     box-shadow: 0 0 20px hsl(var(--primary) / 0.2);
   }
   
+  /* ===========================================
+     PREMIUM ANIMATIONS SYSTEM
+     =========================================== */
+  
   .animate-float {
-    animation: float 6s ease-in-out infinite;
+    animation: float 8s ease-in-out infinite;
   }
   
   @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-8px) rotate(0.5deg); }
+    50% { transform: translateY(-15px) rotate(0deg); }
+    75% { transform: translateY(-8px) rotate(-0.5deg); }
   }
   
   .animate-pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite;
+    animation: pulse-glow 3s ease-in-out infinite;
   }
   
   @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
-    50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.6); }
+    0%, 100% { 
+      box-shadow: 
+        0 0 20px hsl(354 87% 17% / 0.3),
+        0 0 40px hsl(354 87% 17% / 0.1);
+    }
+    50% { 
+      box-shadow: 
+        0 0 30px hsl(354 87% 17% / 0.5),
+        0 0 60px hsl(354 87% 17% / 0.2);
+    }
   }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  .animate-fade-in-left {
+    animation: fadeInLeft 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-40px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }
+  
+  .animate-fade-in-right {
+    animation: fadeInRight 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(40px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+  
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8) rotate(-2deg);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 2.5s linear infinite;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    background-size: 200% 100%;
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  
+  .animate-glow-pulse {
+    animation: glowPulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes glowPulse {
+    0%, 100% {
+      filter: drop-shadow(0 0 8px hsl(354 87% 17% / 0.3));
+    }
+    50% {
+      filter: drop-shadow(0 0 20px hsl(354 87% 17% / 0.6));
+    }
+  }
+  
+  /* Hover Animation Classes */
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-6px) scale(1.02);
+  }
+  
+  .hover-glow {
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 
+      var(--shadow-glow),
+      0 0 60px hsl(354 87% 17% / 0.2);
+    filter: brightness(1.1);
+  }
+  
+  /* Staggered Animation Delays */
+  .animate-delay-100 { animation-delay: 0.1s; }
+  .animate-delay-200 { animation-delay: 0.2s; }
+  .animate-delay-300 { animation-delay: 0.3s; }
+  .animate-delay-400 { animation-delay: 0.4s; }
+  .animate-delay-500 { animation-delay: 0.5s; }
   
   /* Ultra High Quality Image Rendering */
   .instructor-image {
