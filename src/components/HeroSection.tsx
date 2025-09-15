@@ -75,11 +75,11 @@ const HeroSection = () => {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 mx-auto max-w-4xl px-3 md:px-8 lg:px-10 xl:px-12 pt-20 pb-4 md:pt-20 md:pb-8 w-full">
-        <div className="grid lg:grid-cols-[1.2fr,0.8fr] gap-4 lg:gap-12 items-center">
+      <div className="relative z-10 mx-auto max-w-4xl px-3 md:px-8 lg:px-10 xl:px-12 pt-20 pb-4 md:pt-12 lg:pt-16 lg:pb-8 w-full">
+        <div className="grid lg:grid-cols-[1fr,1fr] gap-6 lg:gap-8 items-center">
           
           {/* Left Column - Content */}
-          <div className="space-y-4 text-center lg:text-left animate-fade-in-left">
+          <div className="space-y-3 lg:space-y-3 text-center lg:text-left animate-fade-in-left">
             
             {/* Badge com Melhor Visibilidade */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border-2 border-primary/40 text-xs md:text-sm font-semibold text-primary backdrop-blur-sm shadow-lg">
@@ -89,22 +89,22 @@ const HeroSection = () => {
             </div>
 
             {/* Headline Principal - Abordagem Minimalista */}
-            <div className="space-y-4 md:space-y-6">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-[0.9] text-center lg:text-left">
-                <span className="block text-foreground/90 text-lg sm:text-xl md:text-2xl font-normal mb-2 tracking-wide">
+            <div className="space-y-2 md:space-y-3 lg:space-y-3">
+              <h1 className="text-3xl sm:text-4xl md:text-3xl lg:text-3xl xl:text-4xl font-bold tracking-tight leading-[0.9] text-center lg:text-left">
+                <span className="block text-foreground/90 text-lg sm:text-xl md:text-lg lg:text-lg font-normal mb-2 tracking-wide">
                   Domine a
                 </span>
                 <span className="block bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent font-extrabold tracking-tighter">
                   ULTRASSONOGRAFIA
                 </span>
-                <span className="block text-foreground/90 text-lg sm:text-xl md:text-2xl font-normal mt-2 tracking-wide">
+                <span className="block text-foreground/90 text-lg sm:text-xl md:text-lg lg:text-lg font-normal mt-2 tracking-wide">
                   à beira-leito
                 </span>
               </h1>
               
               {/* Subtítulo Limpo */}
               <div className="space-y-3">
-                <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-lg mx-auto lg:mx-0 leading-relaxed text-center lg:text-left">
+                <p className="text-base sm:text-lg md:text-lg lg:text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0 leading-relaxed text-center lg:text-left">
                   Material premium gratuito + guia de emergência para usar no plantão hoje mesmo
                 </p>
                 
