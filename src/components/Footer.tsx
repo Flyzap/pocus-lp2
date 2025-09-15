@@ -79,7 +79,7 @@ const Footer = () => {
         <div className="border-t border-border mt-8 lg:mt-12 pt-6 lg:pt-8 text-center">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
             <p className="text-xs lg:text-sm text-muted-foreground">
-              © 2024 POCUS Expert. Todos os direitos reservados. CNPJ: 00.000.000/0001-00
+              © 2025 POCUS Intensive. Todos os direitos reservados. CNPJ: 00.000.000/0001-00
             </p>
             <a 
               href="/admin" 

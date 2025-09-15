@@ -75,31 +75,45 @@ const HeroSection = () => {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 mx-auto max-w-4xl px-4 md:px-8 lg:px-10 xl:px-12 pt-16 pb-6 md:pt-20 md:pb-8 w-full">
-        <div className="grid lg:grid-cols-[1.2fr,0.8fr] gap-6 lg:gap-12 items-center">
+      <div className="relative z-10 mx-auto max-w-4xl px-3 md:px-8 lg:px-10 xl:px-12 pt-20 pb-4 md:pt-20 md:pb-8 w-full">
+        <div className="grid lg:grid-cols-[1.2fr,0.8fr] gap-4 lg:gap-12 items-center">
           
           {/* Left Column - Content */}
-          <div className="space-y-5 text-center lg:text-left animate-fade-in-left">
+          <div className="space-y-4 text-center lg:text-left animate-fade-in-left">
             
-            {/* Badge Premium */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 border border-primary/30 text-sm font-medium backdrop-blur-sm">
-              <Star className="w-4 h-4 text-primary fill-primary" />
-              <span>Curso #1 em Ultrassom Point-of-Care</span>
+            {/* Badge com Melhor Visibilidade */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border-2 border-primary/40 text-xs md:text-sm font-semibold text-primary backdrop-blur-sm shadow-lg">
+              <Star className="w-3 h-3 md:w-4 md:h-4 text-primary fill-primary" />
+              <span className="hidden sm:inline">Curso #1 em Ultrassom Point-of-Care</span>
+              <span className="sm:hidden">#1 POCUS</span>
             </div>
 
-            {/* Main Title */}
-            <div className="space-y-3">
-              <h1 className="text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold tracking-tight leading-tight">
-                <span className="block text-foreground">Domine a</span>
-                <span className="block bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent animate-glow-pulse">
-                  Ultrassonografia
+            {/* Headline Principal - Abordagem Minimalista */}
+            <div className="space-y-4 md:space-y-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-[0.9] text-center lg:text-left">
+                <span className="block text-foreground/90 text-lg sm:text-xl md:text-2xl font-normal mb-2 tracking-wide">
+                  Domine a
                 </span>
-                <span className="block text-foreground">à Beira-leito</span>
+                <span className="block bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent font-extrabold tracking-tighter">
+                  ULTRASSONOGRAFIA
+                </span>
+                <span className="block text-foreground/90 text-lg sm:text-xl md:text-2xl font-normal mt-2 tracking-wide">
+                  à beira-leito
+                </span>
               </h1>
               
-              <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-md lg:max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                Material premium gratuito + <span className="text-primary font-semibold">guia de emergência</span> para usar no plantão hoje mesmo
-              </p>
+              {/* Subtítulo Limpo */}
+              <div className="space-y-3">
+                <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-lg mx-auto lg:mx-0 leading-relaxed text-center lg:text-left">
+                  Material premium gratuito + guia de emergência para usar no plantão hoje mesmo
+                </p>
+                
+                {/* Call-to-action visual */}
+                <div className="flex items-center justify-center lg:justify-start gap-2 text-sm text-primary font-medium">
+                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                  <span>Download instantâneo via WhatsApp</span>
+                </div>
+              </div>
             </div>
 
 
@@ -176,8 +190,8 @@ const HeroSection = () => {
           </div>
 
           {/* Form Mobile - Apenas no mobile, acima da imagem */}
-          <div className="lg:hidden mb-6 space-y-3 w-full">
-            <form onSubmit={handleSubmit} className="space-y-3">
+          <div className="lg:hidden mb-4 space-y-2.5 w-full px-1">
+            <form onSubmit={handleSubmit} className="space-y-2.5">
               <PremiumInput
                 type="text"
                 value={name}
@@ -192,7 +206,7 @@ const HeroSection = () => {
                 disabled={isSuccess}
               />
               
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
                 <div className="sm:col-span-2">
                   <PremiumInput
                     type="tel"
@@ -289,7 +303,6 @@ const HeroSection = () => {
                         <Star className="w-2.5 h-2.5 fill-yellow-400 text-yellow-400" />
                         <Star className="w-2.5 h-2.5 fill-yellow-400 text-yellow-400" />
                       </div>
-                      <span className="text-white/60 ml-1">5.0 • 2.8k+</span>
                     </div>
                   </div>
                 </div>

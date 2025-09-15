@@ -1,24 +1,19 @@
 import { useImageManager } from "@/hooks/useImageManager";
-import { Star, Award, BookOpen, Users, MapPin, GraduationCap, Stethoscope, CheckCircle, Play, Quote } from "lucide-react";
+import { Star, Award, BookOpen, Users, MapPin, GraduationCap, CheckCircle, Play, Quote } from "lucide-react";
 import { PremiumCard } from "@/components/ui/premium-card";
 
 const INSTRUCTOR_CONFIG = {
   name: "Dr. Saulo Salgueiro",
-  title: "Especialista em POCUS e Medicina de Emergência",
-  subtitle: "Médico Emergencista • Professor • Especialista em Ultrassom",
+  title: "Especialista em POCUS",
+  subtitle: "Médico • Professor • Especialista em Pocus",
   experience: "4+ anos de experiência",
   specialty: "POCUS",
   location: "Brasil",
   university: "Universidade Federal de Alagoas",
   
-  bio: `Médico emergencista e intensivista com sólida experiência em Point-of-Care Ultrasound (POCUS). Graduado pela Universidade Federal de Alagoas, é reconhecido por sua expertise em ultrassonografia à beira-leito e por desenvolver protocolos práticos para emergência médica.`,
+  bio: `Médico com sólida experiência em Point-of-Care Ultrasound (POCUS). Graduado pela Universidade Federal de Alagoas, é reconhecido por sua expertise em ultrassonografia à beira-leito e por desenvolver protocolos práticos para emergência médica.`,
   
   highlights: [
-    {
-      icon: Stethoscope,
-      title: "Medicina de Emergência",
-      description: "Especialista em atendimento de emergência e medicina intensiva"
-    },
     {
       icon: BookOpen,
       title: "POCUS Expert",
@@ -32,7 +27,7 @@ const INSTRUCTOR_CONFIG = {
     {
       icon: Users,
       title: "Mentor",
-      description: "Já capacitou centenas de médicos em POCUS"
+      description: "Já capacitou médicos em POCUS"
     }
   ],
   
@@ -58,7 +53,7 @@ const InstructorSection = () => {
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/15 rounded-full mix-blend-multiply filter blur-3xl animate-float animate-delay-700"></div>
       </div>
 
-      <div className="relative z-10 mx-auto max-w-4xl px-4 md:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-4xl px-3 md:px-6 lg:px-8">
         
         {/* Section Header Compacto */}
         <div className="text-center mb-8 animate-fade-in-up">
@@ -74,7 +69,7 @@ const InstructorSection = () => {
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-[0.8fr,1.2fr] gap-6 items-start mb-6">
+        <div className="grid lg:grid-cols-[0.8fr,1.2fr] gap-4 md:gap-6 items-start mb-4 md:mb-6">
           
           {/* Visual Premium - Mais Compacto */}
           <div className="relative animate-fade-in-left">
@@ -129,19 +124,19 @@ const InstructorSection = () => {
               </p>
             </div>
             
-            {/* Highlights Compactos em Grid 2x2 */}
-            <div className="grid grid-cols-2 gap-3">
+            {/* Highlights Responsivos - Mobile Single Column */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {INSTRUCTOR_CONFIG.highlights.map((highlight, index) => (
                 <div 
                   key={index}
-                  className="flex items-start gap-2 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors duration-300 group"
+                  className="flex items-start gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors duration-300 group"
                 >
                   <div className="w-8 h-8 bg-gradient-to-r from-primary/20 to-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                     <highlight.icon className="w-4 h-4 text-primary" />
                   </div>
-                  <div className="min-w-0 flex-1">
-                    <h4 className="font-semibold text-foreground text-xs mb-1 truncate">{highlight.title}</h4>
-                    <p className="text-muted-foreground text-xs leading-tight line-clamp-2">{highlight.description}</p>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-foreground text-sm mb-1">{highlight.title}</h4>
+                    <p className="text-muted-foreground text-xs leading-relaxed">{highlight.description}</p>
                   </div>
                 </div>
               ))}

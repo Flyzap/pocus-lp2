@@ -3,32 +3,35 @@ import { ArrowRight, ArrowDown, Quote, TrendingUp, Clock, CheckCircle } from "lu
 
 const TransformationSection = () => {
   return (
-    <section className="mx-auto max-w-screen-xl px-4 md:px-6 lg:px-8 py-10">
+    <section className="mx-auto max-w-screen-xl px-3 md:px-6 lg:px-8 py-8 md:py-10">
       <div className="mx-auto max-w-5xl">
         {/* Header */}
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-3 bg-primary/10 px-6 py-3 rounded-full mb-6">
-            <TrendingUp className="text-primary w-6 h-6" />
-            <span className="text-primary font-semibold text-base">Sua Jornada de Transformação</span>
+        <div className="text-center mb-8 md:mb-10">
+          <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4 md:mb-6">
+            <TrendingUp className="text-primary w-4 h-4 md:w-6 md:h-6" />
+            <span className="text-primary font-semibold text-sm md:text-base">
+              <span className="hidden sm:inline">Sua Jornada de Transformação</span>
+              <span className="sm:hidden">Transformação</span>
+            </span>
           </div>
-          <h2 className="text-xl lg:text-2xl font-bold text-foreground mb-4">
+          <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-foreground mb-3 md:mb-4">
             De <span className="text-destructive">Inseguro</span> para <span className="text-primary">Especialista</span>
           </h2>
-          <p className="text-sm lg:text-base text-muted-foreground max-w-xl mx-auto">
+          <p className="text-xs md:text-sm lg:text-base text-muted-foreground max-w-sm md:max-w-xl mx-auto">
             Veja como sua prática médica será transformada com o domínio do POCUS
           </p>
         </div>
 
         {/* Transformation Flow */}
-        <div className="relative mb-8">
+        <div className="relative mb-6 md:mb-8">
           {/* Timeline Line */}
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-destructive via-yellow-500 to-primary rounded-full hidden lg:block"></div>
           
-          <div className="space-y-6">
+          <div className="space-y-4 md:space-y-6">
             {/* Before State */}
-            <div className="flex flex-col lg:flex-row items-center gap-8">
+            <div className="flex flex-col lg:flex-row items-center gap-6 md:gap-8">
               <div className="lg:w-1/2 lg:pr-8 w-full">
-                <div className="premium-card p-5 border-l-4 border-destructive bg-destructive/5">
+                <div className="premium-card p-4 md:p-5 border-l-4 border-destructive bg-destructive/5">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-12 h-12 bg-destructive/20 rounded-full flex items-center justify-center">
                       <Clock className="text-destructive w-6 h-6" />
@@ -59,11 +62,18 @@ const TransformationSection = () => {
                 </div>
               </div>
               
-              {/* Center Arrow */}
+              {/* Center Arrow Animado Suave */}
               <div className="lg:w-auto w-full flex justify-center">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center premium-glow z-10">
-                  <ArrowDown className="text-primary-foreground w-6 h-6 lg:hidden" />
-                  <ArrowRight className="text-primary-foreground w-6 h-6 hidden lg:block" />
+                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center premium-glow z-10 hover:scale-105 transition-all duration-500 relative group">
+                  {/* Efeito de breathing suave */}
+                  <div className="absolute inset-0 bg-primary/30 rounded-full animate-[breathing_3s_ease-in-out_infinite]"></div>
+                  
+                  {/* Setas com movimento suave */}
+                  <ArrowDown className="text-primary-foreground w-6 h-6 lg:hidden animate-[float_2s_ease-in-out_infinite] relative z-10" />
+                  <ArrowRight className="text-primary-foreground w-6 h-6 hidden lg:block animate-[slideRight_2s_ease-in-out_infinite] relative z-10" />
+                  
+                  {/* Glow suave */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-full blur-lg group-hover:opacity-80 transition-opacity duration-500"></div>
                 </div>
               </div>
               

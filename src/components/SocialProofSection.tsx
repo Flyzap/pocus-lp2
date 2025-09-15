@@ -41,38 +41,43 @@ const SocialProofSection = () => {
   }, []);
 
   return (
-    <section id="depoimentos" className="relative py-12 md:py-16 lg:py-18 overflow-hidden">
+    <section id="depoimentos" className="relative py-8 md:py-16 lg:py-18 overflow-hidden">
       {/* Background Premium */}
       <div className="absolute inset-0 bg-gradient-to-b from-background to-gray-premium/30"></div>
       
-      {/* Animated Background Elements */}
+      {/* Animated Background Elements - Parallax */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-40 left-1/4 w-64 h-64 bg-primary/20 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
-        <div className="absolute bottom-40 right-1/4 w-64 h-64 bg-primary/15 rounded-full mix-blend-multiply filter blur-xl animate-float animate-delay-300"></div>
+        <div className="absolute top-40 left-1/4 w-64 h-64 bg-primary/20 rounded-full mix-blend-multiply filter blur-xl parallax-element"></div>
+        <div className="absolute bottom-40 right-1/4 w-64 h-64 bg-primary/15 rounded-full mix-blend-multiply filter blur-xl parallax-element" style={{ animationDelay: '2s' }}></div>
+        
+        {/* Elementos adicionais de profundidade */}
+        <div className="absolute top-20 right-20 w-32 h-32 bg-primary/5 rounded-full blur-lg parallax-element" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-20 left-20 w-24 h-24 bg-primary/8 rounded-full blur-md parallax-element" style={{ animationDelay: '3s' }}></div>
       </div>
 
-      <div className="relative z-10 mx-auto max-w-4xl px-4 md:px-8 lg:px-10">
+      <div className="relative z-10 mx-auto max-w-4xl px-3 md:px-8 lg:px-10">
 
         {/* Section Header */}
-        <div className="text-center mb-12 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 border border-primary/30 text-sm font-medium backdrop-blur-sm mb-6">
-            <Star className="w-4 h-4 text-primary fill-primary" />
-            <span>Aprovado por Especialistas</span>
+        <div className="text-center mb-8 md:mb-12 animate-fade-in-up">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 border border-primary/30 text-xs md:text-sm font-medium backdrop-blur-sm mb-4 md:mb-6">
+            <Star className="w-3 h-3 md:w-4 md:h-4 text-primary fill-primary" />
+            <span className="hidden sm:inline">Aprovado por Especialistas</span>
+            <span className="sm:hidden">Especialistas</span>
           </div>
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3">
+          <h2 className="text-lg md:text-2xl lg:text-3xl font-bold text-foreground mb-2 md:mb-3">
             Depoimentos de
             <span className="block bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent">
               Médicos Especialistas
             </span>
           </h2>
-          <p className="text-base text-muted-foreground max-w-xl mx-auto">
+          <p className="text-sm md:text-base text-muted-foreground max-w-sm md:max-w-xl mx-auto">
             Veja o que profissionais renomados estão falando sobre o material
           </p>
         </div>
 
         {/* Testimonials Premium */}
-        <div className="mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="mb-6 md:mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
             {Array.from({ length: 3 }, (_, index) => {
               const testimonialIndex = (currentTestimonial + index) % testimonials.length;
               const testimonial = testimonials[testimonialIndex];
@@ -82,7 +87,7 @@ const SocialProofSection = () => {
                   className="group relative animate-fade-in-up hover-lift"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                <div className="premium-card p-5 space-y-3 h-full border-primary/10 hover:border-primary/30 transition-all duration-300"
+                <div className="premium-card p-4 md:p-5 space-y-2.5 md:space-y-3 h-full border-primary/10 hover:border-primary/30 transition-all duration-300"
               >
                   {/* Rating Premium */}
                   <div className="flex gap-1 mb-4">
