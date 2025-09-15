@@ -64,11 +64,14 @@ const HeroSection = () => {
   
   return (
     <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Premium */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-gray-premium to-black-premium"></div>
+      {/* Background Premium - Alto contraste mobile */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 lg:from-background lg:via-gray-premium lg:to-black-premium"></div>
       
-      {/* Animated Background Pattern */}
-      <div className="absolute inset-0 opacity-20">
+      {/* Overlay para melhor legibilidade no mobile */}
+      <div className="absolute inset-0 bg-white/20 lg:bg-transparent"></div>
+      
+      {/* Animated Background Pattern - Removida no mobile */}
+      <div className="absolute inset-0 opacity-0 lg:opacity-20">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
         <div className="absolute top-40 right-10 w-72 h-72 bg-primary/15 rounded-full mix-blend-multiply filter blur-xl animate-float animate-delay-200"></div>
         <div className="absolute -bottom-8 left-20 w-72 h-72 bg-primary/10 rounded-full mix-blend-multiply filter blur-xl animate-float animate-delay-400"></div>
@@ -82,8 +85,8 @@ const HeroSection = () => {
           <div className="space-y-3 lg:space-y-3 text-center lg:text-left animate-fade-in-left">
             
             {/* Badge com Melhor Visibilidade */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border-2 border-primary/40 text-xs md:text-sm font-semibold text-primary backdrop-blur-sm shadow-lg">
-              <Star className="w-3 h-3 md:w-4 md:h-4 text-primary fill-primary" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-100 lg:bg-primary/20 border-2 border-red-500 lg:border-primary/40 text-xs md:text-sm font-semibold text-red-800 lg:text-primary backdrop-blur-sm shadow-lg">
+              <Star className="w-3 h-3 md:w-4 md:h-4 text-red-600 lg:text-primary fill-red-600 lg:fill-primary" />
               <span className="hidden sm:inline">Curso #1 em Ultrassom Point-of-Care</span>
               <span className="sm:hidden">#1 POCUS</span>
             </div>
@@ -91,26 +94,26 @@ const HeroSection = () => {
             {/* Headline Principal - Abordagem Minimalista */}
             <div className="space-y-2 md:space-y-3 lg:space-y-3">
               <h1 className="text-3xl sm:text-4xl md:text-3xl lg:text-3xl xl:text-4xl font-bold tracking-tight leading-[0.9] text-center lg:text-left">
-                <span className="block text-foreground/90 text-lg sm:text-xl md:text-lg lg:text-lg font-normal mb-2 tracking-wide">
+                <span className="block text-gray-800 lg:text-foreground/90 text-lg sm:text-xl md:text-lg lg:text-lg font-normal mb-2 tracking-wide">
                   Domine a
                 </span>
-                <span className="block bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent font-extrabold tracking-tighter">
+                <span className="block text-[#7c121b] font-extrabold tracking-tighter">
                   ULTRASSONOGRAFIA
                 </span>
-                <span className="block text-foreground/90 text-lg sm:text-xl md:text-lg lg:text-lg font-normal mt-2 tracking-wide">
+                <span className="block text-gray-800 lg:text-foreground/90 text-lg sm:text-xl md:text-lg lg:text-lg font-normal mt-2 tracking-wide">
                   à beira-leito
                 </span>
               </h1>
               
               {/* Subtítulo Limpo */}
               <div className="space-y-3">
-                <p className="text-base sm:text-lg md:text-lg lg:text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0 leading-relaxed text-center lg:text-left">
+                <p className="text-base sm:text-lg md:text-lg lg:text-lg text-gray-700 lg:text-muted-foreground max-w-lg mx-auto lg:mx-0 leading-relaxed text-center lg:text-left font-medium">
                   Material premium gratuito + guia de emergência para usar no plantão hoje mesmo
                 </p>
                 
                 {/* Call-to-action visual */}
-                <div className="flex items-center justify-center lg:justify-start gap-2 text-sm text-primary font-medium">
-                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                <div className="flex items-center justify-center lg:justify-start gap-2 text-sm text-red-700 lg:text-primary font-medium">
+                  <div className="w-2 h-2 bg-red-600 lg:bg-primary rounded-full animate-pulse"></div>
                   <span>Download instantâneo via WhatsApp</span>
                 </div>
               </div>
@@ -172,17 +175,17 @@ const HeroSection = () => {
               )}
               
               {/* Trust Indicators */}
-              <div className="flex items-center justify-start gap-4 text-xs text-muted-foreground">
+              <div className="flex items-center justify-start gap-4 text-xs text-gray-700 lg:text-muted-foreground font-medium">
                 <div className="flex items-center gap-1.5">
-                  <Download className="w-3 h-3 text-green-400" />
+                  <Download className="w-3 h-3 text-green-600 lg:text-green-400" />
                   <span>Instantâneo</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <Shield className="w-3 h-3 text-green-400" />
+                  <Shield className="w-3 h-3 text-green-600 lg:text-green-400" />
                   <span>Seguro</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <Clock className="w-3 h-3 text-green-400" />
+                  <Clock className="w-3 h-3 text-green-600 lg:text-green-400" />
                   <span>Sem spam</span>
                 </div>
               </div>
@@ -243,17 +246,17 @@ const HeroSection = () => {
             )}
             
             {/* Trust Indicators Mobile */}
-            <div className="flex items-center justify-center gap-4 text-xs text-muted-foreground">
+            <div className="flex items-center justify-center gap-4 text-xs text-gray-700 font-medium">
               <div className="flex items-center gap-1.5">
-                <Download className="w-3 h-3 text-green-400" />
+                <Download className="w-3 h-3 text-green-600" />
                 <span>Instantâneo</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <Shield className="w-3 h-3 text-green-400" />
+                <Shield className="w-3 h-3 text-green-600" />
                 <span>Seguro</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <Clock className="w-3 h-3 text-green-400" />
+                <Clock className="w-3 h-3 text-green-600" />
                 <span>Sem spam</span>
               </div>
             </div>
