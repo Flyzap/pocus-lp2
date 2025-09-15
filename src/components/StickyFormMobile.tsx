@@ -189,7 +189,7 @@ const StickyFormMobile = () => {
                         onChange={handleNomeChange}
                         placeholder="Seu nome completo"
                         className={`h-12 sm:h-14 lg:h-16 text-base sm:text-lg lg:text-xl mobile-input ${
-                          error && !nome.trim() ? 'border-[#88021c] focus:border-[#88021c]' : ''
+                          error && !nome.trim() ? 'border-[#7c121b] focus:border-[#7c121b]' : ''
                         }`}
                         required
                         disabled={isLoading}
@@ -205,7 +205,7 @@ const StickyFormMobile = () => {
                           onChange={handleWhatsAppChange}
                           placeholder="(82) 98103-9197"
                           className={`h-12 sm:h-14 lg:h-16 text-base sm:text-lg lg:text-xl mobile-input ${
-                            error && whatsapp ? 'border-[#88021c] focus:border-[#88021c]' : ''
+                            error && whatsapp ? 'border-[#7c121b] focus:border-[#7c121b]' : ''
                           }`}
                           required
                           disabled={isLoading}
@@ -216,7 +216,7 @@ const StickyFormMobile = () => {
                         disabled={isLoading}
                         className={`font-bold px-5 sm:px-6 lg:px-8 h-12 sm:h-14 lg:h-16 premium-glow whitespace-nowrap text-base sm:text-lg lg:text-xl mobile-button ${
                           error
-                            ? 'bg-[#88021c] hover:bg-[#a0032a]'
+                            ? 'bg-[#7c121b] hover:bg-[#8f1c26]'
                             : 'bg-primary hover:bg-primary-dark'
                         } text-primary-foreground`}
                       >
@@ -233,7 +233,7 @@ const StickyFormMobile = () => {
                     
                     {/* Erro */}
                     {error && (
-                      <p className="text-[#88021c] text-xs sm:text-sm text-center">{error}</p>
+                      <p className="text-[#7c121b] text-xs sm:text-sm text-center">{error}</p>
                     )}
                   </div>
                   

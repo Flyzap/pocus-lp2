@@ -20,7 +20,7 @@ const premiumInputVariants = cva(
       state: {
         default: "",
         success: "border-green-500/60 focus:border-green-500",
-        error: "border-red-500/60 focus:border-red-500",
+        error: "border-[#7c121b]/60 focus:border-[#7c121b]",
         warning: "border-yellow-500/60 focus:border-yellow-500",
       }
     },
@@ -144,8 +144,8 @@ const PremiumInput = React.forwardRef<HTMLInputElement, PremiumInputProps>(
         {(helperText || error || success) && (
           <div className="mt-2 text-sm">
             {error && (
-              <p className="text-red-400 flex items-center gap-1">
-                <span className="w-4 h-4 text-red-400">⚠</span>
+              <p className="text-[#7c121b] flex items-center gap-1">
+                <span className="w-4 h-4 text-[#7c121b]">⚠</span>
                 {error}
               </p>
             )}

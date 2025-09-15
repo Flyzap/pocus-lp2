@@ -18,12 +18,12 @@ All colors MUST be HSL.
     --popover: 0 0% 4%;
     --popover-foreground: 0 0% 98%;
 
-    /* Premium Red System - Baseado em #88021c */
-    --primary: 354 87% 17%;           /* #88021c */
+    /* Premium Red System - Baseado em #7c121b */
+    --primary: 350 75% 29%;           /* #7c121b */
     --primary-foreground: 0 0% 98%;
-    --primary-light: 354 87% 22%;     /* #a0032a */
-    --primary-dark: 354 87% 12%;      /* #6b0215 */
-    --primary-glow: 354 87% 22%;
+    --primary-light: 350 75% 34%;     /* #8f1c26 */
+    --primary-dark: 350 75% 24%;      /* #691015 */
+    --primary-glow: 350 75% 34%;
 
     /* Premium Neutrals */
     --black-premium: 0 0% 4%;         /* #0a0a0a */
@@ -43,7 +43,7 @@ All colors MUST be HSL.
     --muted: 0 0% 12%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 354 87% 17%;
+    --accent: 350 75% 29%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
@@ -51,13 +51,13 @@ All colors MUST be HSL.
 
     --border: 0 0% 12%;
     --input: 0 0% 8%;
-    --ring: 354 87% 17%;
+    --ring: 350 75% 29%;
 
     /* Premium Gradients System */
-    --gradient-primary: linear-gradient(135deg, hsl(354 87% 17% / 0.9), hsl(354 87% 22% / 0.95));
+    --gradient-primary: linear-gradient(135deg, hsl(350 75% 29% / 0.9), hsl(350 75% 34% / 0.95));
     --gradient-hero: linear-gradient(135deg, hsl(0 0% 2%), hsl(0 0% 6%));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 4% / 0.8), hsl(0 0% 8% / 0.9));
-    --gradient-glow: linear-gradient(135deg, hsl(354 87% 17% / 0.1), hsl(354 87% 22% / 0.2));
+    --gradient-glow: linear-gradient(135deg, hsl(350 75% 29% / 0.1), hsl(350 75% 34% / 0.2));
     --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
 
     /* Premium Shadow System */
@@ -67,10 +67,10 @@ All colors MUST be HSL.
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     --shadow-premium: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    --shadow-glow: 0 0 30px hsl(354 87% 17% / 0.3);
-    --shadow-glow-intense: 0 0 60px hsl(354 87% 17% / 0.4);
+    --shadow-glow: 0 0 30px hsl(350 75% 29% / 0.3);
+    --shadow-glow-intense: 0 0 60px hsl(350 75% 29% / 0.4);
     --shadow-card-premium: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
-    --shadow-button: 0 4px 14px 0 hsl(354 87% 17% / 0.25);
+    --shadow-button: 0 4px 14px 0 hsl(350 75% 29% / 0.25);
 
     /* Premium Elevation System */
     --elevation-1: var(--shadow-sm);
@@ -262,12 +262,12 @@ All colors MUST be HSL.
   
   .glassmorphism-cta {
     background: linear-gradient(135deg, 
-      hsl(354 87% 17% / 0.9), 
-      hsl(354 87% 22% / 0.95)
+      hsl(350 75% 29% / 0.9), 
+      hsl(350 75% 34% / 0.95)
     );
     backdrop-filter: blur(16px) saturate(1.8);
     -webkit-backdrop-filter: blur(16px) saturate(1.8);
-    border: 1px solid hsl(354 87% 17% / 0.4);
+    border: 1px solid hsl(350 75% 29% / 0.4);
     box-shadow: 
       var(--shadow-button),
       inset 0 1px 0 rgba(255, 255, 255, 0.2);
@@ -292,13 +292,13 @@ All colors MUST be HSL.
   
   .glassmorphism-cta:hover {
     background: linear-gradient(135deg, 
-      hsl(354 87% 17%), 
-      hsl(354 87% 25%)
+      hsl(350 75% 29%), 
+      hsl(350 75% 34%)
     );
-    border-color: hsl(354 87% 17% / 0.6);
+    border-color: hsl(350 75% 29% / 0.6);
     box-shadow: 
       var(--shadow-glow-intense),
-      0 12px 35px hsl(354 87% 17% / 0.5),
+      0 12px 35px hsl(350 75% 29% / 0.5),
       inset 0 1px 0 rgba(255, 255, 255, 0.3);
     transform: translateY(-3px) scale(1.03);
   }
@@ -344,7 +344,7 @@ All colors MUST be HSL.
     transform: translateY(-4px) scale(1.01);
     box-shadow: 
       var(--shadow-premium),
-      0 0 40px hsl(354 87% 17% / 0.1);
+      0 0 40px hsl(350 75% 29% / 0.1);
     border-color: hsl(0 0% 18%);
   }
   
@@ -363,7 +363,7 @@ All colors MUST be HSL.
   .btn-premium-primary {
     background: var(--gradient-primary);
     color: hsl(var(--primary-foreground));
-    border: 1px solid hsl(354 87% 17% / 0.3);
+    border: 1px solid hsl(350 75% 29% / 0.3);
     border-radius: var(--radius-md);
     padding: 0.75rem 2rem;
     font-weight: 600;
@@ -391,7 +391,7 @@ All colors MUST be HSL.
   .btn-premium-primary:hover {
     transform: translateY(-2px) scale(1.02);
     box-shadow: var(--shadow-glow);
-    border-color: hsl(354 87% 17% / 0.5);
+    border-color: hsl(350 75% 29% / 0.5);
   }
   
   .btn-premium-secondary {
@@ -408,7 +408,7 @@ All colors MUST be HSL.
   
   .btn-premium-secondary:hover {
     background: hsl(0 0% 8% / 0.8);
-    border-color: hsl(354 87% 17% / 0.4);
+    border-color: hsl(350 75% 29% / 0.4);
     transform: translateY(-1px);
     box-shadow: var(--shadow-md);
   }
@@ -431,9 +431,9 @@ All colors MUST be HSL.
   
   .input-premium:focus {
     outline: none;
-    border-color: hsl(354 87% 17% / 0.6);
+    border-color: hsl(350 75% 29% / 0.6);
     box-shadow: 
-      0 0 0 3px hsl(354 87% 17% / 0.1),
+      0 0 0 3px hsl(350 75% 29% / 0.1),
       var(--shadow-md);
     background: hsl(0 0% 8% / 0.9);
   }
@@ -483,13 +483,13 @@ All colors MUST be HSL.
   @keyframes pulse-glow {
     0%, 100% { 
       box-shadow: 
-        0 0 20px hsl(354 87% 17% / 0.3),
-        0 0 40px hsl(354 87% 17% / 0.1);
+        0 0 20px hsl(350 75% 29% / 0.3),
+        0 0 40px hsl(350 75% 29% / 0.1);
     }
     50% { 
       box-shadow: 
-        0 0 30px hsl(354 87% 17% / 0.5),
-        0 0 60px hsl(354 87% 17% / 0.2);
+        0 0 30px hsl(350 75% 29% / 0.5),
+        0 0 60px hsl(350 75% 29% / 0.2);
     }
   }
   
@@ -575,10 +575,10 @@ All colors MUST be HSL.
   
   @keyframes glowPulse {
     0%, 100% {
-      filter: drop-shadow(0 0 8px hsl(354 87% 17% / 0.3));
+      filter: drop-shadow(0 0 8px hsl(350 75% 29% / 0.3));
     }
     50% {
-      filter: drop-shadow(0 0 20px hsl(354 87% 17% / 0.6));
+      filter: drop-shadow(0 0 20px hsl(350 75% 29% / 0.6));
     }
   }
   
@@ -598,7 +598,7 @@ All colors MUST be HSL.
   .hover-glow:hover {
     box-shadow: 
       var(--shadow-glow),
-      0 0 60px hsl(354 87% 17% / 0.2);
+      0 0 60px hsl(350 75% 29% / 0.2);
     filter: brightness(1.1);
   }
   

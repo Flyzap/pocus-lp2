@@ -165,7 +165,7 @@ const HeroSection = () => {
               </form>
               
               {error && (
-                <p className="text-red-400 text-sm font-medium flex items-center gap-2">
+                <p className="text-[#7c121b] text-sm font-medium flex items-center gap-2">
                   <span className="w-4 h-4">⚠</span>
                   {error}
                 </p>
@@ -236,7 +236,7 @@ const HeroSection = () => {
             </form>
             
             {error && (
-              <p className="text-red-400 text-sm font-medium flex items-center gap-2 justify-center">
+              <p className="text-[#7c121b] text-sm font-medium flex items-center gap-2 justify-center">
                 <span className="w-4 h-4">⚠</span>
                 {error}
               </p>
