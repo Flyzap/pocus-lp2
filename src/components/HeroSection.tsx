@@ -1,65 +1,15 @@
 import { PremiumButton } from "@/components/ui/premium-button";
 import { PremiumInput } from "@/components/ui/premium-input";
 import { PremiumCard } from "@/components/ui/premium-card";
-import { ArrowRight, Download, Shield, Clock, Play, Star, Users, Award, CheckCircle } from "lucide-react";
+import { ArrowRight, CreditCard, Shield, Clock, Play, Star, Users, Award, CheckCircle, Sparkles, Zap } from "lucide-react";
 import { useImageManager } from "@/hooks/useImageManager";
-import { useState } from "react";
-import { formatWhatsApp, validateWhatsApp } from "@/utils/whatsappValidation";
 
 const HeroSection = () => {
   const { images } = useImageManager();
-  const [name, setName] = useState("");
-  const [whatsapp, setWhatsapp] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [error, setError] = useState("");
 
-  const handleWhatsAppChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const formatted = formatWhatsApp(e.target.value);
-    setWhatsapp(formatted);
-    // Limpar erro quando usuário digita
-    if (error) setError("");
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError("");
-    
-    // Validar nome
-    if (!name.trim()) {
-      setError("Por favor, insira seu nome");
-      return;
-    }
-    
-    // Validar WhatsApp
-    const validation = validateWhatsApp(whatsapp);
-    if (!validation.isValid) {
-      setError(validation.errorMessage || "WhatsApp inválido");
-      return;
-    }
-    
-    setIsLoading(true);
-    
-    try {
-      // Aqui você integraria com sua API
-      // const response = await fetch('/api/capture-lead', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({ 
-      //     name: name.trim(), 
-      //     whatsapp: validation.formattedNumber 
-      //   })
-      // });
-      
-      // Simular envio por enquanto
-      setTimeout(() => {
-        setIsLoading(false);
-        setIsSuccess(true);
-      }, 2000);
-    } catch (err) {
-      setIsLoading(false);
-      setError("Erro ao enviar. Tente novamente.");
-    }
+  const handleComprar = () => {
+    // Implementar lógica de checkout/pagamento
+    console.log("Iniciando processo de compra...");
   };
   
   return (
@@ -84,8 +34,8 @@ const HeroSection = () => {
             {/* Badge com Melhor Visibilidade */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#7c121b]/20 border-2 border-[#7c121b]/40 text-xs md:text-sm font-semibold text-[#7c121b] backdrop-blur-sm shadow-lg">
               <Star className="w-3 h-3 md:w-4 md:h-4 text-[#7c121b] fill-[#7c121b]" />
-              <span className="hidden sm:inline">Curso #1 em Ultrassom Point-of-Care</span>
-              <span className="sm:hidden">#1 POCUS</span>
+              <span className="hidden sm:inline">Curso Completo de Ultrassom Point-of-Care</span>
+              <span className="sm:hidden">POCUS Completo</span>
             </div>
 
             {/* Headline Principal - Abordagem Minimalista */}
@@ -102,159 +52,124 @@ const HeroSection = () => {
                 </span>
               </h1>
               
-              {/* Subtítulo Limpo */}
-              <div className="space-y-3">
+              {/* Subtítulo e Benefícios */}
+              <div className="space-y-4">
                 <p className="text-base sm:text-lg md:text-lg lg:text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0 leading-relaxed text-center lg:text-left">
-                  Material premium gratuito + guia de emergência para usar no plantão hoje mesmo
+                  Aprenda a dominar o POCUS e transforme sua prática médica com o curso mais completo do Brasil
                 </p>
                 
-                {/* Call-to-action visual */}
-                <div className="flex items-center justify-center lg:justify-start gap-2 text-sm text-[#7c121b] font-medium">
-                  <div className="w-2 h-2 bg-[#7c121b] rounded-full animate-pulse"></div>
-                  <span>Download instantâneo via WhatsApp</span>
+                {/* Benefícios Rápidos */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg mx-auto lg:mx-0">
+                  <div className="flex items-center gap-2 text-sm">
+                    <div className="w-8 h-8 rounded-lg bg-[#7c121b]/10 flex items-center justify-center">
+                      <Zap className="w-4 h-4 text-[#7c121b]" />
+                    </div>
+                    <span className="text-muted-foreground">Aulas práticas e objetivas</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <div className="w-8 h-8 rounded-lg bg-[#7c121b]/10 flex items-center justify-center">
+                      <Users className="w-4 h-4 text-[#7c121b]" />
+                    </div>
+                    <span className="text-muted-foreground">Suporte individual</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <div className="w-8 h-8 rounded-lg bg-[#7c121b]/10 flex items-center justify-center">
+                      <Award className="w-4 h-4 text-[#7c121b]" />
+                    </div>
+                    <span className="text-muted-foreground">Certificado reconhecido</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <div className="w-8 h-8 rounded-lg bg-[#7c121b]/10 flex items-center justify-center">
+                      <Sparkles className="w-4 h-4 text-[#7c121b]" />
+                    </div>
+                    <span className="text-muted-foreground">Bônus exclusivos</span>
+                  </div>
                 </div>
               </div>
             </div>
 
 
-            {/* Form Desktop */}
-            <div className="hidden lg:block max-w-md xl:max-w-lg space-y-3">
-              <form onSubmit={handleSubmit} className="space-y-3">
-                <div className="grid grid-cols-1 gap-3">
-                  <PremiumInput
-                    type="text"
-                    value={name}
-                    onChange={(e) => {
-                      setName(e.target.value);
-                      if (error) setError("");
-                    }}
-                    placeholder="Seu nome completo"
-                    variant="glassmorphism"
-                    state={error && !name.trim() ? "error" : "default"}
-                    required
-                    disabled={isSuccess}
-                  />
-                  
-                  <div className="grid grid-cols-3 gap-3">
-                    <div className="col-span-2">
-                      <PremiumInput
-                        type="tel"
-                        value={whatsapp}
-                        onChange={handleWhatsAppChange}
-                        placeholder="(82) 98103-9197"
-                        variant="glassmorphism"
-                        state={error && !validateWhatsApp(whatsapp).isValid ? "error" : "default"}
-                        required
-                        disabled={isSuccess}
-                      />
-                    </div>
-                    <PremiumButton
-                      type="submit"
-                      variant="cta"
-                      size="default"
-                      loading={isLoading}
-                      disabled={isLoading || isSuccess}
-                      glow="subtle"
-                      shimmer={!isLoading && !isSuccess}
-                      icon={isSuccess ? <CheckCircle className="w-4 h-4" /> : <Download className="w-4 h-4" />}
-                    >
-                      {isSuccess ? "Enviado!" : "QUERO"}
-                    </PremiumButton>
+            {/* CTA e Trust Indicators Desktop */}
+            <div className="hidden lg:block space-y-6">
+              <div className="space-y-4">
+                {/* Preço */}
+                <div className="space-y-2">
+                  <p className="text-sm text-muted-foreground">Investimento único de</p>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-4xl font-bold text-[#7c121b]">12x R$ 97</span>
+                    <span className="text-sm text-muted-foreground">ou R$ 997 à vista</span>
                   </div>
                 </div>
-              </form>
-              
-              {error && (
-                <p className="text-[#7c121b] text-sm font-medium flex items-center gap-2">
-                  <span className="w-4 h-4">⚠</span>
-                  {error}
-                </p>
-              )}
+                
+                {/* CTA Button */}
+                <PremiumButton
+                  onClick={handleComprar}
+                  variant="cta"
+                  size="lg"
+                  glow="subtle"
+                  shimmer={true}
+                  icon={<CreditCard className="w-5 h-5" />}
+                  className="w-full text-base font-bold py-6"
+                >
+                  GARANTIR MINHA VAGA AGORA
+                </PremiumButton>
+              </div>
               
               {/* Trust Indicators */}
-              <div className="flex items-center justify-start gap-4 text-xs text-muted-foreground">
-                <div className="flex items-center gap-1.5">
-                  <Download className="w-3 h-3 text-green-400" />
-                  <span>Instantâneo</span>
+              <div className="space-y-3 border-t border-white/10 pt-4">
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Shield className="w-4 h-4 text-green-400" />
+                  <span>Garantia incondicional de 7 dias</span>
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <Shield className="w-3 h-3 text-green-400" />
-                  <span>Seguro</span>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <CreditCard className="w-4 h-4 text-green-400" />
+                  <span>Pagamento seguro via cartão ou PIX</span>
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <Clock className="w-3 h-3 text-green-400" />
-                  <span>Sem spam</span>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Users className="w-4 h-4 text-green-400" />
+                  <span>+1000 médicos já transformaram sua prática</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Form Mobile - Apenas no mobile, acima da imagem */}
-          <div className="lg:hidden mb-4 space-y-2.5 w-full px-1">
-            <form onSubmit={handleSubmit} className="space-y-2.5">
-              <PremiumInput
-                type="text"
-                value={name}
-                onChange={(e) => {
-                  setName(e.target.value);
-                  if (error) setError("");
-                }}
-                placeholder="Seu nome completo"
-                variant="glassmorphism"
-                state={error && !name.trim() ? "error" : "default"}
-                required
-                disabled={isSuccess}
-              />
-              
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-                <div className="sm:col-span-2">
-                  <PremiumInput
-                    type="tel"
-                    value={whatsapp}
-                    onChange={handleWhatsAppChange}
-                    placeholder="(82) 98103-9197"
-                    variant="glassmorphism"
-                    state={error && !validateWhatsApp(whatsapp).isValid ? "error" : "default"}
-                    required
-                    disabled={isSuccess}
-                  />
-                </div>
-                <PremiumButton
-                  type="submit"
-                  variant="cta"
-                  size="default"
-                  loading={isLoading}
-                  disabled={isLoading || isSuccess}
-                  glow="subtle"
-                  shimmer={!isLoading && !isSuccess}
-                  icon={isSuccess ? <CheckCircle className="w-4 h-4" /> : <Download className="w-4 h-4" />}
-                  className="sm:col-span-1"
-                >
-                  {isSuccess ? "Enviado!" : "QUERO"}
-                </PremiumButton>
+          {/* CTA Mobile */}
+          <div className="lg:hidden space-y-6 w-full px-1">
+            {/* Preço */}
+            <div className="text-center space-y-2">
+              <p className="text-sm text-muted-foreground">Investimento único de</p>
+              <div className="flex items-baseline justify-center gap-2">
+                <span className="text-3xl font-bold text-[#7c121b]">12x R$ 97</span>
+                <span className="text-sm text-muted-foreground">ou R$ 997 à vista</span>
               </div>
-            </form>
+            </div>
             
-            {error && (
-              <p className="text-[#7c121b] text-sm font-medium flex items-center gap-2 justify-center">
-                <span className="w-4 h-4">⚠</span>
-                {error}
-              </p>
-            )}
+            {/* CTA Button */}
+            <PremiumButton
+              onClick={handleComprar}
+              variant="cta"
+              size="lg"
+              glow="subtle"
+              shimmer={true}
+              icon={<CreditCard className="w-5 h-5" />}
+              className="w-full text-base font-bold py-6"
+            >
+              GARANTIR MINHA VAGA AGORA
+            </PremiumButton>
             
             {/* Trust Indicators Mobile */}
-            <div className="flex items-center justify-center gap-4 text-xs text-muted-foreground">
-              <div className="flex items-center gap-1.5">
-                <Download className="w-3 h-3 text-green-400" />
-                <span>Instantâneo</span>
-              </div>
-              <div className="flex items-center gap-1.5">
+            <div className="space-y-2 border-t border-white/10 pt-4">
+              <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
                 <Shield className="w-3 h-3 text-green-400" />
-                <span>Seguro</span>
+                <span>Garantia de 7 dias</span>
               </div>
-              <div className="flex items-center gap-1.5">
-                <Clock className="w-3 h-3 text-green-400" />
-                <span>Sem spam</span>
+              <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
+                <CreditCard className="w-3 h-3 text-green-400" />
+                <span>Pagamento seguro</span>
+              </div>
+              <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
+                <Users className="w-3 h-3 text-green-400" />
+                <span>+1000 médicos treinados</span>
               </div>
             </div>
           </div>
