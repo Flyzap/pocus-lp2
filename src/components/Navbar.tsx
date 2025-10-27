@@ -79,12 +79,12 @@ const Navbar = () => {
               variant="cta"
               size="sm"
               glow="subtle"
-              shimmer={true}
+              shimmer={false}
               icon={<BookOpen className="w-3 h-3" />}
               onClick={() => scrollToSection('hero')}
               className="font-semibold text-xs px-4"
             >
-              EBOOK GRÁTIS
+              GARANTIR MINHA VAGA AGORA
             </PremiumButton>
           </div>
 
@@ -138,7 +138,7 @@ const Navbar = () => {
                   onClick={() => scrollToSection('hero')}
                   className="w-full font-semibold text-xs justify-center"
                 >
-                  EBOOK GRÁTIS
+                  GARANTIR MINHA VAGA AGORA
                 </PremiumButton>
               </div>
             </div>

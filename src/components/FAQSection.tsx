@@ -7,36 +7,36 @@ import {
 
 const faqs = [
   {
-    question: "Como recebo o ebook?",
-    answer: "Assim que você informar seu WhatsApp, enviamos imediatamente os links para download do ebook completo, PDF de emergência e aula bônus. Recebe tudo em segundos!"
+    question: "Como funciona a imersão prática?",
+    answer: "São 4 dias intensivos de treinamento presencial, combinando teoria e prática. As aulas acontecem na UNOPAR e as práticas são realizadas em ambiente real na UPA."
   },
   {
-    question: "Quanto tempo demora para chegar?",
-    answer: "É instantâneo! Nosso sistema automatizado envia os materiais para seu WhatsApp em até 30 segundos após o cadastro."
+    question: "Quantas vagas por turma?",
+    answer: "Para garantir a qualidade do aprendizado e atenção individualizada, limitamos as turmas a 12 alunos."
   },
   {
-    question: "É realmente gratuito?",
-    answer: "Sim, 100% gratuito! Não cobramos nada pelo ebook, PDF de emergência nem pela aula bônus. É nossa contribuição para melhorar a medicina no Brasil."
+    question: "Preciso ter experiência prévia?",
+    answer: "Não! A imersão é aberta a todos os interessados, sem pré-requisitos. O treinamento foi estruturado para atender desde iniciantes até profissionais experientes."
   },
   {
-    question: "Posso compartilhar com colegas?",
-    answer: "Claro! Incentivamos que você compartilhe o conhecimento. Quanto mais médicos dominarem POCUS, melhor para todos os pacientes."
+    question: "Quais as formas de pagamento?",
+    answer: "Oferecemos diversas opções: cartão de crédito em até 12x, PIX, boleto à vista, PicPay, Apple Pay e Google Pay."
   },
   {
-    question: "Tem mais conteúdo depois?",
-    answer: "Sim! Após baixar o ebook, você receberá dicas semanais de POCUS, casos clínicos exclusivos e atualizações. Sempre conteúdo de valor, nunca spam."
+    question: "Como funciona a garantia?",
+    answer: "Oferecemos garantia incondicional de 7 dias. Se não ficar satisfeito, devolvemos 100% do seu investimento, sem questionamentos."
   },
   {
-    question: "Como tiro dúvidas sobre o conteúdo?",
-    answer: "Você pode responder no próprio WhatsApp! Nossa equipe médica responde dúvidas sobre POCUS, casos clínicos e aplicação prática em até 24 horas."
+    question: "Como funciona o suporte?",
+    answer: "Você terá acesso direto ao número do expert para tirar dúvidas durante e após a imersão, garantindo seu aprendizado completo."
   },
   {
-    question: "Funciona no meu celular?",
-    answer: "Perfeitamente! O PDF é otimizado para leitura em celular. Você pode consultar durante o plantão, salvar na galeria ou imprimir se preferir."
+    question: "Onde acontece a imersão?",
+    answer: "As aulas teóricas e práticas são realizadas em ambiente hospitalar real, proporcionando experiência hands-on com casos reais."
   },
   {
-    question: "E se eu não gostar do material?",
-    answer: "Como é gratuito, não há risco! Mas temos certeza que você vai amar. Mais de 12.000 médicos já baixaram e aplicam as técnicas diariamente."
+    question: "Recebo certificado?",
+    answer: "Sim, após a conclusão da imersão você recebe um certificado de participação."
   }
 ];
 
@@ -46,10 +46,10 @@ const FAQSection = () => {
       <div className="mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
-            <span className="text-primary">Dúvidas</span> sobre o Ebook
+            <span className="text-primary">Dúvidas</span> Frequentes
           </h2>
           <p className="text-base lg:text-lg text-muted-foreground">
-            Respostas para as principais perguntas sobre o download gratuito
+            Respostas para as principais perguntas sobre a imersão
           </p>
         </div>
         
@@ -100,7 +100,7 @@ const FAQSection = () => {
         {/* Still have questions */}
         <div className="text-center mt-12">
           <p className="text-base text-muted-foreground mb-4">
-            Ainda tem dúvidas sobre o ebook? Nossa equipe médica está pronta para ajudar!
+            Ainda tem dúvidas sobre a imersão? Nossa equipe está pronta para ajudar!
           </p>
           <a 
             href="https://wa.me/5582981039197" 
@@ -108,7 +108,7 @@ const FAQSection = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-primary hover:text-primary-glow font-semibold text-base mobile-touch-target"
           >
-            💬 Tire suas dúvidas no WhatsApp
+            💬 Fale com um especialista
           </a>
         </div>
       </div>

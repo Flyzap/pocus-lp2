@@ -25,7 +25,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 mx-auto max-w-4xl px-3 md:px-8 lg:px-10 xl:px-12 pt-20 pb-4 md:pt-12 lg:pt-16 lg:pb-8 w-full">
+      <div className="relative z-10 mx-auto max-w-4xl px-3 md:px-8 lg:px-10 xl:px-12 pt-20 pb-4 md:pt-24 lg:pt-28 lg:pb-8 w-full">
         <div className="grid lg:grid-cols-[1fr,1fr] gap-6 lg:gap-8 items-center">
           
           {/* Left Column - Content */}
@@ -52,99 +52,33 @@ const HeroSection = () => {
                 </span>
               </h1>
               
-              {/* Subtítulo e Benefícios */}
+              {/* Subtítulo */}
               <div className="space-y-4">
                 <p className="text-base sm:text-lg md:text-lg lg:text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0 leading-relaxed text-center lg:text-left">
                   Aprenda a dominar o POCUS e transforme sua prática médica com o curso mais completo do Brasil
                 </p>
-                
-                {/* Benefícios Rápidos */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg mx-auto lg:mx-0">
-                  <div className="flex items-center gap-2 text-sm">
-                    <div className="w-8 h-8 rounded-lg bg-[#7c121b]/10 flex items-center justify-center">
-                      <Zap className="w-4 h-4 text-[#7c121b]" />
-                    </div>
-                    <span className="text-muted-foreground">Aulas práticas e objetivas</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <div className="w-8 h-8 rounded-lg bg-[#7c121b]/10 flex items-center justify-center">
-                      <Users className="w-4 h-4 text-[#7c121b]" />
-                    </div>
-                    <span className="text-muted-foreground">Suporte individual</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <div className="w-8 h-8 rounded-lg bg-[#7c121b]/10 flex items-center justify-center">
-                      <Award className="w-4 h-4 text-[#7c121b]" />
-                    </div>
-                    <span className="text-muted-foreground">Certificado reconhecido</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <div className="w-8 h-8 rounded-lg bg-[#7c121b]/10 flex items-center justify-center">
-                      <Sparkles className="w-4 h-4 text-[#7c121b]" />
-                    </div>
-                    <span className="text-muted-foreground">Bônus exclusivos</span>
-                  </div>
-                </div>
               </div>
             </div>
 
 
-            {/* CTA e Trust Indicators Desktop */}
-            <div className="hidden lg:block space-y-6">
-              <div className="space-y-4">
-                {/* Preço */}
-                <div className="space-y-2">
-                  <p className="text-sm text-muted-foreground">Investimento único de</p>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-4xl font-bold text-[#7c121b]">12x R$ 97</span>
-                    <span className="text-sm text-muted-foreground">ou R$ 997 à vista</span>
-                  </div>
-                </div>
-                
-                {/* CTA Button */}
-                <PremiumButton
-                  onClick={handleComprar}
-                  variant="cta"
-                  size="lg"
-                  glow="subtle"
-                  shimmer={true}
-                  icon={<CreditCard className="w-5 h-5" />}
-                  className="w-full text-base font-bold py-6"
-                >
-                  GARANTIR MINHA VAGA AGORA
-                </PremiumButton>
-              </div>
-              
-              {/* Trust Indicators */}
-              <div className="space-y-3 border-t border-white/10 pt-4">
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Shield className="w-4 h-4 text-green-400" />
-                  <span>Garantia incondicional de 7 dias</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <CreditCard className="w-4 h-4 text-green-400" />
-                  <span>Pagamento seguro via cartão ou PIX</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Users className="w-4 h-4 text-green-400" />
-                  <span>+1000 médicos já transformaram sua prática</span>
-                </div>
-              </div>
+            {/* CTA Desktop */}
+            <div className="hidden lg:block">
+              <PremiumButton
+                onClick={handleComprar}
+                variant="cta"
+                size="lg"
+                glow="subtle"
+                shimmer={true}
+                icon={<CreditCard className="w-5 h-5" />}
+                className="w-full text-base font-bold py-6"
+              >
+                GARANTIR MINHA VAGA AGORA
+              </PremiumButton>
             </div>
           </div>
 
           {/* CTA Mobile */}
-          <div className="lg:hidden space-y-6 w-full px-1">
-            {/* Preço */}
-            <div className="text-center space-y-2">
-              <p className="text-sm text-muted-foreground">Investimento único de</p>
-              <div className="flex items-baseline justify-center gap-2">
-                <span className="text-3xl font-bold text-[#7c121b]">12x R$ 97</span>
-                <span className="text-sm text-muted-foreground">ou R$ 997 à vista</span>
-              </div>
-            </div>
-            
-            {/* CTA Button */}
+          <div className="lg:hidden w-full px-1">
             <PremiumButton
               onClick={handleComprar}
               variant="cta"
@@ -156,22 +90,6 @@ const HeroSection = () => {
             >
               GARANTIR MINHA VAGA AGORA
             </PremiumButton>
-            
-            {/* Trust Indicators Mobile */}
-            <div className="space-y-2 border-t border-white/10 pt-4">
-              <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
-                <Shield className="w-3 h-3 text-green-400" />
-                <span>Garantia de 7 dias</span>
-              </div>
-              <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
-                <CreditCard className="w-3 h-3 text-green-400" />
-                <span>Pagamento seguro</span>
-              </div>
-              <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
-                <Users className="w-3 h-3 text-green-400" />
-                <span>+1000 médicos treinados</span>
-              </div>
-            </div>
           </div>
 
           {/* Right Column - Visual Premium */}

@@ -2,28 +2,28 @@ import { Check } from "lucide-react";
 
 const objections = [
   {
-    title: "É realmente grátis?",
-    description: "Sim, 100% gratuito! O ebook completo."
+    title: "Vale mesmo o investimento?",
+    description: "Absolutamente! O retorno é imediato: você aplica o conhecimento já no próximo plantão, aumentando sua confiança e precisão diagnóstica."
   },
   {
-    title: "Vão me enviar spam no WhatsApp?",
-    description: "Jamais! Apenas conteúdo de valor: dicas práticas de POCUS, casos clínicos e atualizações. Você pode cancelar quando quiser."
+    title: "E se eu não gostar do curso?",
+    description: "Oferecemos garantia incondicional de 7 dias. Se não ficar 100% satisfeito, devolvemos seu dinheiro integralmente, sem questionamentos."
   },
   {
     title: "Preciso ter experiência prévia?",
-    description: "Não! O ebook vai do zero ao avançado. Perfeito tanto para quem nunca usou ultrassom quanto para quem quer aperfeiçoar."
+    description: "Não! O curso foi estruturado do zero ao avançado. Você aprende desde os fundamentos até as técnicas mais avançadas, no seu ritmo."
   },
   {
-    title: "Funciona no meu aparelho de ultrassom?",
-    description: "Sim! Os protocolos funcionam em qualquer marca e modelo. Focamos na técnica e interpretação, não no equipamento específico."
+    title: "Tenho uma agenda muito ocupada...",
+    description: "O curso é 100% gravado e você tem acesso vitalício. Estude no seu ritmo, com aulas objetivas e material de consulta rápida para o dia a dia."
   },
   {
-    title: "Tenho pouco tempo para ler...",
-    description: "O ebook foi pensado para médicos ocupados: leitura de 15 minutos + checklist rápido para consulta durante o plantão."
+    title: "Como são as aulas práticas?",
+    description: "Combinamos teoria e prática intensiva, com demonstrações em pacientes reais, simuladores de alta fidelidade e feedback personalizado dos instrutores."
   },
   {
-    title: "Como vou receber o material?",
-    description: "Instantaneamente pelo WhatsApp! Assim que você informar seu número, enviamos os links de download imediatamente."
+    title: "Quando posso começar?",
+    description: "Imediatamente após a confirmação do pagamento! Você recebe acesso à plataforma na hora e pode começar sua jornada de aprendizado agora mesmo."
   }
 ];
 
@@ -33,10 +33,10 @@ const ObjectionsSection = () => {
       <div className="mx-auto max-w-5xl">
         <div className="text-center mb-10">
           <h2 className="text-xl lg:text-2xl font-bold text-foreground mb-4">
-            <span className="text-primary">Sem pegadinhas,</span> sem complicação
+            <span className="text-primary">Ainda em dúvida?</span> Nós entendemos
           </h2>
           <p className="text-sm lg:text-base text-muted-foreground max-w-xl mx-auto">
-            Respondemos as principais dúvidas sobre nosso ebook gratuito de POCUS
+            Respondemos as principais dúvidas sobre o curso completo de POCUS
           </p>
         </div>
         
@@ -67,13 +67,13 @@ const ObjectionsSection = () => {
         <div className="text-center mt-16">
           <div className="premium-card p-8 max-w-3xl mx-auto">
             <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-6">
-              Ainda com dúvidas? É só baixar!
+              Ainda tem dúvidas? Fale com nossa equipe!
             </h3>
             <p className="text-base text-muted-foreground mb-8">
-              Não perca tempo. O ebook é gratuito e você recebe instantaneamente. Não tem nada a perder!
+              Nossa equipe médica está pronta para esclarecer todas as suas dúvidas sobre o curso. Não perca a oportunidade de transformar sua prática clínica!
             </p>
             <div className="text-primary font-bold text-base">
-              ✅ 100% Gratuito ✅ Download Imediato ✅ Sem Compromisso
+              ✅ Garantia de 7 dias ✅ Suporte Individual ✅ Acesso Vitalício
             </div>
           </div>
         </div>

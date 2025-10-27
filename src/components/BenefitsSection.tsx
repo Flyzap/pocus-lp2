@@ -1,52 +1,68 @@
 import { 
-  FileText, 
-  AlertTriangle, 
+  Laptop, 
+  Users, 
   BookOpen, 
   Zap, 
-  Download,
+  Award,
   Clock,
   CheckCircle,
   Star,
   Shield,
-  Sparkles
+  Sparkles,
+  MessageSquare,
+  FileCheck,
+  GraduationCap,
+  HeartPulse
 } from "lucide-react";
 
 const benefits = [
   {
-    icon: FileText,
-    title: "📋 Protocolo FAST",
-    description: "Passo a passo completo para ultrassom abdominal de emergência com técnica detalhada",
+    icon: Laptop,
+    title: "Aulas Online Completas",
+    description: "Mais de 40 horas de conteúdo em vídeo com técnicas avançadas e casos práticos",
     priority: "high"
   },
   {
-    icon: AlertTriangle,
-    title: "🚨 Checklist de Emergência",
-    description: "Para usar no plantão - protocolo rápido com decisões clínicas fundamentais",
+    icon: HeartPulse,
+    title: "Prática Clínica Intensiva",
+    description: "Treinamento hands-on com pacientes reais e simuladores de alta fidelidade",
     priority: "high"
   },
   {
-    icon: BookOpen,
-    title: "📊 Casos Clínicos Ilustrados",
-    description: "10 situações reais com imagens e interpretação passo a passo",
+    icon: GraduationCap,
+    title: "Material Didático Premium",
+    description: "Apostilas, guias de referência rápida e biblioteca de imagens comentadas",
+    priority: "high"
+  },
+  {
+    icon: MessageSquare,
+    title: "Mentoria Individual",
+    description: "Suporte personalizado com especialistas para tirar suas dúvidas e acelerar seu aprendizado",
+    priority: "high"
+  },
+  {
+    icon: Users,
+    title: "Comunidade VIP",
+    description: "Acesso ao grupo exclusivo de alunos para networking e discussão de casos",
     priority: "medium"
   },
   {
-    icon: Zap,
-    title: "⚡ Guia Rápido de Interpretação",
-    description: "Referência instantânea com os principais achados e diagnósticos diferenciais",
+    icon: Award,
+    title: "Certificação Reconhecida",
+    description: "Certificado de conclusão validado por instituições renomadas",
     priority: "medium"
   },
   {
-    icon: Download,
-    title: "💾 Download Instantâneo",
-    description: "Receba imediatamente no WhatsApp - sem espera, sem complicação",
+    icon: FileCheck,
+    title: "Protocolos Exclusivos",
+    description: "Mais de 20 protocolos práticos para diferentes cenários clínicos",
     priority: "medium"
   },
   {
     icon: Clock,
-    title: "⏱️ Leitura Rápida",
-    description: "Conteúdo direto ao ponto para dominar o essencial",
-    priority: "low"
+    title: "Acesso Vitalício",
+    description: "Estude no seu ritmo com acesso ilimitado a todo o conteúdo",
+    priority: "medium"
   }
 ];
 
@@ -73,20 +89,20 @@ const BenefitsSection = () => {
         {/* Section Header Premium */}
         <div className="text-center mb-8 md:mb-12 animate-fade-in-up">
           <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 border border-primary/30 text-xs md:text-sm font-medium backdrop-blur-sm mb-4 md:mb-6">
-            <Sparkles className="w-3 h-3 md:w-4 md:h-4 text-primary" />
-            <span className="hidden sm:inline">Material Premium Gratuito</span>
-            <span className="sm:hidden">Premium Grátis</span>
+            <Award className="w-3 h-3 md:w-4 md:h-4 text-primary" />
+            <span className="hidden sm:inline">Curso Completo de POCUS</span>
+            <span className="sm:hidden">Curso POCUS</span>
           </div>
           
           <h2 className="text-lg md:text-2xl lg:text-3xl font-bold text-foreground mb-3 md:mb-4">
-            Tudo que você vai receber
+            O que você vai receber
             <span className="block bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent">
-              GRATUITAMENTE
+              NO CURSO COMPLETO
             </span>
           </h2>
           
           <p className="text-sm md:text-base text-muted-foreground max-w-sm md:max-w-2xl mx-auto leading-relaxed">
-            Material completo e profissional de POCUS para transformar sua prática médica <span className="text-primary font-semibold">hoje mesmo</span>
+            Treinamento intensivo e prático de POCUS para você se tornar referência em ultrassom point-of-care <span className="text-primary font-semibold">em menos de 3 meses</span>
           </p>
         </div>
         
@@ -95,10 +111,10 @@ const BenefitsSection = () => {
           <div className="text-center mb-6 md:mb-8">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary mb-4">
               <Star className="w-4 h-4" />
-              <span>Conteúdo Principal</span>
+              <span>Módulos Principais</span>
             </div>
             <h3 className="text-xl lg:text-2xl font-bold text-foreground">
-              O que faz a diferença na sua prática
+              Treinamento Completo e Prático
             </h3>
           </div>
           
@@ -131,7 +147,7 @@ const BenefitsSection = () => {
                   {/* Value Indicator */}
                   <div className="flex items-center gap-2 text-sm">
                     <CheckCircle className="w-4 h-4 text-green-400" />
-                    <span className="text-green-400 font-medium">Essencial para emergência</span>
+                    <span className="text-green-400 font-medium">Módulo Essencial do Curso</span>
                   </div>
                   
                   {/* Glow Effect */}
@@ -147,10 +163,10 @@ const BenefitsSection = () => {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/15 text-sm font-medium text-primary mb-4">
               <Shield className="w-4 h-4" />
-              <span>Material Complementar</span>
+              <span>Bônus Exclusivos</span>
             </div>
             <h3 className="text-xl lg:text-2xl font-bold text-foreground">
-              Recursos para acelerar seu aprendizado
+              Recursos extras para maximizar seus resultados
             </h3>
           </div>
           
