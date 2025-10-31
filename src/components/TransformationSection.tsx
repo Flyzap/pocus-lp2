@@ -2,6 +2,16 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowDown, Quote, TrendingUp, Clock, CheckCircle } from "lucide-react";
 
 const TransformationSection = () => {
+  // Adicione handler
+  const handleScrollToHead = () => {
+    const el = document.getElementById('head');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="mx-auto max-w-screen-xl px-3 md:px-6 lg:px-8 py-8 md:py-10">
       <div className="mx-auto max-w-5xl">
@@ -139,6 +149,7 @@ const TransformationSection = () => {
             <Button 
               size="lg"
               className="bg-primary hover:bg-primary-dark text-primary-foreground font-bold px-8 py-4 text-base premium-glow group mobile-button"
+              onClick={handleScrollToHead}
             >
               <span className="mr-2">Começar Minha Transformação Agora</span>
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />

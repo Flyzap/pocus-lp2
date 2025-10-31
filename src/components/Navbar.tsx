@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Download, Sparkles, BookOpen } from "lucide-react";
 import { PremiumButton } from "@/components/ui/premium-button";
+import LeadCaptureDialog from "@/components/LeadCaptureDialog";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -75,17 +76,18 @@ const Navbar = () => {
 
           {/* Desktop CTA Button Premium */}
           <div className="hidden md:flex items-center relative z-10">
-            <PremiumButton
-              variant="cta"
-              size="sm"
-              glow="subtle"
-              shimmer={false}
-              icon={<BookOpen className="w-3 h-3" />}
-              onClick={() => scrollToSection('hero')}
-              className="font-semibold text-xs px-4"
-            >
-              GARANTIR MINHA VAGA AGORA
-            </PremiumButton>
+            <LeadCaptureDialog>
+              <PremiumButton
+                variant="cta"
+                size="sm"
+                glow="subtle"
+                shimmer={false}
+                icon={<BookOpen className="w-3 h-3" />}
+                className="font-semibold text-xs px-4"
+              >
+                GARANTIR MINHA VAGA AGORA
+              </PremiumButton>
+            </LeadCaptureDialog>
           </div>
 
           {/* Mobile Menu Button Premium */}
@@ -129,17 +131,18 @@ const Navbar = () => {
               </button>
               
               <div className="pt-3 border-t border-white/10">
-                <PremiumButton
-                  variant="cta"
-                  size="sm"
-                  glow="subtle"
-                  shimmer={true}
-                  icon={<BookOpen className="w-3 h-3" />}
-                  onClick={() => scrollToSection('hero')}
-                  className="w-full font-semibold text-xs justify-center"
-                >
-                  GARANTIR MINHA VAGA AGORA
-                </PremiumButton>
+                <LeadCaptureDialog>
+                  <PremiumButton
+                    variant="cta"
+                    size="sm"
+                    glow="subtle"
+                    shimmer={true}
+                    icon={<BookOpen className="w-3 h-3" />}
+                    className="w-full font-semibold text-xs justify-center"
+                  >
+                    GARANTIR MINHA VAGA AGORA
+                  </PremiumButton>
+                </LeadCaptureDialog>
               </div>
             </div>
           </div>

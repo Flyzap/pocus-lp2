@@ -1,6 +1,28 @@
 import { Instagram, MessageCircle, Youtube, Mail, Phone } from "lucide-react";
+import { useState } from "react";
+import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
+  const [open, setOpen] = useState(false);
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const handleAdminLinkClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setOpen(true);
+    setPassword("");
+    setError("");
+  };
+
+  const handleCheck = () => {
+    if (password === "120607") {
+      window.location.href = "/admin";
+    } else {
+      setError("Senha incorreta");
+    }
+  };
+
   return (
     <footer className="bg-background border-t border-border">
       <div className="mx-auto max-w-screen-xl px-4 md:px-6 lg:px-8 py-10">
@@ -65,11 +87,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center justify-center sm:justify-start gap-2 text-muted-foreground">
                 <Phone size={14} className="lg:w-4 lg:h-4" />
-                <span>(11) 99999-9999</span>
+                <span>(82) 99323-8508</span>
               </div>
               <div className="flex items-center justify-center sm:justify-start gap-2 text-muted-foreground">
                 <MessageCircle size={14} className="lg:w-4 lg:h-4" />
-                <span>WhatsApp 24h</span>
+                <a href="https://wa.me/5582993238508" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">WhatsApp 24h</a>
               </div>
             </div>
           </div>
@@ -81,12 +103,6 @@ const Footer = () => {
             <p className="text-xs lg:text-sm text-muted-foreground">
               © 2025 POCUS Intensive. Todos os direitos reservados. CNPJ: 00.000.000/0001-00
             </p>
-            <a 
-              href="/admin" 
-              className="text-xs lg:text-sm text-muted-foreground hover:text-primary transition-colors opacity-50 hover:opacity-100"
-            >
-              Painel Admin
-            </a>
           </div>
         </div>
       </div>
@@ -94,7 +110,7 @@ const Footer = () => {
       {/* Floating WhatsApp */}
       <div className="fixed bottom-6 right-6 z-50">
         <a 
-          href="https://wa.me/5511999999999" 
+          href="https://wa.me/5582993238508" 
           target="_blank" 
           rel="noopener noreferrer"
           className="w-12 h-12 lg:w-14 lg:h-14 bg-primary rounded-full flex items-center justify-center premium-glow animate-pulse-glow hover:scale-110 transition-transform mobile-touch-target"

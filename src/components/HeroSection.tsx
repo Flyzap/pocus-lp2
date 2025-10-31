@@ -3,15 +3,11 @@ import { PremiumInput } from "@/components/ui/premium-input";
 import { PremiumCard } from "@/components/ui/premium-card";
 import { ArrowRight, CreditCard, Shield, Clock, Play, Star, Users, Award, CheckCircle, Sparkles, Zap } from "lucide-react";
 import { useImageManager } from "@/hooks/useImageManager";
+import LeadCaptureDialog from "@/components/LeadCaptureDialog";
 
 const HeroSection = () => {
   const { images } = useImageManager();
 
-  const handleComprar = () => {
-    // Implementar lógica de checkout/pagamento
-    console.log("Iniciando processo de compra...");
-  };
-  
   return (
     <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Background Premium - Preto original */}
@@ -63,8 +59,25 @@ const HeroSection = () => {
 
             {/* CTA Desktop */}
             <div className="hidden lg:block">
+              <LeadCaptureDialog>
+                <PremiumButton
+                  variant="cta"
+                  size="lg"
+                  glow="subtle"
+                  shimmer={true}
+                  icon={<CreditCard className="w-5 h-5" />}
+                  className="w-full text-base font-bold py-6"
+                >
+                  GARANTIR MINHA VAGA AGORA
+                </PremiumButton>
+              </LeadCaptureDialog>
+            </div>
+          </div>
+
+          {/* CTA Mobile */}
+          <div className="lg:hidden w-full px-1">
+            <LeadCaptureDialog>
               <PremiumButton
-                onClick={handleComprar}
                 variant="cta"
                 size="lg"
                 glow="subtle"
@@ -74,22 +87,7 @@ const HeroSection = () => {
               >
                 GARANTIR MINHA VAGA AGORA
               </PremiumButton>
-            </div>
-          </div>
-
-          {/* CTA Mobile */}
-          <div className="lg:hidden w-full px-1">
-            <PremiumButton
-              onClick={handleComprar}
-              variant="cta"
-              size="lg"
-              glow="subtle"
-              shimmer={true}
-              icon={<CreditCard className="w-5 h-5" />}
-              className="w-full text-base font-bold py-6"
-            >
-              GARANTIR MINHA VAGA AGORA
-            </PremiumButton>
+            </LeadCaptureDialog>
           </div>
 
           {/* Right Column - Visual Premium */}

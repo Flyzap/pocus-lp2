@@ -14,6 +14,14 @@ import {
   Star
 } from "lucide-react";
 import { memo } from 'react';
+import {
+  Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter,
+} from "@/components/ui/dialog";
+import { FormProvider, useForm } from "react-hook-form";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import LeadCaptureDialog from "@/components/LeadCaptureDialog";
 
 // Componentes memorizados para otimização de performance
 const PaymentMethod = memo(({ children }: { children: React.ReactNode }) => (
@@ -53,33 +61,37 @@ const benefitCards = [
   }
 ];
 
-const PricingSection = () => {
+const PricingSection = () => {  
+  const [formSuccess, setFormSuccess] = useState(false);
+  const methods = useForm({ mode: 'onBlur' });
+
+  const onSubmit = (data: any) => {
+    setFormSuccess(true);
+    setTimeout(() => {
+      setFormSuccess(false);
+      // O Dialog será fechado pelo usuário normalmente, não programaticamente
+    }, 2000);
+    // Aqui podemos adicionar integração futura (API, etc)
+  };
+
   return (
     <section className="relative py-24 overflow-hidden" id="investimento">
+      {/* Dialog de teste isolado para depuração */}
+      <Dialog>
+        <DialogTrigger asChild>
+          <button style={{margin: 8, padding: 8, background: '#ddd', borderRadius: 4}}>Abrir Dialog TESTE</button>
+        </DialogTrigger>
+        <DialogContent>
+          <DialogTitle>Dialog Teste</DialogTitle>
+          <span>Se você está vendo esse texto, o Dialog funciona corretamente.</span>
+        </DialogContent>
+      </Dialog>
       {/* Background com gradiente otimizado */}
       <div 
         className="absolute inset-0 bg-gradient-to-b from-background via-gray-premium/30 to-background"
-        aria-hidden="true"
-      />
-      
+        aria-hidden="true" />
       <div className="relative z-10 container mx-auto px-4 max-w-6xl">
-        {/* Cabeçalho com badge animado */}
-        <div className="text-center mb-12">
-          <div 
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary mb-4"
-            role="status"
-          >
-            <Star className="w-4 h-4" aria-hidden="true" />
-            <span>Turma Limitada - 12 Vagas</span>
-          </div>
-          <h2 className="text-3xl font-bold mb-4">
-            Investimento
-          </h2>
-        </div>
-
-        {/* Grid principal responsivo */}
         <div className="grid lg:grid-cols-2 gap-8 items-start">
-          {/* Coluna de Preço - Sticky no desktop */}
           <div className="lg:sticky lg:top-24 space-y-6">
             <PremiumCard>
               <div className="p-8">
@@ -119,21 +131,24 @@ const PricingSection = () => {
 
                 {/* CTA com mensagem de urgência */}
                 <div className="space-y-4">
-                  <PremiumButton
-                    variant="cta"
-                    size="lg"
-                    className="w-full py-6 text-lg font-bold"
-                    glow="subtle"
-                    shimmer={false}
-                  >
-                    <div className="relative z-10">
-                      GARANTIR MINHA VAGA AGORA
-                      <span className="block text-sm mt-1 font-normal">
-                        Últimas vagas disponíveis
-                      </span>
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-                  </PremiumButton>
+                  {/* Dialog envolvendo o botão e o conteúdo */}
+                  <LeadCaptureDialog>
+                    <PremiumButton
+                      variant="cta"
+                      size="lg"
+                      className="w-full py-6 text-lg font-bold"
+                      glow="subtle"
+                      shimmer={false}
+                    >
+                      <div className="relative z-10">
+                        GARANTIR MINHA VAGA AGORA
+                        <span className="block text-sm mt-1 font-normal">
+                          Últimas vagas disponíveis
+                        </span>
+                      </div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                    </PremiumButton>
+                  </LeadCaptureDialog>
 
                   {/* Trust badge */}
                   <div className="flex items-center justify-center gap-3 text-xs text-muted-foreground">

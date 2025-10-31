@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { X, CreditCard } from "lucide-react";
+import LeadCaptureDialog from "@/components/LeadCaptureDialog";
 
 const StickyFormMobile = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -103,11 +104,11 @@ const StickyFormMobile = () => {
                   </div>
                 </div>
 
-                <Button
-                  className="w-full bg-primary hover:bg-primary-dark text-primary-foreground font-bold h-12 sm:h-14 premium-glow text-base"
-                >
-                  GARANTIR MINHA VAGA AGORA
-                </Button>
+                <LeadCaptureDialog>
+                  <Button className="w-full bg-primary hover:bg-primary-dark text-primary-foreground font-bold h-12 sm:h-14 premium-glow text-base">
+                    GARANTIR MINHA VAGA AGORA
+                  </Button>
+                </LeadCaptureDialog>
 
                 <div className="text-xs text-muted-foreground">
                   ✅ Garantia de 7 dias ✅ Vagas limitadas
