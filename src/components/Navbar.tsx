@@ -76,7 +76,7 @@ const Navbar = () => {
 
           {/* Desktop CTA Button Premium */}
           <div className="hidden md:flex items-center relative z-10">
-            <LeadCaptureDialog>
+            <LeadCaptureDialog checkoutUrl="https://pay.cakto.com.br/39khjtb_612577">
               <PremiumButton
                 variant="cta"
                 size="sm"
@@ -131,7 +131,7 @@ const Navbar = () => {
               </button>
               
               <div className="pt-3 border-t border-white/10">
-                <LeadCaptureDialog>
+                <LeadCaptureDialog checkoutUrl="https://pay.cakto.com.br/39khjtb_612577">
                   <PremiumButton
                     variant="cta"
                     size="sm"

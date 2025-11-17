@@ -132,7 +132,7 @@ const PricingSection = () => {
                 {/* CTA com mensagem de urgência */}
                 <div className="space-y-4">
                   {/* Dialog envolvendo o botão e o conteúdo */}
-                  <LeadCaptureDialog>
+                  <LeadCaptureDialog checkoutUrl="https://pay.cakto.com.br/39khjtb_612577">
                     <PremiumButton
                       variant="cta"
                       size="lg"
@@ -142,9 +142,6 @@ const PricingSection = () => {
                     >
                       <div className="relative z-10">
                         GARANTIR MINHA VAGA AGORA
-                        <span className="block text-sm mt-1 font-normal">
-                          Últimas vagas disponíveis
-                        </span>
                       </div>
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                     </PremiumButton>

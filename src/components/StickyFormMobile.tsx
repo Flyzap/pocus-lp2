@@ -104,7 +104,7 @@ const StickyFormMobile = () => {
                   </div>
                 </div>
 
-                <LeadCaptureDialog>
+                <LeadCaptureDialog checkoutUrl="https://pay.cakto.com.br/39khjtb_612577">
                   <Button className="w-full bg-primary hover:bg-primary-dark text-primary-foreground font-bold h-12 sm:h-14 premium-glow text-base">
                     GARANTIR MINHA VAGA AGORA
                   </Button>

@@ -7,11 +7,12 @@ import { CheckCircle } from "lucide-react";
 
 interface LeadCaptureDialogProps {
   children: React.ReactNode;
+  checkoutUrl?: string;
 }
 
 const WEBHOOK_URL = "https://webhook.automatizando.net/webhook/CAPTURA";
 
-export default function LeadCaptureDialog({ children }: LeadCaptureDialogProps) {
+export default function LeadCaptureDialog({ children, checkoutUrl }: LeadCaptureDialogProps) {
   const [open, setOpen] = useState(false);
   const [formSuccess, setFormSuccess] = useState(false);
   const [formError, setFormError] = useState<string | null>(null);
@@ -26,15 +27,21 @@ export default function LeadCaptureDialog({ children }: LeadCaptureDialogProps) 
     }
   }, [open])
 
-  // Responsável por fechar automaticamente após sucesso
+  // Responsável por fechar automaticamente após sucesso e redirecionar
   useEffect(() => {
     if (formSuccess && open) {
-      closeTimer.current = setTimeout(() => setOpen(false), 2000);
+      closeTimer.current = setTimeout(() => {
+        setOpen(false);
+        // Redireciona para checkout após fechar o modal
+        if (checkoutUrl) {
+          window.location.href = checkoutUrl;
+        }
+      }, 2000);
     }
     return () => {
       if (closeTimer.current) clearTimeout(closeTimer.current);
     };
-  }, [formSuccess, open]);
+  }, [formSuccess, open, checkoutUrl]);
 
   const onSubmit = async (data: any) => {
     setFormError(null);

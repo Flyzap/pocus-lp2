@@ -59,7 +59,7 @@ const HeroSection = () => {
 
             {/* CTA Desktop */}
             <div className="hidden lg:block">
-              <LeadCaptureDialog>
+              <LeadCaptureDialog checkoutUrl="https://pay.cakto.com.br/39khjtb_612577">
                 <PremiumButton
                   variant="cta"
                   size="lg"
@@ -76,7 +76,7 @@ const HeroSection = () => {
 
           {/* CTA Mobile */}
           <div className="lg:hidden w-full px-1">
-            <LeadCaptureDialog>
+            <LeadCaptureDialog checkoutUrl="https://pay.cakto.com.br/39khjtb_612577">
               <PremiumButton
                 variant="cta"
                 size="lg"

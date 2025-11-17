@@ -349,7 +349,7 @@ git status
 
 ### **2. Adicionar Todos os Arquivos Modificados**
 ```bash
-<code_block_to_apply_changes_from>
+git add .
 ```
 
 ### **3. Fazer o Commit das Mudanças**
