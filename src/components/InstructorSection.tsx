@@ -34,8 +34,7 @@ const INSTRUCTOR_CONFIG = {
   credentials: [
     "4+ anos de experiência em POCUS",
     "Professor universitário",
-    "Graduado pela UFAL",
-    "Especialista em Emergência"
+    "Graduado pela UFAL"
   ]
 };
 
